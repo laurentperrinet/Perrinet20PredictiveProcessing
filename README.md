@@ -60,3 +60,21 @@ to better unravel visual processes -
 as they unfold in time.
 
 
+Essential to this endeavour, a correct
+definition of time in that processes.
+For instance, as we record a neural cell
+in some visual areas, we may display
+in a master plot the timing of the spikes
+that the cell emitted. The time is relative
+to that of the experimenter and is given
+thanks to an external clock. The plot is
+shown a posteriori, that is after the
+recording of the spike train. In contrast,
+a neuron has no access to a central clock but
+its response is controlled by the distribution
+of electro-chemical gradients on its membrane, and
+only at this present time. Such an observation is
+essential in understanding the principles guiding
+the organization of visual processes. In particular,
+predictive processes can be only defined in this
+interruptive time, using only information at the present.
