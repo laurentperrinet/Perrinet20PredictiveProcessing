@@ -132,5 +132,26 @@ the brain stimulus was more precise, suggesting
 that such suppressive wave could serve as
 predictive processing step to be reared-out in
 uptream cortical areas.
+
+In particular, we found that the activity
+that we recorded fitted wolf with a .me air-field
+model using a dynamical gain control. qualitatively,
+this model reproduced the propagation of activity
+on the cortex. Importantly, this inn. del allowed
+to show that the observed activity was best fitted
+when the speed of lateral connections was about
+1 m/s, a propagation speed which is of the
+order of that measured inn the primary visual
+cortex.
+A more functional (probabilistic) model also showed
+that the Neal suppressive wave allowed to
+disambiguate the stimulus by explaining
+away (that is, suppressing) ambiguous alternatives.
+As a consequences, lateral interactions are key
+to generate travelling waves on the surface of the
+cortex and 2) these waves help disambiguate
+the input stimulus. This corresponds to the implementation
+of a predictive process using on a priori knowledge
+of smoothly-moving visual objects-
 ## neural implementation
 
