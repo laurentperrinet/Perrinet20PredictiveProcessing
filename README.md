@@ -8,5 +8,20 @@ visual areas. In particular, we will
 compare such models in light of recent
 neurophysiological data showing the role
 of travelling waves in shaping visual
-processing.
+processing. Finally, we will propose some lines of
+research to understand how the
+previous functional models may be
+implemented at the neural level..
+In particular, we will describe models
+of cortical processing in terms of
+prototypical micro-circuits.
+These allow to separate the different
+flows of information, from feed-forward
+prediction error to feed-back
+anticipation error.
+Still, the particular implementation
+of such a circuit is not bromown
+and we will review some possible
+implementations using Spiking
+Neural Networks.
 
