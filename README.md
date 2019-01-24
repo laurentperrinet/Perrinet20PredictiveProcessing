@@ -41,3 +41,22 @@ individual edges to form a representation of the
 contours of visual objects. In the time domain,
 the knowledge of the motion of visual objects may
 help predict their future positions..
+
+However, there are limits to this efficiency.
+First, luminous information can be
+noisy and ambiguous, such as in dim
+light conditions. Second, neural networks
+have limited information transfer capacities
+and importantly process in formation
+with a certain delay. In humans for
+instance the delay for the transmission
+of retinal information is approx 80ms,
+while the minimal latency to
+perform a motor action is approx an
+additional 50 ms. While this constrains
+a lot the capacity of the visual system,
+we will take advantage of these delays
+to better unravel visual processes -
+as they unfold in time.
+
+
