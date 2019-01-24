@@ -30,67 +30,10 @@ The model that we used for the FLE can be used with any image. In particular, a 
 
 ### neural correlate of apparent motion
 
-When two stationary dots are flashed at close successive
-positions and time, observers may experience a
-percept of motion. This transforms the presentation
-of a discrete pattern into a continuous one. This
-visual illusion is called apparent motion and can
-persist over a relatively long range (superior to the
-characteristic size of the RF of a Va neuron). Similarly
-to the study above for the FL E, it is believed
-that this illusion can be explained by predictive
-processes. Due to the dynamical characteristics of KRAM,
-At neural implementation of this illusion would
-dye in the propagation of visual information through
-intra-cortical interactions. In particular, these
-lateral interactions may evoke waves of activity in
-µ which may modulate the integration of
-the sense my information coming from thalamocortical connections.
-An interesting prospect is thus to record neural
-activity during the presentation of the tram stimulus.
-This allows oho quantitatively assess why the superposition
-of L dots as in L RAM is more than the sum of
-the two dots in isolation.
+When two stationary dots are flashed at close successive positions and times, observers may experience a percept of motion. This transforms the presentation of a discrete pattern into a continuous one. This visual illusion is called apparent motion and can persist over a relatively long range (superior to the characteristic size of the RF of a V1 neuron), and is called long-range Apparent Motion (lrAM). Similarly to the study above for the FLE, it is believed that this illusion can be explained by predictive processes. Due to the dynamical characteristics of lrAM, a neural implementation of this illusion may consist in the propagation of visual information through intra-cortical interactions. In particular, these lateral interactions may evoke waves of activity in V1 which may modulate the integration of the sensory information coming from thalamocortical connections. An interesting prospect is thus to record neural activity during the presentation of the lrAM stimulus. This allows to quantitatively assess why the superposition of two dots as in lrAM is "more" than the sum of the two dots in isolation.
 
-In this study, we used USD to record the
-activity of the primary visual cortex (Ve) of macaque
-monkeys. Is there any difference between the
-response to the single dot and that to the two dots?
-Indeed VSD recordings allow to record the
-activity of populations of neurons which are approx
-at the scale of a cortical column. Algo, the response
-is rapid enough to capture the dynamics of the
-Anr stimulus. These recordings show that as
-the evoked activity of the second stimulus reaches
-Va, a cortical suppressive wave propagates low and
-the retinolopic wave evoked by the first. This was
-put in evidence by statistically comparing the
-response of the brain to the response of the
-two dots in isolation.
-In particular, we found that the activity for
-the brain stimulus was more precise, suggesting
-that such suppressive wave could serve as
-predictive processing step to be reared-out in
-uptream cortical areas.
+In this study, we used VSDI to record the activity of the primary visual cortex (V1) of awake macaque monkeys. Is there any difference between the response to the single dot and that to the two dots? Indeed VSD recordings allow to record the activity of populations of neurons which are approx at the scale of a cortical column. Also, the recorded response is rapid enough to capture the dynamics of the lrAM stimulus. These recordings show that as the evoked activity of the second stimulus reaches V1, a cortical suppressive wave propagates toward the retinolopic wave evoked by the first dot. This was put in evidence by statistically comparing the response of the brain to the response of the two dots in isolation. In particular, we found that the activity for the brain stimulus was more precise, suggesting that such suppressive wave could serve as predictive processing step to be read-out in upstream cortical areas.
 
-In particular, we found that the activity
-that we recorded fitted wolf with a .me air-field
-model using a dynamical gain control. qualitatively,
-this model reproduced the propagation of activity
-on the cortex. Importantly, this inn. del allowed
-to show that the observed activity was best fitted
-when the speed of lateral connections was about
-1 m/s, a propagation speed which is of the
-order of that measured inn the primary visual
-cortex.
-A more functional (probabilistic) model also showed
-that the Neal suppressive wave allowed to
-disambiguate the stimulus by explaining
-away (that is, suppressing) ambiguous alternatives.
-As a consequences, lateral interactions are key
-to generate travelling waves on the surface of the
-cortex and 2) these waves help disambiguate
-the input stimulus. This corresponds to the implementation
-of a predictive process using on a priori knowledge
-of smoothly-moving visual objects-
+In particular, we found that the activity that we recorded fitted well with a mean-field model using a dynamical gain control. Qualitatively, this model reproduced the propagation of activity on the cortex. Importantly, this model allowed to show that the observed activity was best fitted when the speed of lateral connections within the mean-field was about 1 m/s, a propagation speed which is of the order of that measured for intra-cortical connectcions in the primary visual cortex. A more functional (probabilistic) model also showed that the cortical suppressive wave allowed to disambiguate the stimulus by explaining away (that is, suppressing) ambiguous alternatives. As a consequences, 1) lateral interactions are key to generate travelling waves on the surface of the cortex and 2) these waves help disambiguate the input stimulus. This corresponds to the implementation of a predictive process using on a priori knowledge of smoothly-moving visual objects.
+
 ## neural implementation
