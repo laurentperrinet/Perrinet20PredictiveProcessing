@@ -19,3 +19,25 @@ of the visual system is such that it is efficient
 [AH neave, Barlow]. Such an ecological
 framework (Atick] allows to explain many
 aspects of visual processing.
+
+Such principles take different form such as
+redundancy reduction, maximisation of
+information transfer or minimization of
+metabolic energy, However, it is possible
+to link these different theories into a single
+framework, the Free-Energy Principle [friston, 053.
+Key to this principle is the notion that, knowing
+the processes that generated the visual image
+and the internal generative model that allows
+its representation, predictive processes will take
+advantage of a priori knowledge to form
+an optimal representation of the image.
+Such an a. priori knowledge is an explicit
+(probabilistic) representation of the structure of
+the world. For instance, an image composed
+of edges will be understood at a higher level using
+the a priori knowledge of the link between any
+individual edges to form a representation of the
+contours of visual objects. In the time domain,
+the knowledge of the motion of visual objects may
+help predict their future positions..
