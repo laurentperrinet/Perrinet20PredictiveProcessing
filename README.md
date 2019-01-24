@@ -17,7 +17,7 @@ This chapter will review some dynamical predictive processing approaches for vis
 ## active inference
 
 ## topography
-
+### fle
 
 figure: ME. In [Khoei 17], we
 propose a model of predictive
@@ -61,6 +61,36 @@ However, other models such as differential
 latency of postediation (Engleman) were
 also proposed, such that it is yet
 not chedar what is the neural substrate of the fee.
+
+2a2: take from talk
+
+
+The model that we used for the ALE can
+be used with any image. In particular, a single
+flashed dot evokes a expanding / contracting
+isotropic activity while a moving dot may produce
+a soliton-like wave which may traverse an odusion (Khoei]
+More generally, this model may be described
+as a simplification of the Navier Stokes equation of
+fluid dynamics with the advection term. As such,
+solutions to these equations are typically waves which
+are travelling on the 'retinotopic map. A particular
+feature of these maps is that these in dude an
+amplification term for rectilinear motions . As
+a consequence, once an object begins to be tracked,
+its position is predicted in the future, such that
+position and velocity are better estimated. on the
+contrary, a dot which is moving on an unpredictable
+tragectory is explained away by the system. This explains
+some of the iron. linear, binary behaviours explained
+by this model. It is of partial interest at
+this point to understand if such a model
+extends to dher stimuli or has any
+neural correlate.
+
+### neural correlate of apparent motion
+
+
 
 ## neural implementation
 
