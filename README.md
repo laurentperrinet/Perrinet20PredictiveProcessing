@@ -12,3 +12,32 @@ However, there are limits to this efficiency. First, luminous information can be
 A correct definition of time in that processes is essential to this endeavour. For instance, as we record a neural cell in some visual areas, we may display in a raster plot the timing of the spikes that the cell emitted. The time is relative to that of the experimenter and is given thanks to an external clock. The plot is shown a posteriori, that is, after the recording of the spike trains. In contrast, a neuron has no access to a central clock but its response is controlled by the distribution of electro-chemical gradients on its membrane, and only at this present time. Such an observation is essential in understanding the principles guiding the organization of visual processes. In particular, predictive processes can be only defined in this interoceptive time, using only information at the present.
 
 This chapter will review some dynamical predictive processing approaches for vision at different scales of analysis, from the whole system to intermediate representations and finally to neurons [marr].  First, we will apply the FEP to vision as a normative approach. Extending this principle with the capacity of actively sample sensory input, we will define Active Inference (AI) and its potential role in understanding vision, and also behaviors such as eye movements. Then, we will extend it to understand how such processes may be implemented in retinotopic maps. In particular, we will show how such a model may explain a visual illusion, the Flash-lag effect. This will then be compared with neurophysiological data and try to understand the potential role of travelling waves in shaping visual processing. Finally, we will review possible implementations of such models in Spiking Neural Networks. In particular, we will review some models of elementary micro-circuits and detail some potential rules for learning the structure of their connections in an unsupervised manner.
+
+
+## active inference
+
+## topography
+
+The flash-lag effect is a visual
+illusion which is popular for its
+generality and simplicity. In its original
+form [McKay], the oben en is asked to
+always fixate on a central cross in the
+screen. Then a dot traverses the
+screen with a constant, rectilinear
+Weotaion. As it reaches the center of
+the screen, another dot is briefly
+flashed just below the moving dot.
+While they are vertically perfectly
+aligned, the flashed dot Is perceived
+as dragging the moving dot. This
+visual illusion saw a resurgence of
+scientific interest with the motion
+extrapolation model [Ninja wow].
+However, other models such as differential
+latency of postediation (Engleman) were
+also proposed, such that it is yet
+not chedar what is the neural substrate of the fee.
+
+## neural implementation
+
