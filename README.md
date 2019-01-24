@@ -90,7 +90,27 @@ neural correlate.
 
 ### neural correlate of apparent motion
 
-
+When two stationary dots are flashed at close successive
+positions and time, observers may experience a
+percept of motion. This transforms the presentation
+of a discrete pattern into a continuous one. This
+visual illusion is called apparent motion and can
+persist over a relatively long range (superior to the
+characteristic size of the RF of a Va neuron). Similarly
+to the study above for the FL E, it is believed
+that this illusion can be explained by predictive
+processes. Due to the dynamical characteristics of KRAM,
+At neural implementation of this illusion would
+dye in the propagation of visual information through
+intra-cortical interactions. In particular, these
+lateral interactions may evoke waves of activity in
+µ which may modulate the integration of
+the sense my information coming from thalamocortical connections.
+An interesting prospect is thus to record neural
+activity during the presentation of the tram stimulus.
+This allows oho quantitatively assess why the superposition
+of L dots as in L RAM is more than the sum of
+the two dots in isolation.
 
 ## neural implementation
 
