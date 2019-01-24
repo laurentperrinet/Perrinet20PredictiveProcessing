@@ -18,6 +18,29 @@ This chapter will review some dynamical predictive processing approaches for vis
 
 ## topography
 
+
+figure: ME. In [Khoei 17], we
+propose a model of predictive
+processing in a topographic map.
+A) the modild consist of a two-
+layered map: an input source target
+integrates information from visual sensors,
+knowing the sensory delay. This map represents
+both position and velocity, and we represent here
+a representation for a Amano-dimensional variable.
+Using this belief (as reprecinoted here by the
+probabity distribution function), it is possible
+to project this information to a second target
+tayer that integrates information knowing a
+compensation for the delay. In that particular
+cosy speed is positive and thus information
+of position is transported to the right.
+⑧ Representation of the inferred probability
+of position and velocity as a function of the
+iterations of the model (time). darker colon
+denotes higher probabilities. See tht for an
+interpretation.
+
 The flash-lag effect is a visual
 illusion which is popular for its
 generality and simplicity. In its original
