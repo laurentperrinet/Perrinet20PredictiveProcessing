@@ -78,3 +78,27 @@ essential in understanding the principles guiding
 the organization of visual processes. In particular,
 predictive processes can be only defined in this
 interruptive time, using only information at the present.
+
+This chapter will review some dynamical
+predictive processing approaches at different
+analysis scale, from the whole system to intermediate
+representations and finally to neurons [man]
+First, we will apply the FFP to vision as a
+normative approach, Extending this principle with
+the capacity of actively sample sensory input, we
+will define Active Inference and its potential
+role in understanding vision, and also behaviors
+such as eye movements.
+Then, we will extend it to understand how such
+processes may be implemented in retinotopic maps.
+In particular, we will show how such a model
+may explain a visual illusion, the Flash-lag effect.
+This will then be compared with neurophysiological
+data and try to understand the potential role of
+travelling waves in shaping visual processing.
+Finally, we will review possible implementations
+of such models in Spiking Neural Networks. In
+particular, we will review some models of elementary
+micro-circuits and detail some potential rules
+for learning the structure of their connections
+in an unsupervised manner.
