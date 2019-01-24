@@ -19,50 +19,12 @@ This chapter will review some dynamical predictive processing approaches for vis
 ## topography
 ### fle
 
-figure: ME. In [Khoei 17], we
-propose a model of predictive
-processing in a topographic map.
-A) the modild consist of a two-
-layered map: an input source target
-integrates information from visual sensors,
-knowing the sensory delay. This map represents
-both position and velocity, and we represent here
-a representation for a Amano-dimensional variable.
-Using this belief (as reprecinoted here by the
-probabity distribution function), it is possible
-to project this information to a second target
-tayer that integrates information knowing a
-compensation for the delay. In that particular
-cosy speed is positive and thus information
-of position is transported to the right.
-⑧ Representation of the inferred probability
-of position and velocity as a function of the
-iterations of the model (time). darker colon
-denotes higher probabilities. See tht for an
-interpretation.
+figure: ME. In [Khoei 17], we propose a model of predictive processing in a topographic map. A) the model consists of a two-layered map: an input source target integrates information from visual sensors. This map represents both position and velocity, and we represent here a representation for a mono-dimensional variable. Using this belief (as represented here by the probability distribution function), it is possible to project this information to a second target layer that integrates information knowing a compensation for the delay. In that particular case, speed is positive and thus information of position is transported to the right. B) Response of a model compensating for a 100ms delay to a moving dot. Representation of the inferred probability of position and velocity as a function of the iterations of the model (time). Darker colors denote higher probabilities. See text for an interpretation of the result.
 
-The flash-lag effect is a visual
-illusion which is popular for its
-generality and simplicity. In its original
-form [McKay], the oben en is asked to
-always fixate on a central cross in the
-screen. Then a dot traverses the
-screen with a constant, rectilinear
-Weotaion. As it reaches the center of
-the screen, another dot is briefly
-flashed just below the moving dot.
-While they are vertically perfectly
-aligned, the flashed dot Is perceived
-as dragging the moving dot. This
-visual illusion saw a resurgence of
-scientific interest with the motion
-extrapolation model [Ninja wow].
-However, other models such as differential
-latency of postediation (Engleman) were
-also proposed, such that it is yet
-not chedar what is the neural substrate of the fee.
+The flash-lag effect (FLE) is a visual illusion which is popular for its generality and simplicity. In its original form [McKay], the observer is asked to always fixate on a central cross in the screen. A dot traverses the screen with a constant, horizontal motion. As it reaches the center of the screen, another dot is briefly flashed just below the moving dot. While they are vertically perfectly aligned, the flashed dot is perceived as lagging the moving dot. This visual illusion saw a resurgence of scientific interest with the motion extrapolation model [Nihjawan]. However, other models such as differential latency of postdiction (Eagleman) were also proposed, such that it is yet not clear what is the neural substrate of the FLE.
 
-2a2: take from talk
+
+ 2a2: take from talk
 
 
 The model that we used for the ALE can
@@ -154,4 +116,3 @@ the input stimulus. This corresponds to the implementation
 of a predictive process using on a priori knowledge
 of smoothly-moving visual objects-
 ## neural implementation
-
