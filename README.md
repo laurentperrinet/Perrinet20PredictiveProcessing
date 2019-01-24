@@ -112,5 +112,25 @@ This allows oho quantitatively assess why the superposition
 of L dots as in L RAM is more than the sum of
 the two dots in isolation.
 
+In this study, we used USD to record the
+activity of the primary visual cortex (Ve) of macaque
+monkeys. Is there any difference between the
+response to the single dot and that to the two dots?
+Indeed VSD recordings allow to record the
+activity of populations of neurons which are approx
+at the scale of a cortical column. Algo, the response
+is rapid enough to capture the dynamics of the
+Anr stimulus. These recordings show that as
+the evoked activity of the second stimulus reaches
+Va, a cortical suppressive wave propagates low and
+the retinolopic wave evoked by the first. This was
+put in evidence by statistically comparing the
+response of the brain to the response of the
+two dots in isolation.
+In particular, we found that the activity for
+the brain stimulus was more precise, suggesting
+that such suppressive wave could serve as
+predictive processing step to be reared-out in
+uptream cortical areas.
 ## neural implementation
 
