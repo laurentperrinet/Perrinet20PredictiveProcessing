@@ -1,12 +1,14 @@
-default: doc markdown pdf
+default: doc markdown
 
 SRC=Perrinet19PredictiveProcessing
 
+OPTIONS=-f markdown+tex_math_dollars  --smart --standalone --mathjax --filter pandoc-crossref --filter pandoc-crossref  --bibliography=$(SRC).bib
+
 markdown:
-	pandoc -f markdown $(SRC).md -t markdown --bibliography=$(SRC).bib -o README.md
+	pandoc $(OPTIONS) $(SRC).md -t markdown -o README.md
 
 doc:
-	pandoc -f markdown $(SRC).md -t docx --bibliography=$(SRC).bib -o $(SRC).doc
+	pandoc $(OPTIONS) $(SRC).md -t docx -o $(SRC).doc
 
 pdf:
-	pandoc -f markdown+tex_math_dollars $(SRC).md  --mathjax -t latex --bibliography=$(SRC).bib -o $(SRC).pdf
+	pandoc $(OPTIONS) $(SRC).md -t latex -o $(SRC).pdf
