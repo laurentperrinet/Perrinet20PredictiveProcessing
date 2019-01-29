@@ -5,35 +5,17 @@ institute: Institut de Neurosciences de la Timone, CNRS / Aix-Marseille Universi
 keywords:
     - Vision
     - Active Inference
-abstract: Visual areas are essential in transforming the raw luminous signal into a representation which efficiently conveys information about the environment. This process is constrained by various factors such as a wide variety of changes in the characteristics of the visual image but also by the necessity to be able to respond as quickly as possible to the incoming sensory stream, for instance to drive a movement of the eyes to the location of a potential danger. To achieve this, it is believed that the visual system takes advantage of the existence of a priori knowledge in the structure of visual information, such as the regularity in the shape and motion of visual objects. As such, the predictive coding coding framework offers a unified theory to explain many of the mechanisms at the different levels of the visual system and which were unveiled by decades of study in neurophysiology and psychophysics. However, we still lack a global normative approach unifying those mechanisms and we will review here some of the promising approaches which allow to explain the processing of visual information in the visual hierarchy from the time scale of coding to that of learning. In particular, we will describe how Active Inference, that is predictive coding with the ability to actively sample the visual space, can provide an unified account of visual mechanisms from the sensory information to the generation of an appropriate action. Then, we will extend this paradigm to the case where information is distributed on a topography, such as is the case for retino-topically organised visual areas. In particular, we will compare such models in light of recent neurophysiological data showing the role of travelling waves in shaping visual processing. Finally, we will propose some lines of research to understand how the previous functional models may be implemented at the neural level. In particular, we will describe models of cortical processing in terms of prototypical micro-circuits. These allow to separate the different flows of information, from feed-forward prediction error to feed-back anticipation error. Still, the particular implementation of such a circuit is not known and we will review some possible implementations using Spiking Neural Networks.
+website: http://invibe.net/LaurentPerrinet
+email: Laurent.Perrinet@univ-amu.fr
 
-output: html_document
+abstract: Visual areas are essential in transforming the raw luminous signal into a representation which efficiently conveys information about the environment. This process is constrained by various factors such as a wide variety of changes in the characteristics of the visual image but also by the necessity to be able to respond as quickly as possible to the incoming sensory stream, for instance to drive a movement of the eyes to the location of a potential danger. To achieve this, it is believed that the visual system takes advantage of the existence of a priori knowledge in the structure of visual information, such as the regularity in the shape and motion of visual objects. As such, the predictive coding coding framework offers a unified theory to explain many of the mechanisms at the different levels of the visual system and which were unveiled by decades of study in neurophysiology and psychophysics. However, we still lack a global normative approach unifying those mechanisms and we will review here some of the promising approaches which allow to explain the processing of visual information in the visual hierarchy from the time scale of coding to that of learning. In particular, we will describe how Active Inference, that is predictive coding with the ability to actively sample the visual space, can provide an unified account of visual mechanisms from the sensory information to the generation of an appropriate action. Then, we will extend this paradigm to the case where information is distributed on a topography, such as is the case for retino-topically organised visual areas. In particular, we will compare such models in light of recent neurophysiological data showing the role of travelling waves in shaping visual processing. Finally, we will propose some lines of research to understand how the previous functional models may be implemented at the neural level. In particular, we will describe models of cortical processing in terms of prototypical micro-circuits. These allow to separate the different flows of information, from feed-forward prediction error to feed-back anticipation error. Still, the particular implementation of such a circuit is not known and we will review some possible implementations using Spiking Neural Networks.
 
 bibliography: Perrinet19PredictiveProcessing.bib
 
-
-references:
-- id: fenner2012a
-  title: One-click science marketing
-  author:
-  - family: Fenner
-    given: Martin
-  container-title: Nature Materials
-  volume: 11
-  URL: 'http://dx.doi.org/10.1038/nmat3283'
-  DOI: 10.1038/nmat3283
-  issue: 4
-  publisher: Nature Publishing Group
-  page: 261-263
-  type: article-journal
-  issued:
-    year: 2012
-    month: 3
 ---
 
 
-Blah blah [@fenner2012a, pp. 33-35, 38-39 and *passim*].
-Blah blah [@Atick92] by Atick  [-@Atick92].
+Blah blah [@Atick92, pp. 33-35, 38-39 and *passim*] by Atick  [-@Atick92].
 
 
 ## Motivation : Role of dynamics in neural computations underlying visual processing
@@ -77,7 +59,10 @@ Rao, R. P., and Ballard, D. H. (1999). Predictive coding in the visual cortex: a
 
 ### oculomotor delays PerrinetAdamsFriston14
 
-The central nervous system has to contend with axonal delays, both at the sensory and the motor levels. For instance, in the human visuo-oculomotor system, it takes approximately $\tau_s=50~ms$ for the retinal image to reach the visual areas implicated in motion detection, and a further $\tau_m=40~ms $ to reach the oculomotor muscles.
+hello $ \LaTeX $ and hello $\tau_m=50~ms$
+
+The central nervous system has to contend with axonal delays, both at the sensory and the motor levels. For instance, in the human visuo-oculomotor system, it takes approximately $\tau_s=50~ms$ for the retinal image to reach the visual areas implicated in motion detection, and a further  $\tau_m$ of 40~ms  to reach the oculomotor muscles.
+
 * how does this impact behaviour? Indeed, one challenge for modelling is to understand EMs using AI as a problem of optimal motor control under axonal delays.  let's move to a human, in particular a tennis player ---here (highly trained) Jo-Wilfried Tsonga at Wimbledon---...
 * ...  trying to intercept a passing-shot ball at a (conservative) speed of $20~m.s^{-1}$, the position sensed on the retinal space corresponds to the instant when its image formed on the photoreceptors of the retina and reaches our hypothetical motion perception area behind:
 and at this instant, the sensed physical position is lagging behind (as represented here by $\tau_s \cdot v 1~m$ ), that is, approximately at $45$ degrees of eccentricity (red dotted line),
