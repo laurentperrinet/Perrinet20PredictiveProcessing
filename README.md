@@ -1,3 +1,6 @@
+some formatting tricks
+----------------------
+
 Blah blah [@Atick92, pp. 33-35, 38-39 and *passim*] by Atick
 [-@Atick92].
 
@@ -12,24 +15,16 @@ sensory modifications, such as with eye movements. As such, visual
 processing is not separable from the dynamics of the neural networks
 involved in vision. To make sense of such a complex system, it has been
 proposed that the organization of the visual system is such that it is
-efficient \[AH neave, Barlow\]. Such an ecological framework (Atick\]
-allows to explain many aspects of visual processing. Formalizing such
-optimization strategies in probabilistic language, these may be
-encompassed by the Bayesian Brain framework \[Knill, D. C., and Pouget,
-A. (2004). The Bayesian brain: the role of uncertainty in neural coding
-and computation. Trends Neurosci. 27, 712--719.\]
+efficient [@Attneave54]. Such an ecological framework (Atick\] allows to
+explain many aspects of visual processing. Formalizing such optimization
+strategies in probabilistic language, these may be encompassed by the
+Bayesian Brain framework [@Knill04]
 
 Such principles take different forms such as redundancy reduction
-\[Barlow, H. (1961). "Possible principles underlying the transformations
-of sensory messages," in Sensory Communication, ed. W. Rosenblith
-(Cambridge, MA: MIT Press), 217--34.\], maximisation of information
-transfer \[Linsker, R. (1990). Perceptual neural organization: some
-approaches based on network models and information theory. Annu.
-Rev. Neurosci. 13, 257--281.\] or minimization of metabolic energy.
-However, it is possible to link these different theories into a single
-framework, the Free-Energy Principle \[Friston, K. (2010). The
-free-energy principle: a unified brain theory? Nat. Rev. Neurosci. 11,
-127--138.\]. Key to this principle is the notion that, knowing the
+[@Barlow61], maximisation of information transfer [@Linsker90] or
+minimization of metabolic energy. However, it is possible to link these
+different theories into a single framework, the Free-Energy Principle
+[@Friston10]. Key to this principle is the notion that, knowing the
 processes that generated the visual image and the internal generative
 model that allows its representation, predictive processes will take
 advantage of a priori knowledge to form an optimal representation of the
@@ -70,7 +65,7 @@ this interoceptive time, using only information at the present instant.
 
 This chapter will review some dynamical predictive processing approaches
 for vision at different scales of analysis, from the whole system to
-intermediate representations and finally to neurons \[marr\]. First, we
+intermediate representations and finally to neurons [@Marr83]. First, we
 will apply the FEP to vision as a normative approach. Extending this
 principle with the capacity of actively sampling sensory input, we will
 define Active Inference (AI) and its potential role in understanding
@@ -95,14 +90,15 @@ Trying to understand vision as an efficiency principle seems like a
 teleological principle in which causation would be reversed. However, it
 is one way "by which we may seek to learn how things came to be, and to
 take their places in the harmonious complexity of the world."
-\[d'Arcy\]. Putting this another way, it is not important to know if the
-brain is bayesian, and that some its part may use Bayes rule explictly,
-but rather that it offers for a simpler explanation of these complex
-system. Here, we will consider the visual system from the retina to the
-oculomotor muscles as an organizarional closure (Autopoeise / maturama /
-varela). This will follow basic principles of self-organized behavior:
-namely, the imperative to minimize the entropy of hidden states of the
-world and their sensory consequences.
+[@DArcy-Thompson17, p.XXX]. Putting this another way, it is not
+important to know if the brain is bayesian, and that some its part may
+use Bayes rule explictly, but rather that it offers for a simpler
+explanation of these complex system. Here, we will consider the visual
+system from the retina to the oculomotor muscles as an organizarional
+closure (Autopoeise / maturama / varela). This will follow basic
+principles of self-organized behavior: namely, the imperative to
+minimize the entropy of hidden states of the world and their sensory
+consequences.
 
 ### Friston12
 
@@ -118,14 +114,12 @@ In this work, we explore the idea that saccadic eye movements are
 optimal experiments, in which data are gathered to test hypotheses or
 beliefs about how those data are caused. This provides a plausible model
 of visual search that can be motivated from the basic principles of
-self-organized behavior \[Gibson, J. J. (1979). The Ecological Approach
-to Visual Perception. Boston: Houghton Mifflin.\]: namely, the
-imperative to minimize the entropy of hidden states of the world and
-their sensory consequences. This imperative is met if agents sample
-hidden states of the world efficiently. This efficient sampling of
-salient information can be derived in a fairly straightforward way,
-using approximate Bayesian inference and variational free-energy
-minimization.
+self-organized behavior [@Gibson79]: namely, the imperative to minimize
+the entropy of hidden states of the world and their sensory
+consequences. This imperative is met if agents sample hidden states of
+the world efficiently. This efficient sampling of salient information
+can be derived in a fairly straightforward way, using approximate
+Bayesian inference and variational free-energy minimization.
 
 Simulations of the resulting AI scheme reproduce sequential eye
 movements that are reminiscent of empirically observed saccades and
@@ -278,7 +272,7 @@ topography
 
 ### fle
 
-figure: ME. In \[Khoei 17\], we propose a model of predictive processing
+figure: ME. In [@Khoei17], we propose a model of predictive processing
 in a topographic map. A) the model consists of a two-layered map: an
 input source target integrates information from visual sensors. This map
 represents both position and velocity, and we represent here a
@@ -300,16 +294,16 @@ delayed input knowing $\tau=100~ms$. See text for an interpretation of
 the result.
 
 The flash-lag effect (FLE) is a visual illusion which is popular for its
-generality and simplicity. In its original form \[McKay\], the observer
-is asked to always fixate on a central cross in the screen. A dot
-traverses the screen with a constant, horizontal motion. As it reaches
-the center of the screen, another dot is briefly flashed just below the
-moving dot. While they are vertically perfectly aligned, the flashed dot
-is perceived as lagging the moving dot. This visual illusion saw a
-resurgence of scientific interest with the motion extrapolation model
-\[Nihjawan\]. However, other models such as differential latency of
-postdiction (Eagleman) were also proposed, such that it is yet not clear
-what is the neural substrate of the FLE.
+generality and simplicity. In its original form [@MacKay58], the
+observer is asked to always fixate on a central cross in the screen. A
+dot traverses the screen with a constant, horizontal motion. As it
+reaches the center of the screen, another dot is briefly flashed just
+below the moving dot. While they are vertically perfectly aligned, the
+flashed dot is perceived as lagging the moving dot. This visual illusion
+saw a resurgence of scientific interest with the motion extrapolation
+model [@Nijhawan02, @Nijhawan09]. However, other models such as
+differential latency of postdiction (Eagleman) were also proposed, such
+that it is yet not clear what is the neural substrate of the FLE.
 
 Activity in both models shows three different phases. First, there is a
 rapid build-up of the precision of the target after the first appearance
@@ -334,7 +328,7 @@ perceived as leading the flash.
 The model that we used for the FLE can be used with any image. In
 particular, a single flashed dot evokes an expanding then contracting
 isotropic activity while a moving dot may produce a soliton-like wave
-which may traverse an occlusion \[Khoei13\]. More generally, this model
+which may traverse an occlusion [@Khoei13]. More generally, this model
 may be described as a simplification of the Navier Stokes equation of
 fluid dynamics using the advection term. As such, solutions to these
 equations are typically waves which are travelling on the retinotopic
@@ -405,6 +399,4 @@ neural implementation
 
 ### The role of cortical waves in shaping the dynamic processing of visual information
 
-"Muller, Chavane, Reynolds, Sejnowski", "2018", 'Nature Reviews
-Neuroscience 19 (5), 255', 'Cortical travelling waves: mechanisms and
-computational principles'
+single trials [@Muller14] review in [@Muller18]
