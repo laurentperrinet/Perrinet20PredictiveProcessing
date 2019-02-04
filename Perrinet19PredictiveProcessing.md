@@ -92,20 +92,14 @@ Especially, by manipulating the a priori precision of internal belief at the dif
 particularly relevant for a quantitative understanding of the diversity of behavionss in the human population [@Karvelis18autistic].
 
 ### oculomotor delays PerrinetAdamsFriston14
-An interesting perspective to study
-the role of such dynamics in cognition is
-to extend this model to more realistic
-description of the constraints faced by
-the visual system. Indeed,
-actually realize action.
-Extending the modelling framework of
-[@Adams 123 for SPE M, it was observed in
-[@Perrine Adams Frishon 143 that
+An interesting perspective to study the role of such dynamics in cognition is to extend this model to more realistic description of the constraints faced by the visual system. Indeed, the central nervous system has to contend with axonal delays, both at the sensory and the motor levels. For instance, in the human visuo-oculomotor system, it takes approximately $\tau_s=50~ms$ for the retinal image to reach the visual areas implicated in motion detection, and a further  $\tau_m$ of 40~ms  to reach the oculomotor muscles and actually realize action.
 
 
-The central nervous system has to contend with axonal delays, both at the sensory and the motor levels. For instance, in the human visuo-oculomotor system, it takes approximately $\tau_s=50~ms$ for the retinal image to reach the visual areas implicated in motion detection, and a further  $\tau_m$ of 40~ms  to reach the oculomotor muscles.
 
-* how does this impact behaviour? Indeed, one challenge for modelling is to understand EMs using AI as a problem of optimal motor control under axonal delays.  let's move to a human, in particular a tennis player ---here (highly trained) Jo-Wilfried Tsonga at Wimbledon---...
+Extending the modelling framework of [@Adams12] for SPEM, it was observed in [@PerrinetAdamsFriston14] that ...
+
+
+Indeed, one challenge for modelling is to understand EMs using AI as a problem of optimal motor control under axonal delays.  let's move to a human, in particular a tennis player ---here (highly trained) Jo-Wilfried Tsonga at Wimbledon---...
 * ...  trying to intercept a passing-shot ball at a (conservative) speed of $20~m.s^{-1}$, the position sensed on the retinal space corresponds to the instant when its image formed on the photoreceptors of the retina and reaches our hypothetical motion perception area behind:
 and at this instant, the sensed physical position is lagging behind (as represented here by $\tau_s \cdot v 1~m$ ), that is, approximately at $45$ degrees of eccentricity (red dotted line),
 * while the  position at the moment of emitting the motor command will be $.8~m$ ahead of its present physical position ($\tau_m \cdot v$).
