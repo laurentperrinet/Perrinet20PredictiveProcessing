@@ -83,6 +83,27 @@ ecological to keep eyes open to explore the different parts of the visual scene.
 
 ### neural implementation + Adams12
 
+As we have seen above, the agent that
+we have defined is simply ruled by
+aa set of differential equations.
+These equations are the Result of
+a generic approximation on the form
+of the internal representation. Such
+equations are simplified when using
+the Laplace approximation, that is, that
+internal beliefs are represented
+by multidimensional Gaussian
+probability distribution functions,
+This holds true in hall generality
+when transforming variables in
+higher dimensions, such as is
+the case for generalized
+coordinates [@ormiston og] which
+represent at any (present) time,
+the Taylor expansion of
+the temporal trajectory
+of any variable
+
 This mathematical framework can be mapped to the anatomy of the visual system. Similar to the sketch that we have shown above, "compiling" (that is, solving) the equations of Free-energy minimization forms a set of coupled differential equations which correpond to different node along the visuo-oculomotor pathways.
 
 Rao, R. P., and Ballard, D. H. (1999). Predictive coding in the visual cortex: a functional interpretation of some extra-classical receptive-field effects. Nat. Neurosci. 2, 79–87.
