@@ -86,91 +86,10 @@ ecological to keep eyes open to explore the different parts of the visual scene.
 As we have seen above, the agent that we have defined is simply ruled by aa set of differential equations. These equations are the Result of a generic approximation on the form of the internal representation. Such equations are simplified when using the Laplace approximation, that is, that internal beliefs are represented by multidimensional Gaussian probability distribution functions. This holds true in all generality when transforming variables in higher dimensions, such as is
 the case for generalized coordinates [@Friston10generalized] which represent at any (present) time, the Taylor expansion of the temporal trajectory of any variable.
 
-[@Rao99]
+As a consequence, the solution provided by the agent gives a plausible neural implementation as a set of hierarchically organized linear / non-linear equations [@Heeger17]. In particular these equations are the Kalman filtering solution which provides with a Bayes-optimal estimate of hidden states and action in generalized coordinates of motion. In particular, this solution generalizes the predictive coding framework offered by [@Rao99]. Similarly to that model, the dynamical evolution of activity at the different levels of the hierarchy is governed by the balance in the integration of internal (past) beliefs with (present) sensory information. In particular, the weights assigned in information passing is based on the (inferred) precision of each variable in the dependency graphed. This allow us to predict the influence of the prior knowledge of the precision at a given level on the final outcome. The predictive power of the modelling of such an agent is important to understand deviations from the median behavior within a population of agents. For instance, there are acute differences in the smooth pursuit eye movements (SPEM) observed in control and schizophrenic patients. SPEM are distinct from saccades as those are voluntary eye movements which aim at stabilizing the retinal image of a smoothly moving visual object. For a target following the motion of a pendulum for instance, the eye will produce a prototypical response to follow this predictable target. Interestingly, schizophrenic agents tend to produce a different pattern of SPEM when the pendulum is occluded on half cycles (for instance as it passes behind an opaque cardboard on one side from the midline). In general, SPEM may still follow the target, as it is ocluded (behind the cardboard) yet with a lower gain [@Barnes91]. As the target reappears from behind the ocluder, schizophrenic agents engage more quickly to a SPEM response [@Avila06]. In [@Adams12], we have modelled an agent which has the capability to smoothly follow a moving object. This model allows in particular to  understand most prototypical SPEM as a Bayes-optimal solution to minimize surprise in the perception / action loop implemented in the agent's dependency graph.
 
--
-As a consequence, the solution provided by the
-agent gives a plausible neural implementation
-as a set of hierarchically organized linear-
-non-linear equations [@thegn). In particular
-these equations are the Kalman filtering
-solution which provides with a Bayes-optimal
-estimate of hidden states and action in
-generalized coordinates of motion. In
-particular, this solution generalizes the
-predictive coding framework offered by
-[@Rao 99J.
-Mmmmm
-similarly to that model, the dynamical
-evolution of activity at the different levels
-of the hierarchy is governed by the
-balance in the integration of internal (par)
-beliefs with (present) sensory information.
-In particulars the weight assigned in
-information passing is based on the
-(inferred) precision of each variable in
-the dependency graphed. This allow us to
-predict the influence of the prion
-knowledge of the precision at a given
-level on the final outcome.
-The predictive power of the modelling of
-such an agent is important to understand
-deviations. from the median behavior
-within a population of agents. For
-instance, there are acute differences in
-the smooth pursuit eye movements (spam)
-observed in control and schizophrenic
-patients. SPEM are distinct from
-saccades as those are voluntary eye
-movements which aim at stabilizing the
-retinal image of a smoothly moving
-visual object. For a target following
-the motion of a pendulum for instance,
-the eye will produce a prototypical
-response to follow this predictable target.
-Interestingly, schizophrenic agents tend to
-produce a different pattern of spam
-when the pendulum is occluded on
-half cycles (for instance as it passes
-behind an opaque cardboard on one
-side from the midline). In general, spear
-may still follow the target, as it is
-• chimp (behind the cardboard) yet with a
-tower-gain of@Barnes 983 As the target
-reappears from behind the ocluder, schizo ph
-agents engage more quickly to a span
-response [@Avila 05]. In ferdams 12]
-we have modelled an agent which has
-the capability to smoothly follow a
-moving object. This model allows in
-particular to understand most prototypical
-SPEE M, as a Bayes-optimal solution to
-minimize surprise in the percept-en-
-action loop implemented in the agent's
-dependency graph.
-
-Especially, by manipulating the a priori
-precision of internal belief at the different
-levels of the hierarchical model, one
-could reproduce different-classes of
-behaviors as evidenced by spear to
-classical psychophysical stimuli.
-for the half-cycle ocluded pendulum,
-fAdams 12) found that manipulating
-the post-synaptic gain of predictive
-neurons reproduced these observed
-behaviors in schizophrenia and control
-populations. Such a difference in the
-balance of information flow could have
-for instance a genetic origin in the
-egression of this grain and vicariously
-in the behavior of this population.
-Importantly, such method allows to perform
-quantitative predictions. Such applications
-of computational neuroscience seem
-particularly relevant for a quantitative
-understanding of the diversity of
-behavionsinthehwmar.pro#ulahou@eries]
+Especially, by manipulating the a priori precision of internal belief at the different levels of the hierarchical model, one could reproduce different-classes of behaviors as evidenced by SPEM to classical psychophysical stimuli. For the half-cycle ocluded pendulum, [@Adams12] found that manipulating the post-synaptic gain of predictive neurons reproduced these observed behaviors in schizophrenia and control populations. Such a difference in the balance of information flow could have for instance a genetic origin in the egression of this grain and vicariously in the behavior of this population. Importantly, such method allows to perform quantitative predictions. Such applications of computational neuroscience seem
+particularly relevant for a quantitative understanding of the diversity of behavionss in the human population [@Series]
 
 ### oculomotor delays PerrinetAdamsFriston14
 
