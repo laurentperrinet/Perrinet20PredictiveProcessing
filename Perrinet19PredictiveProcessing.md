@@ -84,7 +84,7 @@ ecological to keep eyes open to explore the different parts of the visual scene.
 ### neural implementation + Adams12
 
 As we have seen above, the agent that we have defined is simply ruled by aa set of differential equations. These equations are the Result of a generic approximation on the form of the internal representation. Such equations are simplified when using the Laplace approximation, that is, that internal beliefs are represented by multidimensional Gaussian probability distribution functions. This holds true in all generality when transforming variables in higher dimensions, such as is
-the case for generalized coordinates [@Friston10] which represent at any (present) time, the Taylor expansion of the temporal trajectory of any variable.
+the case for generalized coordinates [@Friston10generalized] which represent at any (present) time, the Taylor expansion of the temporal trajectory of any variable.
 
 [@Rao99]
 
