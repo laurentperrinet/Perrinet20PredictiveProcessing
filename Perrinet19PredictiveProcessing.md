@@ -77,7 +77,7 @@ the hidden world. This is reminiscent
 of Helmoltz's 1866 definition of perception
 as hypothesis testing@Gregory 803
 
-In a first study, we will propose that PERCEPTION (Helmhotz 1866) is an active process of hypothesis testing by which we seek to confirm our predictive models of the (hidden) world. In particular, we will equip our sensory system with the ability to actively sample from the visual world, defining  Active Inference (AI). If perception corresponds to hypothesis testing (Gregory, R. L. (1980). Perceptions as hypotheses. Philos. Trans. R. Soc. Lond. B Biol. Sci. 290, 181–197.); then visual searches might be construed as experiments that generate sensory data. In this work, we explore the idea that saccadic eye movements are optimal experiments, in which data are gathered to test hypotheses or beliefs about how those data are caused. This provides a plausible model of visual search that can be motivated from the basic principles of self-organized behavior [@Gibson79]: namely, the imperative to minimize the entropy of hidden states of the world and their sensory consequences. This imperative is met if agents sample hidden states of the world efficiently. This efficient sampling of salient information can be derived in a fairly straightforward way, using approximate Bayesian inference and variational free-energy minimization.
+This provides a plausible model of visual search that can be motivated from the basic principles of self-organized behavior [@Gibson79]: namely, the imperative to minimize the entropy of hidden states of the world and their sensory consequences. This imperative is met if agents sample hidden states of the world efficiently. This efficient sampling of salient information can be derived in a fairly straightforward way, using approximate Bayesian inference and variational free-energy minimization.
 
 
 One key ingredient to this process is
@@ -88,8 +88,37 @@ hypothesis as they are realized into actions.
 This augment the FEP of an agent
 such as to define Active Inference.
 
+Using the SPM simulation environment, f@Fris honk]
+provides with simulations of the behaviour
+of such an agent which senses the image
+of a face, and knowing an internal
+model of their structure . In twaddling
+the agent, we dearly delineate the hidden
+eaten al state (the visual image, the
+actual position of the eye) from the internal
+state of the agent. Those internal beliefs are
+linked by a probabilistic dependency graph
+and evolve such as to minimize Variational
+free-energy. This takes the form of differential
+equations with respect to Y the internal
+belief 2) the counterfactual action Inhis
+action is the one which is expected to reduce
+pensomy surprise and is ultimately realized
+by an arc reflex.
 
 Simulations of the resulting AI scheme reproduce sequential eye movements that are reminiscent of empirically observed saccades  and provide some counterintuitive insights into the way that sensory evidence is accumulated or assimilated into beliefs about the world.
+
+In particular, knowing the localized image
+sensed on the retina, Saccades will explore points
+of interests (Ryer, mouth, nose) until an
+internal representation of the whole image is
+made. This Active Inference process allows to
+bridge the image in intrinsic (retinal) coordinates
+with that extrinsic world coordinates which is
+prevalent in visual perception.
+Looking closely at the process underlying the
+behaviour of this agent, this could be encompassed
+by a set of differential equations. In particular,
 
 This schematic shows the dependencies among various quantities modelling exchanges of an agent with the environment. It shows the states of the environment and the system in terms of a probabilistic dependency graph, where connections denote directed (causal) dependencies. The quantities are described within the nodes of this graph -- with exemplar forms for their dependencies on other variables.
 
