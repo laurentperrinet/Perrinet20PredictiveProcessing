@@ -72,28 +72,37 @@ The predictive power of the modeling of such an agent is important to understand
 
 Especially, by manipulating the a priori precision of internal beliefs at the different levels of the hierarchical model, one could reproduce different-classes of behaviors as evidenced by SPEM to classical psychophysical stimuli. For the half-cycle occluded pendulum, [@Adams12] found that manipulating the post-synaptic gain of predictive neurons reproduced these observed behaviors in schizophrenia and control populations. Such a difference in the balance of information flow could have for instance a genetic origin in the expression of this gain and vicariously in the behavior of this population. Importantly, such a method thus allows to perform quantitative predictions and such applications of computational neuroscience seem particularly relevant for a better understanding of the diversity of behaviours in the human population (see for instance [@Karvelis18autistic]).
 
-### oculomotor delays PerrinetAdamsFriston14
-An interesting perspective to study the role of such dynamics in cognition is to extend this model to more realistic description of the constraints faced by the visual system. Indeed, the central nervous system has to contend with axonal delays, both at the sensory and the motor levels. For instance, in the human visuo-oculomotor system, it takes approximately $\tau_s=50~ms$ for the retinal image to reach the visual areas implicated in motion detection, and a further  $\tau_m$ of 40~ms  to reach the oculomotor muscles and actually realize action.
+### introducing delays in AI
+![This figure reports the simulation of smooth pursuit when the target motion is hemi-sinusoidal, as would happen for a pendulum that would be stopped at each half cycle left of the vertical (broken black lines in the lower-right panel).
+We report the horizontal excursions of oculomotor angle in retinal space (two upper panels) and the angular position of the target in an intrinsic frame of reference (visual space, lower panels).
+The lower-right panel shows the true value of the displacement in visual space (broken black lines) and the action (blue line) which is responsible for
+oculomotor displacements.
+The upper left panel shows in retinal space the predicted sensory input (colored lines) and sensory prediction errors (dotted red lines)
+along with the true values (broken black lines).
+The latter is effectively the distance of the target from the centre of gaze
+and reports the spatial lag of the target that is being followed (solid
+red line). One can see clearly the initial displacement of the target
+that is suppressed after a few hundred milliseconds.
+The sensory
+predictions are based upon the conditional expectations of hidden
+oculomotor (blue line) and target (red line) angular displacements shown
+on the upper right. The grey regions correspond to 90\% Bayesian
+confidence intervals and the broken lines show the true values of these
+hidden states.
+The generative model used here has been
+equipped with a second hierarchical level that contains hidden states,
+modeling latent periodic behavior of the (hidden) causes of target
+motion (states not shown here).
+The hidden cause of these displacements is shown with its
+conditional expectation on the lower left. The true cause and action are
+shown on the lower right. The action (blue line) is responsible for
+oculomotor displacements and is driven by the proprioceptive prediction
+errors.
+](PerrinetAdamsFriston14anticip.png){#fig:PerrinetAdamsFriston14anticip}
 
-one challenge for modelling is to understand EMs using AI as a problem of optimal motor control under axonal delays. let's take the exampls of a tennis player trying to intercept a passing-shot ball at a (conservative) speed of $20m.s^{-1}$, the position sensed on the retinal space corresponds to the instant when its image formed on the photoreceptors of the retina and reaches our hypothetical motion perception area behind: and at this instant, the sensed physical position is lagging behind (as represented here by $\tau_s \cdot v 1m$ ), that is, approximately at $45$ degrees of eccentricity, while the position at the moment of emitting the motor command will be $.8~m$ ahead of its present physical position ($\tau_m \cdot v$).
-As a consequence, the player's gaze can be directed to the ball at its present position, in anticipatory fashion. Alternatively’ Optimal control directs action (future motion of the eye) to the expected position hen motor commands reach the periphery (muscles). This is obviously an interesting challenge for modelling an optimal control theory.
+An interesting perspective to study the role of such dynamics in cognition is to extend this model to a more realistic description of the constraints faced by the visual system. Indeed, the central nervous system has to contend with axonal delays, both at the sensory and the motor levels. For instance, in the human visuo-oculomotor system, it takes approximately $\tau_s=50~ms$ for the retinal image to reach the visual areas implicated in motion detection, and a further  $\tau_m$ of 40~ms  to reach the oculomotor muscles and actually realize action. One challenge for modeling is to understand eye movements using AI as a problem of optimal motor control under axonal delays. Let's take the example of a tennis player trying to intercept a passing-shot ball at a (conservative) speed of $20m.s^{-1}$, the position sensed on the retinal space corresponds to the instant when its image formed on the photoreceptors of the retina and reaches our hypothetical motion perception area behind: and at this instant, the sensed physical position is lagging behind (as represented here by $\tau_s \cdot v 1m$ ), that is, approximately at $45$ degrees of eccentricity, while the position at the moment of emitting the motor command will be $.8~m$ ahead of its present physical position ($\tau_m \cdot v$). As a consequence, the player's gaze can be directed to the ball at its present position, in anticipatory fashion. Alternatively’ Optimal control directs action (future motion of the eye) to the expected position hen motor commands reach the periphery (muscles). This is obviously an interesting challenge for modeling an optimal control theory.
 
-Extending the modelling framework of [@Adams12] for SPEM, it was observed in [@PerrinetAdamsFriston14] that ...
-
-. Representing hidden states in generalized coordinates provides a simple way of compensating for both these delays.
-
-a novelty of our approach including known delays was to take advantage of generalized coordinates to create an operator $T$ to travel back and forth in time with a delay $\tau$.
-
-
-
- It is simply formed by using a Taylor expansion of the succesive orders in the generalized coordinates which takes this form in matrix form and thus simply by taking the exponential matrix form. Applying such an operator to the FEM generates a slightly different and more complicated formulation but it is important to note that to compensate for delays, there is no change in the structure of the network but just in how the synaptic weights are tuned (similar to what we had done in the first part)
-
-In particular, when the agent has
-some belief about these delays, it
-can Bayes-optimally integrate
-internal belief. Such a behaviour
-is still regulated by the same type
-of internal equation.
+Extending the modeling framework of [@Adams12] for SPEM, it was observed in [@PerrinetAdamsFriston14] that representing hidden states in generalized coordinates provides a simple way of compensating for both these delays. A novelty of this approach is to include the delays in the dynamics at the present time by takeing advantage of generalized coordinates to create an operator $T$ to travel back and forth in time with a delay $\tau$. It is simply formed by using a Taylor expansion of the succesive orders in the generalized coordinates which takes this form in matrix form and thus simply by taking the exponential matrix form. Applying such an operator to the FEM generates a slightly different and more complicated formulation but it is important to note that to compensate for delays, there is no change in the structure of the network but just in how the synaptic weights are tuned (similar to what we had done in the first part). In particular, when the agent has some belief about these delays, it can Bayes-optimally integrate internal belief. Such a behaviour is still regulated by the same type of internal equation.
 Famous quote:
 time travel = matrix
 
