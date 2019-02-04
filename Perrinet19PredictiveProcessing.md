@@ -77,7 +77,24 @@ action is the one which is expected to reduce pensomy surprise and is ultimately
 Simulations of the resulting AI scheme reproduce sequential eye movements that are reminiscent of empirically observed saccades  and provide some counterintuitive insights into the way that sensory evidence is accumulated or assimilated into beliefs about the world. In particular, knowing the localized image sensed on the retina, Saccades will explore points
 of interests (eyes, mouth, nose) until an internal representation of the whole image is made. This Active Inference process allows to bridge the image in intrinsic (retinal) coordinates with that extrinsic world coordinates which is prevalent in visual perception. Looking closely at the process underlying the behaviour of this agent, this could be encompassed
 by a set of differential equations. In particular,
-
+this model highlights a solution to
+a common misconception about FEP as suipuse
+minimization. Indeed, if the agent was
+to close his eyes, the sensory surprise
+would be minimal as one would
+then precisely expect a pitch-dark visual
+scene. However, in the graph of
+dependencies which defines the agent,
+such a counterfactual,(prospective)
+hypothesis would be highly penalized
+as it would also be a priori
+known that such an action would
+not yield any minimisation of the
+surprise about the prospective visual scene.
+globally, it is therefore more
+ecological to keep eyes open to
+explore the different parts of the
+visual scene.
 
 ### neural implementation + Adams12
 
