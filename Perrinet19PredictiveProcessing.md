@@ -94,9 +94,33 @@ particularly relevant for a quantitative understanding of the diversity of behav
 ### oculomotor delays PerrinetAdamsFriston14
 An interesting perspective to study the role of such dynamics in cognition is to extend this model to more realistic description of the constraints faced by the visual system. Indeed, the central nervous system has to contend with axonal delays, both at the sensory and the motor levels. For instance, in the human visuo-oculomotor system, it takes approximately $\tau_s=50~ms$ for the retinal image to reach the visual areas implicated in motion detection, and a further  $\tau_m$ of 40~ms  to reach the oculomotor muscles and actually realize action.
 
-
+one challenge for modelling is to understand EMs using AI as a problem of optimal motor control under axonal delays. let's take the exampls of a tennis player trying to intercept a passing-shot ball at a (conservative) speed of $20m.s^{-1}$, the position sensed on the retinal space corresponds to the instant when its image formed on the photoreceptors of the retina and reaches our hypothetical motion perception area behind: and at this instant, the sensed physical position is lagging behind (as represented here by $\tau_s \cdot v 1m$ ), that is, approximately at $45$ degrees of eccentricity, while the position at the moment of emitting the motor command will be $.8~m$ ahead of its present physical position ($\tau_m \cdot v$).
+As a consequence, the player's gaze can be directed to the ball at its present position, in anticipatory fashion. Alternatively’ Optimal control directs action (future motion of the eye) to the expected position hen motor commands reach the periphery (muscles). This is obviously an interesting challenge for modelling an optimal control theory.
 
 Extending the modelling framework of [@Adams12] for SPEM, it was observed in [@PerrinetAdamsFriston14] that ...
+
+. Representing hidden states in generalized coordinates provides a simple way of compensating for both these delays.
+
+a novelty of our approach including known delays was to take advantage of generalized coordinates to create an operator $T$ to travel back and forth in time with a delay $\tau$. 
+
+
+
+ It is simply formed by using a Taylor expansion of the succesive orders in the generalized coordinates which takes this form in matrix form and thus simply by taking the exponential matrix form. Applying such an operator to the FEM generates a slightly different and more complicated formulation but it is important to note that to compensate for delays, there is no change in the structure of the network but just in how the synaptic weights are tuned (similar to what we had done in the first part)
+
+In particular, when the agent has
+some belief about these delays, it
+can Bayes-optimally integrate
+internal belief. Such a behaviour
+is still regulated by the same type
+of internal equation.
+Famous quote:
+time travel = matrix
+
+
+
+First, The efficacy of this scheme will be illustrated using neuronal simulations of pursuit initiation responses, with and without compensation.
+This figure reports the conditional estimates of hidden states and causes during the simulation of pursuit initiation, using a single rightward (positive) sweep of a visual target, while compensating for sensory motor delays. We will use the format of this figure in subsequent figures: the upper left panel shows the predicted sensory input (coloured lines) and sensory prediction errors (dotted red lines) along with the true values (broken black lines). Here, we see horizontal excursions of oculomotor angle (upper lines) and the angular position of the target in an intrinsic frame of reference (lower lines). This is effectively the distance of the target from the centre of gaze and reports the spatial lag of the target that is being followed (solid red line). One can see clearly the initial displacement of the target that is suppressed after a few hundred milliseconds. One can see the motion that elicits following responses and the oculomotor excursion that follows with a short delay of about 64ms. 
+This figure also illustrates the effects of sensorimotor delays on pursuit initiation (red lines) in relation to compensated (optimal) active inferenc. Under pure sensory delays (top row), one can see clearly the delay in sensory predictions, in relation to the true inputs. Of note here is the failure of optimal control with oscillatory fluctuations in oculomotor trajectories, which become unstable under combined sensorimotor delays.
 
 
 Indeed, one challenge for modelling is to understand EMs using AI as a problem of optimal motor control under axonal delays.  let's move to a human, in particular a tennis player ---here (highly trained) Jo-Wilfried Tsonga at Wimbledon---...
@@ -110,6 +134,24 @@ Applying such an operator to the FEM generates a slightly different and more com
 * The efficacy of this scheme will be illustrated using neuronal simulations of pursuit initiation responses, with and without compensation.
 
 This figure reports the conditional estimates of hidden states and causes during the simulation of pursuit initiation, using a single rightward (positive) sweep of a visual target, while compensating for sensory motor delays. We will use the format of this figure in subsequent figures: the upper left panel shows the predicted sensory input (coloured lines) and sensory prediction errors (dotted red lines) along with the true values (broken black lines). Here, we see horizontal excursions of oculomotor angle (upper lines) and the angular position of the target in an intrinsic frame of reference (lower lines). This is effectively the distance of the target from the centre of gaze and reports the spatial lag of the target that is being followed (solid red line). One can see clearly the initial displacement of the target that is suppressed after a few hundred milliseconds. The sensory predictions are based upon the conditional expectations of hidden oculomotor (blue line) and target (red line) angular displacements shown on the upper right. The grey regions correspond to 90% Bayesian confidence intervals and the broken lines show the true values of these hidden states. One can see the motion that elicits following responses and the oculomotor excursion that follows with a short delay of about 64ms. The hidden cause of these displacements is shown with its conditional expectation on the lower left. The true cause and action are shown on the lower right. The action (blue line) is responsible for oculomotor displacements and is driven by the proprioceptive prediction errors.
+
+Interestingly, this model extends to more
+complex stimulation trajectories.
+
+
+
+the generative model has been equipped with a second hierarchical level that contains hidden states, modelling latent periodic behaviour of the (hidden) causes of target motion of the pendulum. With this addition, the improvement in pursuit accuracy apparent at the onset of the second cycle of motion is observed, similar to psychophysical experiments barnes08. This is because the model has an internal representation of latent causes of target motion that can be called upon even when these causes are not expressed explicitly in the target trajectory.
+
+
+
+
+A particular advantage of this model is
+that it provides a solution for the
+integration of past and future information
+while still being governed by online
+differential equations. This therefore
+implements some form of Bayes-optimal
+temporal memory.
 
 * This figure illustrates the effects of sensorimotor delays on pursuit initiation (red lines) in relation to compensated (optimal) active inference -- as shown in the previous figure (blue lines). The left panels show the true (solid lines) and estimated sensory input (dotted lines), while action is shown in the right panels. Under pure sensory delays (top row), one can see clearly the delay in sensory predictions, in relation to the true inputs. The thicker (solid and dotted) red lines correspond respectively to (true and predicted) proprioceptive input, reflecting oculomotor displacement. The middle row shows the equivalent results with pure motor delays and the lower row presents the results with combined sensorimotor delays. Of note here is the failure of optimal control with oscillatory fluctuations in oculomotor trajectories, which become unstable under combined sensorimotor delays.
 
