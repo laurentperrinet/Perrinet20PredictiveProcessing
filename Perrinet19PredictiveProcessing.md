@@ -62,7 +62,32 @@ Here, we will consider the visual system from the retina to the oculomotor muscl
 
 ### Friston12
 
+As a first step, we will consider a simplistic
+agent that senses a subset of the visual scene
+as its projection on the (log-) polar retinotopic
+space. The agent has the ability to
+direct his gaze toward any position in (visual)
+space using fast eye movements, saccades.
+As duke sensory system of our agent can
+actively sample the visual world, we will egpk.me
+the idea that saccadic eye movements are
+optimal experiments, by which the agent
+seeks to confirm predictive models of
+the hidden world. This is reminiscent
+of Helmoltz's 1866 definition of perception
+as hypothesis testing@Gregory 803
+
 In a first study, we will propose that PERCEPTION (Helmhotz 1866) is an active process of hypothesis testing by which we seek to confirm our predictive models of the (hidden) world. In particular, we will equip our sensory system with the ability to actively sample from the visual world, defining  Active Inference (AI). If perception corresponds to hypothesis testing (Gregory, R. L. (1980). Perceptions as hypotheses. Philos. Trans. R. Soc. Lond. B Biol. Sci. 290, 181–197.); then visual searches might be construed as experiments that generate sensory data. In this work, we explore the idea that saccadic eye movements are optimal experiments, in which data are gathered to test hypotheses or beliefs about how those data are caused. This provides a plausible model of visual search that can be motivated from the basic principles of self-organized behavior [@Gibson79]: namely, the imperative to minimize the entropy of hidden states of the world and their sensory consequences. This imperative is met if agents sample hidden states of the world efficiently. This efficient sampling of salient information can be derived in a fairly straightforward way, using approximate Bayesian inference and variational free-energy minimization.
+
+
+One key ingredient to this process is
+the (internal) representation of
+counterfactual predictions, that is, of
+the probable consequences of possible
+hypothesis as they are realized into actions.
+This augment the FEP of an agent
+such as to define Active Inference.
+
 
 Simulations of the resulting AI scheme reproduce sequential eye movements that are reminiscent of empirically observed saccades  and provide some counterintuitive insights into the way that sensory evidence is accumulated or assimilated into beliefs about the world.
 
