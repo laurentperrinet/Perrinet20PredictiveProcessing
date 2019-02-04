@@ -16,6 +16,7 @@ bibliography: Perrinet19PredictiveProcessing.bib
 
 https://en.wikipedia.org/wiki/YAML
 https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/
+get https://zoteromusings.wordpress.com/tag/bibtex/
 
 -->
 ---
