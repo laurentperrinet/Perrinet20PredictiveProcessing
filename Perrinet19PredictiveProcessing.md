@@ -88,6 +88,90 @@ the case for generalized coordinates [@Friston10generalized] which represent at 
 
 [@Rao99]
 
+-
+As a consequence, the solution provided by the
+agent gives a plausible neural implementation
+as a set of hierarchically organized linear-
+non-linear equations [@thegn). In particular
+these equations are the Kalman filtering
+solution which provides with a Bayes-optimal
+estimate of hidden states and action in
+generalized coordinates of motion. In
+particular, this solution generalizes the
+predictive coding framework offered by
+[@Rao 99J.
+Mmmmm
+similarly to that model, the dynamical
+evolution of activity at the different levels
+of the hierarchy is governed by the
+balance in the integration of internal (par)
+beliefs with (present) sensory information.
+In particulars the weight assigned in
+information passing is based on the
+(inferred) precision of each variable in
+the dependency graphed. This allow us to
+predict the influence of the prion
+knowledge of the precision at a given
+level on the final outcome.
+The predictive power of the modelling of
+such an agent is important to understand
+deviations. from the median behavior
+within a population of agents. For
+instance, there are acute differences in
+the smooth pursuit eye movements (spam)
+observed in control and schizophrenic
+patients. SPEM are distinct from
+saccades as those are voluntary eye
+movements which aim at stabilizing the
+retinal image of a smoothly moving
+visual object. For a target following
+the motion of a pendulum for instance,
+the eye will produce a prototypical
+response to follow this predictable target.
+Interestingly, schizophrenic agents tend to
+produce a different pattern of spam
+when the pendulum is occluded on
+half cycles (for instance as it passes
+behind an opaque cardboard on one
+side from the midline). In general, spear
+may still follow the target, as it is
+• chimp (behind the cardboard) yet with a
+tower-gain of@Barnes 983 As the target
+reappears from behind the ocluder, schizo ph
+agents engage more quickly to a span
+response [@Avila 05]. In ferdams 12]
+we have modelled an agent which has
+the capability to smoothly follow a
+moving object. This model allows in
+particular to understand most prototypical
+SPEE M, as a Bayes-optimal solution to
+minimize surprise in the percept-en-
+action loop implemented in the agent's
+dependency graph.
+
+Especially, by manipulating the a priori
+precision of internal belief at the different
+levels of the hierarchical model, one
+could reproduce different-classes of
+behaviors as evidenced by spear to
+classical psychophysical stimuli.
+for the half-cycle ocluded pendulum,
+fAdams 12) found that manipulating
+the post-synaptic gain of predictive
+neurons reproduced these observed
+behaviors in schizophrenia and control
+populations. Such a difference in the
+balance of information flow could have
+for instance a genetic origin in the
+egression of this grain and vicariously
+in the behavior of this population.
+Importantly, such method allows to perform
+quantitative predictions. Such applications
+of computational neuroscience seem
+particularly relevant for a quantitative
+understanding of the diversity of
+behavionsinthehwmar.pro#ulahou@eries]
+
 ### oculomotor delays PerrinetAdamsFriston14
 
 The central nervous system has to contend with axonal delays, both at the sensory and the motor levels. For instance, in the human visuo-oculomotor system, it takes approximately $\tau_s=50~ms$ for the retinal image to reach the visual areas implicated in motion detection, and a further  $\tau_m$ of 40~ms  to reach the oculomotor muscles.
