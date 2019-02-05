@@ -472,17 +472,17 @@ nervous system has to contend with axonal delays, both at the sensory
 and the motor levels. For instance, in the human visuo-oculomotor
 system, it takes approximately $\tau_s=50 ms$ for the retinal image to
 reach the visual areas implicated in motion detection, and a further
-$\tau_m$ of 40 ms to reach the oculomotor muscles and actually realize
+$\tau_m = 40 ms$ to reach the oculomotor muscles and actually realize
 action. One challenge for modeling is to understand eye movements using
 AI as a problem of optimal motor control under axonal delays. Let's take
 the example of a tennis player trying to intercept a passing-shot ball
-at a (conservative) speed of $20m.s^{-1}$, the position sensed on the
+at a (conservative) speed of $20 m/s$, the position sensed on the
 retinal space corresponds to the instant when its image formed on the
 photoreceptors of the retina and reaches our hypothetical motion
 perception area behind: and at this instant, the sensed physical
 position is lagging behind (as represented here by $\tau_s \cdot v 1m$
 ), that is, approximately at $45$ degrees of eccentricity, while the
-position at the moment of emitting the motor command will be $.8~m$
+position at the moment of emitting the motor command will be $.8 m$
 ahead of its present physical position ($\tau_m \cdot v$). As a
 consequence, the player's gaze can be directed to the ball at its
 present position, in anticipatory fashion. Alternatively' Optimal
