@@ -64,10 +64,6 @@ figPrefix:
 figPrefixTemplate: $$p$$ $$i$$
 figureTemplate: $$figureTitle$$ $$i$$$$titleDelim$$ $$t$$
 figureTitle: Figure
-header-includes:
-- '\makeatletter'
-- '\let\listoflistings\@undefined'
-- '\makeatother'
 institute: |
     Institut de Neurosciences de la Timone, CNRS / Aix-Marseille Université
     - Marseille, France
@@ -130,12 +126,6 @@ title: |
 titleDelim: ':'
 website: 'http://invibe.net/LaurentPerrinet'
 ---
-
-\makeatletter
-
-\let\listoflistings\@undefined
-
-\makeatother
 
 <!--
 
