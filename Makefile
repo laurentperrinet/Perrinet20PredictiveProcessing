@@ -1,4 +1,4 @@
-default: doc markdown
+default: doc markdown pdf
 
 SRC=Perrinet19PredictiveProcessing
 

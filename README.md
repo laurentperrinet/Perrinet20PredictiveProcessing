@@ -64,6 +64,10 @@ figPrefix:
 figPrefixTemplate: $$p$$ $$i$$
 figureTemplate: $$figureTitle$$ $$i$$$$titleDelim$$ $$t$$
 figureTitle: Figure
+header-includes:
+- '\makeatletter'
+- '\let\listoflistings\@undefined'
+- '\makeatother'
 institute: |
     Institut de Neurosciences de la Timone, CNRS / Aix-Marseille Université
     - Marseille, France
@@ -127,6 +131,12 @@ titleDelim: ':'
 website: 'http://invibe.net/LaurentPerrinet'
 ---
 
+\makeatletter
+
+\let\listoflistings\@undefined
+
+\makeatother
+
 <!--
 
 https://en.wikipedia.org/wiki/YAML
@@ -141,7 +151,7 @@ Blah blah [@Atick92, pp. 33-35, 38-39 and *passim*] by Atick  [-@Atick92].
 
 https://lierdakil.github.io/pandoc-crossref/
 
-hello $\LaTeX$ and hello $\tau_m=50~ms$
+hello $\LaTeX$ and hello $\tau_m=50 ms$
 
 [@fig:label1;@fig:label2;...] or [@eq:euler] or [@tbl:label1;@tbl:label2;...] or @fig:label or @eq:label or @tbl:label
 
@@ -153,7 +163,6 @@ Here is some text.[^fn]
 
 [^fn]: And the footnote!
 -->
-\listoffigures \listoftables
 
 Motivation : Role of dynamics in neural computations underlying visual processing {#sec:intro}
 ---------------------------------------------------------------------------------
@@ -461,9 +470,9 @@ cognition is to extend this model to a more realistic description of
 naturalistic constraints faced by the visual system. Indeed, the central
 nervous system has to contend with axonal delays, both at the sensory
 and the motor levels. For instance, in the human visuo-oculomotor
-system, it takes approximately $\tau_s=50~ms$ for the retinal image to
+system, it takes approximately $\tau_s=50 ms$ for the retinal image to
 reach the visual areas implicated in motion detection, and a further
-$\tau_m$ of 40\~ms to reach the oculomotor muscles and actually realize
+$\tau_m$ of 40 ms to reach the oculomotor muscles and actually realize
 action. One challenge for modeling is to understand eye movements using
 AI as a problem of optimal motor control under axonal delays. Let's take
 the example of a tennis player trying to intercept a passing-shot ball
@@ -606,25 +615,25 @@ topography {#sec:maps}
 Caption of figure
 </div> -->
 
-![Figure 1: Figure 1: ME. In [@Khoei17], we propose a model of
-predictive processing in a topographic map. A) the model consists of a
-two-layered map: an input source target integrates information from
-visual sensors. This map represents both position and velocity, and we
-represent here a representation for a mono-dimensional variable. Using
-this belief (as represented here by the probability distribution
-function), it is possible to project this information to a second target
-layer that integrates information knowing a compensation for the delay.
-In that particular case, speed is positive and thus information of
-position is transported to the right. B) Response of a model
-compensating for a 100ms delay to a moving dot. Representation of the
-inferred probability of position and velocity with delay compensation as
-a function of the iterations of the model (time). Darker colors denote
-higher probabilities, while a light color corresponds to an unlikely
+![Figure 1: ME. In [@Khoei17], we propose a model of predictive
+processing in a topographic map. A) the model consists of a two-layered
+map: an input source target integrates information from visual sensors.
+This map represents both position and velocity, and we represent here a
+representation for a mono-dimensional variable. Using this belief (as
+represented here by the probability distribution function), it is
+possible to project this information to a second target layer that
+integrates information knowing a compensation for the delay. In that
+particular case, speed is positive and thus information of position is
+transported to the right. B) Response of a model compensating for a
+100ms delay to a moving dot. Representation of the inferred probability
+of position and velocity with delay compensation as a function of the
+iterations of the model (time). Darker colors denote higher
+probabilities, while a light color corresponds to an unlikely
 estimation. In particular, we focus on three particular epochs along the
 trajectory, corresponding to the standard, flash initiated and
 terminated cycles. The timing of these epochs flashes are indicated by
 dashed vertical lines. In dark, the physical time and in green the
-delayed input knowing $\tau=100~ms$. See text for an interpretation of
+delayed input knowing $\tau=100 ms$. See text for an interpretation of
 the result.](Khoei17.png){#fig:Khoei17}
 
 The flash-lag effect (FLE) is a visual illusion which is popular for its
@@ -641,7 +650,7 @@ that it is yet not clear what is the neural substrate of the FLE.
 
 Activity in both models shows three different phases. First, there is a
 rapid build-up of the precision of the target after the first appearance
-of the moving dot (at $t=300~ms$). Consistently with the Frölich effect,
+of the moving dot (at $t=300 ms$). Consistently with the Frölich effect,
 the beginning of the trajectory is seen ahead of its physical position.
 During the second phase, the moving dot is correctly tracked as both its
 velocity and position are correctly inferred. In the source layer, there
@@ -651,9 +660,9 @@ correctly predicts the position at the present time and the position
 follows the actual physical position of the dot (black dotted line)
 fig. 1. Finally, the third phase corresponds to motion termination. The
 moving dot disappears and the corresponding activity vanishes in the
-source layer at $t=900~ms$. However, between $t=800~ms$ and $t=900~ms$,
+source layer at $t=900 ms$. However, between $t=800 ms$ and $t=900 ms$,
 the dot position was extrapolated and predicted ahead of the terminal
-position. At $t=900~ms$, while motion information is absent, the
+position. At $t=900 ms$, while motion information is absent, the
 position information is still transiently consistent and extrapolated
 using a broad, centered prior distribution of speeds. Although it is
 less precise, this position of the dot at flash termination is therefore
