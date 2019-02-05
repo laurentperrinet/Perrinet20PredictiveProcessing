@@ -18,7 +18,7 @@ abstract: |
     approaches which allow to explain the processing of visual information
     in the visual hierarchy. In particular, we will describe how Active
     Inference, that is predictive coding with the ability to actively sample
-    the visual space, can provide an unified account of visual mechanisms
+    the visual space, can provide a unified account of visual mechanisms
     from the sensory information to the generation of an appropriate action.
     Then, we will extend this paradigm to the case where information is
     distributed on a topography, such as is the case for retinotopically
@@ -215,7 +215,7 @@ provides with an analog signal from which we may extract the analog
 timings of spiking events for the population of cells. We may then chose
 to display this data in a "raster plot", that is, showing the timing of
 the spikes that each cell emitted. The time is thus relative to that of
-the experimenter and is given thanks to an external clock. Moreover,the
+the experimenter and is given thanks to an external clock. Moreover, the
 plot is shown a posteriori, that is, after the recording of the spike
 trains. This definition of an absolute time $t$ was introduced by Newton
 and defines most of the laws of physics. Consistent with that, time
@@ -392,7 +392,7 @@ have for instance a genetic origin in the expression of this gain and
 vicariously in the behavior of this population. Importantly, such a
 method thus allows to perform quantitative predictions and such
 applications of computational neuroscience seem particularly relevant
-for a better understanding of the diversity of behaviours in the human
+for a better understanding of the diversity of behaviors in the human
 population (see for instance [@Karvelis18autistic]).
 
 ### Introducing delays in AI: dynamics of predictive processing
@@ -504,8 +504,8 @@ as pendulum). More striking, this is also true if the trajectory is
 when the target motion is hemi-sinusoidal, as would happen for a
 pendulum that would be stopped at each half cycle, left of the vertical
 (broken black lines). The generative model has been equipped with a
-second hierarchical level that contains hidden states, modelling latent
-periodic behaviour of the (hidden) causes of target motion of the
+second hierarchical level that contains hidden states, modeling latent
+periodic behavior of the (hidden) causes of target motion of the
 pendulum. With this addition, the improvement in pursuit accuracy
 apparent at the onset of the second cycle of motion is observed, similar
 to psychophysical experiments [@Barnes91]. One can see clearly the
@@ -569,29 +569,29 @@ reaches the center of the screen, another dot is briefly flashed just
 below the moving dot. While they are vertically perfectly aligned, the
 flashed dot is perceived as lagging the moving dot. This visual illusion
 saw a resurgence of scientific interest with the motion extrapolation
-model [@Nijhawan02, @Nijhawan09]. However, other models such as
+model [@Nijhawan02], [@Nijhawan09]. However, other models such as
 differential latency of postdiction (Eagleman) were also proposed, such
 that it is yet not clear what is the neural substrate of the FLE.
 
 Activity in both models shows three different phases. First, there is a
 rapid build-up of the precision of the target after the first appearance
-of the moving dot (at $t=300 ms$). Consistently with the Frölich effect,
-the beginning of the trajectory is seen ahead of its physical position.
-During the second phase, the moving dot is correctly tracked as both its
-velocity and position are correctly inferred. In the source layer, there
-is no extrapolation and the trajectory follows the delayed trajectory of
-the dot (green dotted line). In the target layer, motion extrapolation
-correctly predicts the position at the present time and the position
-follows the actual physical position of the dot (black dotted line)
-fig. 2. Finally, the third phase corresponds to motion termination. The
-moving dot disappears and the corresponding activity vanishes in the
-source layer at $t=900 ms$. However, between $t=800 ms$ and $t=900 ms$,
-the dot position was extrapolated and predicted ahead of the terminal
-position. At $t=900 ms$, while motion information is absent, the
-position information is still transiently consistent and extrapolated
-using a broad, centered prior distribution of speeds. Although it is
-less precise, this position of the dot at flash termination is therefore
-not perceived as leading the flash.
+of the moving dot (at $t=300 ms$). Consistently with the Fröhlich effect
+[@Jancke10], the beginning of the trajectory is seen ahead of its
+physical position. During the second phase, the moving dot is correctly
+tracked as both its velocity and position are correctly inferred. In the
+source layer, there is no extrapolation and the trajectory follows the
+delayed trajectory of the dot (green dotted line). In the target layer,
+motion extrapolation correctly predicts the position at the present time
+and the position follows the actual physical position of the dot (black
+dotted line) fig. 2. Finally, the third phase corresponds to motion
+termination. The moving dot disappears and the corresponding activity
+vanishes in the source layer at $t=900 ms$. However, between $t=800 ms$
+and $t=900 ms$, the dot position was extrapolated and predicted ahead of
+the terminal position. At $t=900 ms$, while motion information is
+absent, the position information is still transiently consistent and
+extrapolated using a broad, centered prior distribution of speeds.
+Although it is less precise, this position of the dot at flash
+termination is therefore not perceived as leading the flash.
 
 The model that we used for the FLE can be used with any image. In
 particular, a single flashed dot evokes an expanding then contracting
@@ -605,7 +605,7 @@ amplification term for rectilinear motions. As a consequence, once an
 object begins to be tracked, its position is predicted in the future,
 such that position and velocity are better estimated. On the contrary, a
 dot which is moving on an unpredictable trajectory is explained away by
-the system. This explains some of the non-linear, binary behaviours
+the system. This explains some of the non-linear, binary behaviors
 explained by this model. It is of particular interest at this point to
 understand if such a model extends to other stimuli or if we can precise
 its neural correlate.
@@ -651,11 +651,11 @@ this model reproduced the propagation of activity on the cortex.
 Importantly, this model allowed to show that the observed activity was
 best fitted when the speed of lateral connections within the mean-field
 was about 1 m/s, a propagation speed which is of the order of that
-measured for intra-cortical connectcions in the primary visual cortex. A
+measured for intra-cortical connections in the primary visual cortex. A
 more functional (probabilistic) model also showed that the cortical
 suppressive wave allowed to disambiguate the stimulus by explaining away
 (that is, suppressing) ambiguous alternatives. As a consequences, 1)
-lateral interactions are key to generate travelling waves on the surface
+lateral interactions are key to generate traveling waves on the surface
 of the cortex and 2) these waves help disambiguate the input stimulus.
 This corresponds to the implementation of a predictive process using on
 a priori knowledge of smoothly-moving visual objects.
