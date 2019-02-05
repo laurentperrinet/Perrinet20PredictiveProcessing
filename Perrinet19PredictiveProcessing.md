@@ -98,23 +98,10 @@ Interestingly, this model extends to more
 complex stimulation trajectories. In particular, it is has been shown that gaze will be directed at the present physical position of the target (thus in anticipatory fashion) if that target follows a smooth trajectory (such as pendulum). More striking, this is also true if the trajectory is *predictable*, for instance for a pendulum behind a static occluder [@Barnes91]. Figure [@fig:PerrinetAdamsFriston14, B] reports the simulation of smooth pursuit when the target motion is hemi-sinusoidal, as would happen for a pendulum that would be stopped at each half cycle, left of the vertical (broken black lines). The generative model has been equipped with a second hierarchical level that contains hidden states, modeling latent periodic behavior of the (hidden) causes of target motion of the pendulum. With this addition, the improvement in pursuit accuracy apparent at the onset of the second cycle of motion is observed, similar to psychophysical experiments [@Barnes91]. One can see clearly the initial displacement of the target that is suppressed after a few hundred milliseconds.  With this addition, the improvement in pursuit accuracy apparent at the onset of the second cycle of motion is reinstated.  This is because the model has an internal representation of latent causes of target motion that can be called upon even when these causes are not expressed explicitly in the target trajectory. A particular advantage of this model is that it provides a solution for the integration of past and future information while still being governed by online differential equations. This therefore implements some form of Bayes-optimal temporal memory.
 
 ### summary
-
-laws of vision: perspective, gravity, rebounds of a ball - resolves Gestalt laws by seing it as conflicts between separate contexts
-time to awareness / explanatory gap
-
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX  laws of vision: perspective, gravity, rebounds of a ball - resolves Gestalt laws by seing it as conflicts between separate contexts time to awareness / explanatory gap
 
 ## Predictive processing on visual maps  {#sec:maps}
 ### fle
-<!--
-<div id="fig:figureRef">
-![subfigure 1 caption](image1.png){#fig:figureRefA}
-
-![subfigure 2 caption](image2.png){#fig:figureRefB}
-
-Caption of figure
-</div> -->
-
-
 ![ME. In [@Khoei17], we propose a model of predictive processing in a topographic map. A) the model consists of a two-layered map: an input source target integrates information from visual sensors. This map represents both position and velocity, and we represent here a representation for a mono-dimensional variable. Using this belief (as represented here by the probability distribution function), it is possible to project this information to a second target layer that integrates information knowing a compensation for the delay. In that particular case, speed is positive and thus information of position is transported to the right. B) Response of a model compensating for a 100ms delay to a moving dot. Representation of the inferred probability of position and velocity with delay compensation as a function of the iterations of the model (time). Darker colors denote higher probabilities, while a light  color corresponds to an unlikely estimation. In particular, we focus on three  particular epochs along the trajectory, corresponding to the standard, flash  initiated and terminated cycles. The timing of these epochs flashes are indicated by  dashed vertical lines. In dark, the physical time and in green the delayed  input knowing $\tau=100 ms$. See text for an interpretation of the result.
 ](Khoei17.png){#fig:Khoei17}
 
@@ -124,9 +111,9 @@ Activity in both models shows three different phases. First, there is a rapid  b
 
 The model that we used for the FLE can be used with any image. In particular, a single flashed dot evokes an expanding then contracting isotropic activity while a moving dot may produce a soliton-like wave which may traverse an occlusion [@Khoei13]. More generally, this model may be described as a simplification of the Navier Stokes equation of fluid dynamics using the advection term. As such, solutions to these equations are typically waves which are travelling on the retinotopic map. A particular feature of these maps is that these include an amplification term for rectilinear motions. As a consequence, once an object begins to be tracked, its position is predicted in the future, such that position and velocity are better estimated. On the contrary, a dot which is moving on an unpredictable trajectory is explained away by the system. This explains some of the non-linear, binary behaviors explained by this model. It is of particular interest at this point to understand if such a model extends to other stimuli or if we can precise its neural correlate.
 
-hindsight, parodiction, sort of adaption
-### neural correlate of apparent motion
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX  hindsight, parodiction, sort of adaption
 
+### neural correlate of apparent motion
 When two stationary dots are flashed at close successive positions and times, observers may experience a percept of motion. This transforms the presentation of a discrete pattern into a continuous one. This visual illusion is called apparent motion and can persist over a relatively long range (superior to the characteristic size of the RF of a V1 neuron), and is called long-range Apparent Motion (lrAM). Similarly to the study above for the FLE, it is believed that this illusion can be explained by predictive processes. Due to the dynamical characteristics of lrAM, a neural implementation of this illusion may consist in the propagation of visual information through intra-cortical interactions. In particular, these lateral interactions may evoke waves of activity in V1 which may modulate the integration of the sensory information coming from thalamocortical connections. An interesting prospect is thus to record neural activity during the presentation of the lrAM stimulus. This allows to quantitatively assess why the superposition of two dots as in lrAM is "more" than the sum of the two dots in isolation.
 
 In this study, we used VSDI to record the activity of the primary visual cortex (V1) of awake macaque monkeys. Is there any difference between the response to the single dot and that to the two dots? Indeed VSD recordings allow to record the activity of populations of neurons which are approx at the scale of a cortical column. Also, the recorded response is rapid enough to capture the dynamics of the lrAM stimulus. These recordings show that as the evoked activity of the second stimulus reaches V1, a cortical suppressive wave propagates toward the retinolopic wave evoked by the first dot. This was put in evidence by statistically comparing the response of the brain to the response of the two dots in isolation. In particular, we found that the activity for the brain stimulus was more precise, suggesting that such suppressive wave could serve as predictive processing step to be read-out in upstream cortical areas.
@@ -134,12 +121,30 @@ In this study, we used VSDI to record the activity of the primary visual cortex 
 In particular, we found that the activity that we recorded fitted well with a mean-field model using a dynamical gain control. Qualitatively, this model reproduced the propagation of activity on the cortex. Importantly, this model allowed to show that the observed activity was best fitted when the speed of lateral connections within the mean-field was about 1 m/s, a propagation speed which is of the order of that measured for intra-cortical connections in the primary visual cortex. A more functional (probabilistic) model also showed that the cortical suppressive wave allowed to disambiguate the stimulus by explaining away (that is, suppressing) ambiguous alternatives. As a consequences, 1) lateral interactions are key to generate traveling waves on the surface of the cortex and 2) these waves help disambiguate the input stimulus. This corresponds to the implementation of a predictive process using on a priori knowledge of smoothly-moving visual objects.
 
 ### summary
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 
+## Open problems in the science of visual predictive processing {#sec:spikes}
 
-## neural implementation  {#sec:spikes}
-
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 
 ### The role of cortical waves in shaping the dynamic processing of visual information
-
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 single trials  [@Muller14]
 review in [@Muller18]
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+
+### ### XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX 
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+
+### XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+
+
+## Bibliography
