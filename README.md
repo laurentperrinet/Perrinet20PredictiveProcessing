@@ -36,6 +36,7 @@ author: Laurent Perrinet
 autoEqnLabels: False
 autoSectionLabels: False
 bibliography: 'Perrinet19PredictiveProcessing.bib'
+category: 'XXX document category, included in docx and pptx metadata'
 ccsDelim: ','
 ccsLabelSep: '---'
 ccsTemplate: $$i$$$$ccsLabelSep$$$$t$$
@@ -45,6 +46,11 @@ chaptersDepth: 1
 codeBlockCaptions: False
 cref: False
 crossrefYaml: 'pandoc-crossref.yaml'
+date: '2019-02-17'
+date-meta: '2019-02-17'
+description: |
+    XXX document description, included in ODT, docx and pptx metadata. Some
+    applications show this as Comments metadata.
 email: 'Laurent.Perrinet\@univ-amu.fr'
 eqnLabels: arabic
 eqnPrefix:
@@ -64,6 +70,7 @@ institute: |
 keywords:
 - Vision
 - Active Inference
+lang: 'en-US'
 lastDelim: ','
 linkReferences: False
 listingTemplate: $$listingTitle$$ $$i$$$$titleDelim$$ $$t$$
@@ -86,6 +93,7 @@ lstPrefixTemplate: $$p$$ $$i$$
 nameInLink: False
 numberSections: False
 pairDelim: ','
+papersize: a4
 rangeDelim: '\-'
 refDelim: ','
 refIndexTemplate: $$i$$$$suf$$
@@ -102,6 +110,7 @@ subfigLabels: alpha a
 subfigureChildTemplate: $$i$$
 subfigureRefIndexTemplate: '$$i$$$$suf$$ ($$s$$)'
 subfigureTemplate: '$$figureTitle$$ $$i$$$$titleDelim$$ $$t$$. $$ccs$$'
+subject: 'XXX document subject, included in ODT, docx and pptx metadata'
 tableEqns: False
 tableTemplate: $$tableTitle$$ $$i$$$$titleDelim$$ $$t$$
 tableTitle: Table
@@ -110,6 +119,7 @@ tblPrefix:
 - 'tbl.'
 - 'tbls.'
 tblPrefixTemplate: $$p$$ $$i$$
+thanks: XXX
 title: |
     From the retina to action: Dynamics of predictive processing in the
     visual system
@@ -143,6 +153,7 @@ Here is some text.[^fn]
 
 [^fn]: And the footnote!
 -->
+\listoffigures \listoftables
 
 Motivation : Role of dynamics in neural computations underlying visual processing {#sec:intro}
 ---------------------------------------------------------------------------------

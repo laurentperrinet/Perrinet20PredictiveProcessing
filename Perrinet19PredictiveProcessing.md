@@ -1,15 +1,27 @@
 ---
 title: "From the retina to action: Dynamics of predictive processing in the visual system"
 author: Laurent Perrinet
+date: 2019-02-17
+date-meta: 2019-02-17
 institute: Institut de Neurosciences de la Timone, CNRS / Aix-Marseille Université - Marseille, France
+subject: XXX document subject, included in ODT, docx and pptx metadata
+description: XXX document description, included in ODT, docx and pptx metadata. Some applications show this as Comments metadata.
+category: XXX document category, included in docx and pptx metadata
 keywords:
     - Vision
     - Active Inference
+lang: en-US
+papersize: a4
+thanks: XXX
 website: http://invibe.net/LaurentPerrinet
 source: https://github.com/laurentperrinet/Perrinet19PredictiveProcessing/
 email: Laurent.Perrinet@univ-amu.fr
 abstract: Visual areas are essential in transforming the raw luminous signal into a representation which efficiently conveys information about the environment. This process is constrained by various factors such as a wide variety of changes in the characteristics of the visual image but also by the necessity to be able to respond as quickly as possible to the incoming sensory stream, for instance to drive a movement of the eyes to the location of a potential danger. To achieve this, it is believed that the visual system takes advantage of a priori knowledge about the structure of visual information, such as the regularity in the shape and motion of visual objects. As such, the predictive processing framework offers a unified theory to explain many of the dynamical mechanisms which were progressively unveiled by decades of study in neurophysiology and psychophysics at the different levels of the visual system. However, we still lack a global normative approach unifying those mechanisms and we will review here some of the promising approaches which allow to explain the processing of visual information in the visual hierarchy. In particular, we will describe how Active Inference, that is predictive coding with the ability to actively sample the visual space, can provide an unified account of visual mechanisms from the sensory information to the generation of an appropriate action. Then, we will extend this paradigm to the case where information is distributed on a topography, such as is the case for retinotopically organized visual areas. In particular, we will compare such models in light of recent neurophysiological data showing the role of traveling waves in shaping visual processing. Finally, we will propose some lines of research to understand how the previous functional models may be implemented at the neural level. In particular, we will describe models of cortical processing in terms of prototypical micro-circuits. These allow to separate the different flows of information, from feed-forward prediction error to feed-back anticipation error. Still, the particular implementation of such a circuit is not known and we will review some possible implementations using Spiking Neural Networks.
 bibliography: Perrinet19PredictiveProcessing.bib
+header-includes:
+  - "\\makeatletter"
+  - "\\let\\listoflistings\\@undefined"
+  - "\\makeatother"
 ---
 
 <!--
@@ -39,7 +51,6 @@ Here is some text.[^fn]
 
 [^fn]: And the footnote!
 -->
-
 
 ## Motivation : Role of dynamics in neural computations underlying visual processing  {#sec:intro}
 Vision, the capacity of making sense of the luminous environment, is a dynamic process. From its first stage, the retina, to the different areas which help in forming a representation of the visual world knowing its transformations as with the motion of a visual object but also to sensory modifications, such as with eye movements. As such, visual processing is not separable from the dynamics of the neural networks involved in vision. To make sense of such a complex system, it has been proposed that the organization of the visual system is such that it is efficient [@Attneave54]. Such an ecological framework [@Atick92] allows to explain many aspects of visual processing. Formalizing such optimization strategies in probabilistic language, these may be encompassed by the "Bayesian Brain" framework [@Knill04]
