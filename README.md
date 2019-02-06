@@ -33,8 +33,18 @@ abstract: |
     implementation of such a circuit is not known and we will review some
     possible implementations using Spiking Neural Networks.
 author: Laurent Perrinet
+author_info:
+- affiliations:
+  - 'Department of Something, University of Whatever'
+  email: 'john.doe\@something.com'
+  funders: Grant XXXXXXXX
+  github: johndoe
+  initials: JD
+  name: John Doe
+  orcid: 'XXXX-XXXX-XXXX-XXXX'
+  twitter: johndoe
 autoEqnLabels: False
-autoSectionLabels: False
+autoSectionLabels: True
 bibliography: 'Perrinet19PredictiveProcessing.bib'
 category: 'XXX document category, included in docx and pptx metadata'
 ccsDelim: ','
@@ -91,7 +101,7 @@ lstPrefix:
 - 'lsts.'
 lstPrefixTemplate: $$p$$ $$i$$
 nameInLink: False
-numberSections: False
+numberSections: True
 pairDelim: ','
 papersize: a4
 rangeDelim: '\-'
@@ -103,7 +113,7 @@ secPrefix:
 - 'sec.'
 - 'secs.'
 secPrefixTemplate: $$p$$ $$i$$
-sectionsDepth: 0
+sectionsDepth: '-1'
 source: 'https://github.com/laurentperrinet/Perrinet19PredictiveProcessing/'
 subfigGrid: False
 subfigLabels: alpha a
@@ -152,10 +162,15 @@ See Equation [@eq:euler]
 Here is some text.[^fn]
 
 [^fn]: And the footnote!
+
+http://lierdakil.github.io/pandoc-crossref/
+
+TODO: move to https://greenelab.github.io/manubot-rootstock/
+
 -->
 
-Motivation : Role of dynamics in neural computations underlying visual processing {#sec:intro}
----------------------------------------------------------------------------------
+1 Motivation : Role of dynamics in neural computations underlying visual processing {#sec:intro}
+===================================================================================
 
 Vision, the capacity of making sense of the luminous environment, is a
 dynamic process. From its first stage, the retina, to the different
@@ -226,24 +241,23 @@ levels of analysis from [@Marr83]). First, we will apply the FEP to
 vision as a normative approach. Extending this principle with the
 capacity of actively sampling sensory input, we will define Active
 Inference (AI) and its potential role in understanding vision, and also
-behaviors such as eye movements (see Section \[\#sec:AI\]). Then, we
-will extend it to understand how such processes may be implemented in
-retinotopic maps (see Section \[\#sec:maps\]). In particular, we will
-show how such a model may explain a visual illusion, the Flash-lag
-effect. This will then be compared with neurophysiological data and try
-to understand the potential role of traveling waves in shaping visual
-processing. Finally, we will review possible implementations of such
-models in Spiking Neural Networks (see Section \[\#sec:spikes\]). In
-particular, we will review some models of elementary micro-circuits and
-detail some potential rules for learning the structure of their
-connections in an unsupervised manner. We will conclude by synthesizing
-these results and their limit. In particular, we will try to define an
-emerging notion for time as it appears in the definition of predictive
-processes for visual processing.
+behaviors such as eye movements (see sec. 2). Then, we will extend it to
+understand how such processes may be implemented in retinotopic maps
+(see sec. 3). In particular, we will show how such a model may explain a
+visual illusion, the Flash-lag effect. This will then be compared with
+neurophysiological data and try to understand the potential role of
+traveling waves in shaping visual processing. Finally, we will review
+possible implementations of such models in Spiking Neural Networks (see
+sec. 4). In particular, we will review some models of elementary
+micro-circuits and detail some potential rules for learning the
+structure of their connections in an unsupervised manner. We will
+conclude by synthesizing these results and their limit. In particular,
+we will try to define an emerging notion for time as it appears in the
+definition of predictive processes for visual processing.
 <!--  what Dennett (2009) calls a “strange inversion of reasoning,”  -->
 
-Active Inference and the "optimality" of vision {#sec:AI}
------------------------------------------------
+2 Active Inference and the "optimality" of vision {#sec:AI}
+=================================================
 
 To rephrase Wigner [@Wigner90], optimization principles seem the only
 choice to understand "The Unreasonable Effectiveness of Vision in the
@@ -263,7 +277,8 @@ maturama / varela). Then, we will follow basic principles of
 self-organized behavior: namely, the imperative to minimize the entropy
 of hidden states of the world and their sensory consequences.
 
-### Perceptions as hypotheses, Actions as experiments
+2.1 Perceptions as hypotheses, Actions as experiments {#sec:perceptions-as-hypotheses-actions-as-experiments}
+-----------------------------------------------------
 
 As a first step, we will consider a simplistic agent that senses a
 subset of the visual scene as its projection on the (log-)polar
@@ -322,7 +337,8 @@ minimization of the surprise about the prospective visual scene.
 Globally, it is therefore more ecological to keep eyes open to explore
 the different parts of the visual scene.
 
-### Is there a neural implementation for AI?
+2.2 Is there a neural implementation for AI? {#sec:is-there-a-neural-implementation-for-ai}
+--------------------------------------------
 
 As we have seen above, the agent that we have defined is simply ruled by
 a set of differential equations. Technically, these equations are the
@@ -383,9 +399,10 @@ vicariously in the behavior of this population. Importantly, such a
 method thus allows to perform quantitative predictions and such
 applications of computational neuroscience seem particularly relevant
 for a better understanding of the diversity of behaviors in the human
-population (see for instance [@Karvelis18autistic]).
+population (see for instance [@Karvelis18autistic; @Kent19]).
 
-### Introducing delays in AI: dynamics of predictive processing
+2.3 Introducing delays in AI: dynamics of predictive processing {#sec:introducing-delays-in-ai-dynamics-of-predictive-processing}
+---------------------------------------------------------------
 
 ![Figure 1: ***(A)*** This figure reports the response of predictive
 processing during the simulation of pursuit initiation, using a single
@@ -510,7 +527,8 @@ the integration of past and future information while still being
 governed by online differential equations. This therefore implements
 some form of Bayes-optimal temporal memory.
 
-### summary
+2.4 summary {#sec:summary}
+-----------
 
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
@@ -519,10 +537,11 @@ vision: perspective, gravity, rebounds of a ball - resolves Gestalt laws
 by seing it as conflicts between separate contexts time to awareness /
 explanatory gap
 
-Predictive processing on visual maps {#sec:maps}
-------------------------------------
+3 Predictive processing on visual maps {#sec:maps}
+======================================
 
-### fle
+3.1 fle {#sec:fle}
+-------
 
 ![Figure 2: ME. In [@Khoei17], we propose a model of predictive
 processing in a topographic map. A) the model consists of a two-layered
@@ -553,7 +572,7 @@ reaches the center of the screen, another dot is briefly flashed just
 below the moving dot. While they are vertically perfectly aligned, the
 flashed dot is perceived as lagging the moving dot. This visual illusion
 saw a resurgence of scientific interest with the motion extrapolation
-model [@Nijhawan02], [@Nijhawan09]. However, other models such as
+model [@Nijhawan02; @Nijhawan09]. However, other models such as
 differential latency of postdiction (Eagleman) were also proposed, such
 that it is yet not clear what is the neural substrate of the FLE.
 
@@ -599,7 +618,8 @@ XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX hindsight,
 parodiction, sort of adaption
 
-### neural correlate of apparent motion
+3.2 neural correlate of apparent motion {#sec:neural-correlate-of-apparent-motion}
+---------------------------------------
 
 When two stationary dots are flashed at close successive positions and
 times, observers may experience a percept of motion. This transforms the
@@ -648,20 +668,22 @@ of the cortex and 2) these waves help disambiguate the input stimulus.
 This corresponds to the implementation of a predictive process using on
 a priori knowledge of smoothly-moving visual objects.
 
-### summary
+3.3 summary {#sec:summary-1}
+-----------
 
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 
-Open problems in the science of visual predictive processing {#sec:spikes}
-------------------------------------------------------------
+4 Open problems in the science of visual predictive processing {#sec:spikes}
+==============================================================
 
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 
-### The role of cortical waves in shaping the dynamic processing of visual information
+4.1 The role of cortical waves in shaping the dynamic processing of visual information {#sec:the-role-of-cortical-waves-in-shaping-the-dynamic-processing-of-visual-information}
+--------------------------------------------------------------------------------------
 
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
@@ -686,7 +708,8 @@ XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 XXX XXX XXX XXX XXX XXX XXX XXX XXX
 
-### \#\#\# XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+4.2 b XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX {#sec:b-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx}
+-----------------------------------------------------------------------------
 
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
@@ -711,7 +734,8 @@ XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 XXX XXX XXX XXX XXX XXX XXX XXX XXX
 
-### XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+4.3 c XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX {#sec:c-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx}
+-----------------------------------------------------------------------------
 
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
@@ -736,5 +760,5 @@ XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 XXX XXX XXX XXX XXX XXX XXX XXX XXX
 
-Bibliography {#bibliography .unnumbered}
-------------
+5 Summary and conclusions {#sec:summary-and-conclusions .unnumbered}
+=========================
