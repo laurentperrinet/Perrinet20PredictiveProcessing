@@ -164,7 +164,28 @@ travelling waves on the cortical surface.
 
 # Open problems in the science of visual predictive processing {#sec:spikes}
 
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+In [@seo: AI], we have studied the dynamics of
+predictive processing at the macroscopic scale, that is,
+by considering different cortical areas as different
+modes of a dependency graph. In [@see: maps], we
+have extended such models to fields of such
+nodes, organized on the topography of a single
+visual area . At a finer scale than this
+intermediate mesoscopic scale is the microscopic
+scale of' actual neural cells. Indeed to
+better understand the mechanisms of predictive
+processing, we need now to finesse the
+granularity of the modelling to this scale.
+In particular, in addition to the asynchronous
+nature of the neural representation, communication
+between neurons has the property of being
+event-based. Indeed, in a vast majority of
+neural cells across the biosphere communicate
+using prototypical, short pulses called action
+potentials or spikes. In this section, we will
+propose three open problems which are
+raised when modelling such Spiking Neural
+Networks in the context of predictive processing.
 
 ## The role of cortical waves in shaping the dynamic processing of visual information
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
