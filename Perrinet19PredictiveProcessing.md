@@ -141,7 +141,26 @@ In this study, we used VSDI to record the activity of the primary visual cortex 
 In particular, we found that the activity that we recorded fitted well with a mean-field model using a dynamical gain control. Qualitatively, this model reproduced the propagation of activity on the cortex. Importantly, this model allowed to show that the observed activity was best fitted when the speed of lateral connections within the mean-field was about 1 m/s, a propagation speed which is of the order of that measured for intra-cortical connections in the primary visual cortex. A more functional (probabilistic) model also showed that the cortical suppressive wave allowed to disambiguate the stimulus by explaining away (that is, suppressing) ambiguous alternatives. As a consequences, 1) lateral interactions are key to generate traveling waves on the surface of the cortex and 2) these waves help disambiguate the input stimulus. This corresponds to the implementation of a predictive process using on a priori knowledge of smoothly-moving visual objects.
 
 ## summary
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+As a summary, we have seen that it
+is possible to extend predictive processing
+to topographic maps. In particular, such
+resulting computations are particularly
+adapted to visual processing and we
+have shown here fig: Khoei a model which
+represents at any given time different
+variables (here" source" and "Target"). In
+a. more realistic model, neural activity
+is more likely to form intermediate
+representations, at different levels of
+adaptation. As a consequence, such
+processes are observed phenomenologically
+as the propagation of neural information
+tangentially to the cortical surface,
+modulating dynamically the feed-and
+feed-back stream. In particular it is
+an open question whether such neural
+computiouantions could be implemented by
+travelling waves on the cortical surface.
 
 # Open problems in the science of visual predictive processing {#sec:spikes}
 
