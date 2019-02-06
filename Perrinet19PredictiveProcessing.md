@@ -146,11 +146,48 @@ As a summary, we have seen that it is possible to extend predictive processing t
 # Open problems in the science of visual predictive processing {#sec:spikes}
 In [@sec:AI], we have studied the dynamics of predictive processing at the macroscopic scale, that is, by considering different cortical areas as different modes of a dependency graph. In [@sec:maps], we have extended such models to fields of such nodes, organized on the topography of a single visual area . At a finer scale than this intermediate mesoscopic scale is the microscopic scale of' actual neural cells. Indeed to better understand the mechanisms of predictive processing, we need now to finesse the granularity of the modelling to this scale. In particular, in addition to the asynchronous nature of the neural representation, communication between neurons has the property of being event-based. Indeed, in a vast majority of neural cells across the biosphere communicate using prototypical, short pulses called action potentials or *spikes*. In this section, we will propose three open problems which are raised when modelling such Spiking Neural Networks (SNNs) in the context of predictive processing.
 
-## b XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+## Htt The challenge If representing information
+uningois
+spikingNeunoenetworks.CN#
+Following the first generations of ANN s, present
+machine learning algorithms (DL) constitute a
+breakthrough, second generation, 5N No
+constitute a third, promising generation [@Ghosh]
+Indeed, event-based representation have many
+advantages which are a deadlock in DL.
+For instance, instead of repeating all compu­tations. for each layer, channel and pixel
+of a hierarchical network ENN), and for
+which energy-greedy GPUs are necessary,
+computations need only to be performed for
+active units. In particular, an active
+research field -consists in developing dedicated
+hardware, such as neuromorphic chips, which
+would allow to scale the effective volume
+of computations beyond the last generations
+of classical semi-conductors which attain the
+limits of Moone's Law.
+Crucial in this new type of representation
+is the discrete nature of the addressing of
+neurons and the analog nature of the timing
+of spikes. Notable results have been made
+notably in real-time classification and
+sensor fusion [@Oconnor 13] and in pattern
+recognition [@Lagorcett]. Indeed, an important
+property of SN Ns is the ability to represent
+dynamically a latent, internal variable (the
+membrane potential in neuro-physiology) and to
+emit a spine when find only when) an internally
+defined threshold is reached. This defines each
+spiking neuron as an integrator (similarly to
+glassical neurons), but also as a synchrony
+detector. This ability to. modulate procuring based
+on the relative timing of presynaptic spikes
+constitute a novel paradigm for neural computations
+[@Pangan r2]. In particular, this shows
+that the balance in the flux of incoming
+excitatory and inhibitory spikes is crucial
+to maximize the efficiency of such saws
+[@Hansel 12J oXX
 
 
 ## The role of cortical waves in shaping the dynamic processing of visual information
