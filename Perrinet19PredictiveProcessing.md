@@ -152,7 +152,29 @@ Following the first generations of ANNs, present machine learning algorithms (DL
 Crucial in this new type of representation is the discrete nature of the addressing of neurons and the analog nature of the timing of spikes. Notable results have been made notably in real-time classification and sensor fusion [@Oconnor13] and in pattern recognition [@Lagorce17]. Indeed, an important property of SNNs is the ability to represent dynamically a latent, internal variable (the membrane potential in neuro-physiology) and to emit a spike when (and only when) an internally defined threshold is reached. This defines each spiking neuron as an integrator (similarly to classical neurons), but also as a synchrony detector. This ability to. modulate procuring based on the relative timing of presynaptic spikes constitute a novel paradigm for neural computations [@Paugam12]. In particular, this shows that the balance in the flux of incoming excitatory and inhibitory spikes is crucial to maximize the efficiency of such SNNs [@Hansel12].
 
 ## The role of cortical waves in shaping the dynamic processing of visual information
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+Another crucial point in deciphering the
+predictive processing mechanisms in Vy is
+given by its functional activity. Indeed, as
+in other cortical areas, the neural network
+is highly recurrent with a median number
+of noooo connections per neuron.
+Surprisingly, 95% of these connections occur
+within a 2mm radius (macaque monkey)
+[@Markov 13] .
+This suggests that a majority of
+neural resources is devoted to intraared
+communications . The potential
+functional role is to generate
+traveling waves which modify the
+strength and dynamics of incoming,
+feed-forward neural activity. We
+have seen its potential role in
+disambiguating motion [@Chenla] and
+it has also been shown to facilitate
+the progressive build-up of visual
+information [@ fringier 993.
+
+
 single trials [@Muller14]
 review in [@Muller18]
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
