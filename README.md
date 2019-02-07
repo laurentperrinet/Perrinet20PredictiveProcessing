@@ -311,7 +311,7 @@ and variational free-energy minimization [@Friston10]. One key
 ingredient to this process is the (internal) representation of
 counterfactual predictions, that is, of the probable consequences of
 possible hypothesis as they would be realized into actions. This augment
-the FEP modelling of an agent such as to define Active Inference (AI).
+the FEP modeling of an agent such as to define Active Inference (AI).
 
 Using the SPM simulation environment [@SPM12], Friston and colleagues
 [@Friston12] provide with simulations of the behavior of such an agent
@@ -413,7 +413,7 @@ the diversity of behaviors in the human population (see for instance
 2.3 Introducing delays in AI: dynamics of predictive processing {#sec:introducing-delays-in-ai-dynamics-of-predictive-processing}
 ---------------------------------------------------------------
 
-![Figure 1: ***(A)*** This figure reports the response of predictive
+![Figure 1: **(A)** This figure reports the response of predictive
 processing during the simulation of pursuit initiation, using a single
 sweep of a visual target, while compensating for sensory motor delays.
 Here, we see horizontal excursions of oculomotor angle (red line). One
@@ -425,7 +425,7 @@ clearly the delay in sensory predictions, in relation to the true
 inputs. With pure motor delays (blue dashed line) and with combined
 sensorimotor delays (blue line) there is a failure of optimal control
 with oscillatory fluctuations in oculomotor trajectories, which may
-become unstable. ***(B)*** This figure reports the simulation of smooth
+become unstable. **(B)** This figure reports the simulation of smooth
 pursuit when the target motion is hemi-sinusoidal, as would happen for a
 pendulum that would be stopped at each half cycle left of the vertical
 (broken black lines in the lower-right panel). We report the horizontal
@@ -529,71 +529,61 @@ therefore implements some form of Bayes-optimal temporal memory.
 2.4 summary {#sec:summary}
 -----------
 
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX laws of
-vision: perspective, gravity, rebounds of a ball - resolves Gestalt laws
-by seing it as conflicts between separate contexts time to awareness /
-explanatory gap
+To sum up, we have shown here that a full visual perception / action
+cycle could be understood as a predictive process unnder the Active
+Inference framework. In particular, we have shown that such models could
+reproduce the dynamics observed in eye movements, in particular when
+introducing realistic constraints such as sensory-motor delays. Further
+models should allow for the introduction of even more complex structural
+constraints such as the physical laws governing the motion of visual
+objects such as gravity or external cues [@Kowler14]. This may help
+synthesize most laws governing the organization of perception, as
+formalized in the Gestalt theory.
 
 3 Predictive processing on visual maps {#sec:maps}
 ======================================
 
-3.1 fle {#sec:fle}
--------
+While we have shown the role of predictive processing at a macroscopic
+scale, is there any evidence for such processes in visual space?
 
-![Figure 2: ME. In [@Khoei17], we propose a model of predictive
-processing in a topographic map. A) the model consists of a two-layered
-map: an input source target integrates information from visual sensors.
-This map represents both position and velocity, and we represent here a
-representation for a mono-dimensional variable. Using this belief (as
-represented here by the probability distribution function), it is
-possible to project this information to a second target layer that
-integrates information knowing a compensation for the delay. In that
-particular case, speed is positive and thus information of position is
-transported to the right. B) Response of a model compensating for a
-100ms delay to a moving dot. Representation of the inferred probability
-of position and velocity with delay compensation as a function of the
-iterations of the model (time). Darker colors denote higher
-probabilities, while a light color corresponds to an unlikely
-estimation. In particular, we focus on three particular epochs along the
-trajectory, corresponding to the standard, flash initiated and
-terminated cycles. The timing of these epochs flashes are indicated by
-dashed vertical lines. In dark, the physical time and in green the
-delayed input knowing a delay of $100 ms$. See text for an
-interpretation of the result.](Khoei17.png){#fig:Khoei17}
+3.1 The flash-lag effect as evidence for predictive processing in topographic maps {#sec:the-flash-lag-effect-as-evidence-for-predictive-processing-in-topographic-maps}
+----------------------------------------------------------------------------------
+
+![Figure 2: In [@Khoei17], we propose a model of predictive processing
+in a topographic map. **(A)** the model consists of a two-layered map:
+an input source target integrates information from visual sensors. This
+map represents both position and velocity, and we display here a
+projection on a single variable. Using this belief (as represented here
+by the probability distribution function), it is possible to project
+this information to a second target layer that integrates information
+knowing a compensation for the delay. In that particular case, speed is
+positive and thus information of position is transported to the right.
+**(B)** Response of a model compensating for a 100ms delay to a moving
+dot. Representation of the inferred probability of position and velocity
+with delay compensation as a function of the iterations of the model
+(time). Darker colors denote higher probabilities, while a light color
+corresponds to an unlikely estimation. In particular, we focus on three
+particular epochs along the trajectory, corresponding to the standard,
+flash initiated and terminated cycles. The timing of these epochs
+flashes are indicated by dashed vertical lines. In dark, the physical
+time and in green the delayed input knowing a delay of $100 ms$. See
+text for an interpretation of the result.](Khoei17.png){#fig:Khoei17}
 
 The flash-lag effect (FLE) is a visual illusion which is popular for its
 generality and simplicity. In its original form [@MacKay58], the
-observer is asked to always fixate on a central cross in the screen. A
-dot traverses the screen with a constant, horizontal motion. As it
-reaches the center of the screen, another dot is briefly flashed just
+observer is asked to keep fixating on a central cross in the screen
+while a dot traverses the screen with a constant, horizontal motion. As
+it reaches the center of the screen, another dot is briefly flashed just
 below the moving dot. While they are vertically perfectly aligned, the
 flashed dot is perceived as lagging the moving dot. This visual illusion
 saw a resurgence of scientific interest with the motion extrapolation
 model [@Nijhawan02; @Nijhawan09]. However, other models such as
 differential latency of postdiction (Eagleman) were also proposed, such
-that it is yet not clear what is the neural substrate of the FLE.
-
-Activity in both models shows three different phases. First, there is a
-rapid build-up of the precision of the target after the first appearance
-of the moving dot (at $t=300 ms$). Consistently with the Fröhlich effect
-[@Jancke10], the beginning of the trajectory is seen ahead of its
-physical position. During the second phase, the moving dot is correctly
-tracked as both its velocity and position are correctly inferred. In the
-source layer, there is no extrapolation and the trajectory follows the
-delayed trajectory of the dot (green dotted line). In the target layer,
-motion extrapolation correctly predicts the position at the present time
-and the position follows the actual physical position of the dot (black
-dotted line) fig. 2. Finally, the third phase corresponds to motion
-termination. The moving dot disappears and the corresponding activity
-vanishes in the source layer at $t=900 ms$. However, between $t=800 ms$
-and $t=900 ms$, the dot position was extrapolated and predicted ahead of
-the terminal position. At $t=900 ms$, while motion information is
-absent, the position information is still transiently consistent and
-extrapolated using a broad, centered prior distribution of speeds.
-Although it is less precise, this position of the dot at flash
-termination is therefore not perceived as leading the flash.
+that it is yet not clear what is the neural substrate of the FLE. Here,
+similarly to the model compensating for delays, we define a model of
+predictive processing defined on the visual topography using an internal
+representation of visual motion [@Perrinet12] to define an anisotropic
+diffusion of information fig. 2, A.
 
 The model that we used for the FLE can be used with any image. In
 particular, a single flashed dot evokes an expanding then contracting
@@ -601,27 +591,43 @@ isotropic activity while a moving dot may produce a soliton-like wave
 which may traverse an occlusion [@Khoei13]. More generally, this model
 may be described as a simplification of the Navier Stokes equation of
 fluid dynamics using the advection term. As such, solutions to these
-equations are typically waves which are travelling on the retinotopic
+equations are typically waves which are traveling on the retinotopic
 map. A particular feature of these maps is that these include an
 amplification term for rectilinear motions. As a consequence, once an
 object begins to be tracked, its position is predicted in the future,
 such that position and velocity are better estimated. On the contrary, a
 dot which is moving on an unpredictable trajectory is explained away by
 the system. This explains some of the non-linear, binary behaviors
-explained by this model. It is of particular interest at this point to
-understand if such a model extends to other stimuli or if we can precise
-its neural correlate.
+explained by this model [@Perrinet12]. It is of particular interest at
+this point to understand if such a model extends to other stimuli or if
+we can precise its neural correlate.
 
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX hindsight,
-parodiction, sort of adaption
+Applied to the image of the FLE, activity in the model shows three
+different phases fig. 2, B. First, there is a rapid build-up of the
+precision of the target after the first appearance of the moving dot (at
+300 ms). Consistently with the Fröhlich effect [@Jancke10], the
+beginning of the trajectory is seen ahead of its physical position.
+During the second phase, the moving dot is correctly tracked as both its
+velocity and position are correctly inferred. This is ahead of the
+delayed trajectory of the dot (green dotted line). Motion extrapolation
+correctly predicts the position at the present time and the position
+follows the actual physical position of the dot (black dotted line).
+Finally, the third phase corresponds to motion termination. The moving
+dot disappears and the corresponding activity vanishes in the source
+layer at t=900 ms. However, between t=800 ms and t=900 ms, the dot
+position was extrapolated and predicted ahead of the terminal position.
+At t=900 ms, while motion information is absent, the position
+information is still transiently consistent and extrapolated using a
+broad, centered prior distribution of speeds: Although it is less
+precise, with *hindsight*, this position of the dot at flash termination
+is therefore not perceived as leading the flash.
 
 3.2 neural correlate of apparent motion {#sec:neural-correlate-of-apparent-motion}
 ---------------------------------------
 
-When two stationary dots are flashed at close successive positions and
-times, observers may experience a percept of motion. This transforms the
+Let's apply a similar approach to another visual illusion: When two
+stationary dots are flashed at close successive positions and times,
+observers may experience a percept of motion. This transforms the
 presentation of a discrete pattern into a continuous one. This visual
 illusion is called apparent motion and can persist over a relatively
 long range (superior to the characteristic size of the RF of a V1
@@ -637,20 +643,20 @@ record neural activity during the presentation of the lrAM stimulus.
 This allows to quantitatively assess why the superposition of two dots
 as in lrAM is "more" than the sum of the two dots in isolation.
 
-In this study, we used VSDI to record the activity of the primary visual
-cortex (V1) of awake macaque monkeys. Is there any difference between
-the response to the single dot and that to the two dots? Indeed VSD
-recordings allow to record the activity of populations of neurons which
-are approx at the scale of a cortical column. Also, the recorded
-response is rapid enough to capture the dynamics of the lrAM stimulus.
-These recordings show that as the evoked activity of the second stimulus
-reaches V1, a cortical suppressive wave propagates toward the
-retinolopic wave evoked by the first dot. This was put in evidence by
-statistically comparing the response of the brain to the response of the
-two dots in isolation. In particular, we found that the activity for the
-brain stimulus was more precise, suggesting that such suppressive wave
-could serve as predictive processing step to be read-out in upstream
-cortical areas.
+In a recent study [@Chemla18], we used VSDI to record the activity of
+the primary visual cortex (V1) of awake macaque monkeys. Is there any
+difference between the response to the single dot and that to the two
+dots? Indeed, VSD recordings allow to record the activity of populations
+of neurons which are approximately at the scale of a cortical column.
+Also, the recorded response is rapid enough to capture the dynamics of
+the lrAM stimulus. These recordings show that as the evoked activity of
+the second stimulus reaches V1, a cortical suppressive wave propagates
+toward the retinolopic wave evoked by the first dot. This was put in
+evidence by statistically comparing the response of the brain to the
+response of the two dots in isolation. In particular, we found that
+thanks to this suppressive wave, the activity for the brain stimulus was
+more precise, suggesting that such suppressive wave could serve as
+predictive processing step to be read-out in upstream cortical areas.
 
 In particular, we found that the activity that we recorded fitted well
 with a mean-field model using a dynamical gain control. Qualitatively,
@@ -664,24 +670,25 @@ suppressive wave allowed to disambiguate the stimulus by explaining away
 (that is, suppressing) ambiguous alternatives. As a consequences, 1)
 lateral interactions are key to generate traveling waves on the surface
 of the cortex and 2) these waves help disambiguate the input stimulus.
-This corresponds to the implementation of a predictive process using on
+This corresponds to the implementation of a predictive process using an
 a priori knowledge of smoothly-moving visual objects.
 
 3.3 summary {#sec:summary-1}
 -----------
 
 As a summary, we have seen that it is possible to extend predictive
-processing to topographic maps. In particular, such resulting
-computations are particularly adapted to visual processing and we have
-shown here (see fig. 2) a model which represents (at any given time)
-different variables (here "Source" and "Target"). In a more realistic
-model, neural activity is more likely to form intermediate
-representations, at different levels of adaptation. As a consequence,
-such processes are observed phenomenologically as the propagation of
-neural information tangentially to the cortical surface, modulating
-dynamically the feed-forward and feed-back stream. In particular it is
-an open question whether such neural computations [@Muller18] could be
-implemented by travelling waves on the cortical surface.
+processing to topographic maps. In particular, resulting computations
+are particularly adapted to vision. We have shown (see fig. 2) a model
+which represents (at any given present time) different variables (here
+"Source" and "Target"). In a more realistic model, neural activity is
+more likely to form intermediate representations, at different levels of
+adaptation as illustrated for the lrAM stimulus [@Chemla18]. As a
+consequence, such processes are observed phenomenologically as the
+propagation of neural information tangentially to the cortical surface,
+modulating dynamically the feed-forward and feed-back stream. In
+particular it is an open question whether such neural computations
+[@Muller18] could be implemented by travelling waves on the cortical
+surface.
 
 4 Open problems in the science of visual predictive processing {#sec:spikes}
 ==============================================================
@@ -693,13 +700,13 @@ models to fields of such nodes, organized on the topography of a single
 visual area . At a finer scale than this intermediate mesoscopic scale
 is the microscopic scale of' actual neural cells. Indeed to better
 understand the mechanisms of predictive processing, we need now to
-finesse the granularity of the modelling to this scale. In particular,
-in addition to the asynchronous nature of the neural representation,
+finesse the granularity of the modeling to this scale. In particular, in
+addition to the asynchronous nature of the neural representation,
 communication between neurons has the property of being event-based.
 Indeed, in a vast majority of neural cells across the biosphere
 communicate using prototypical, short pulses called action potentials or
 *spikes*. In this section, we will propose three open problems which are
-raised when modelling such Spiking Neural Networks (SNNs) in the context
+raised when modeling such Spiking Neural Networks (SNNs) in the context
 of predictive processing.
 
 4.1 The challenges of representing visual information in Spiking Neunal Networks (SNNs) {#sec:the-challenges-of-representing-visual-information-in-spiking-neunal-networks-snns}
@@ -712,7 +719,7 @@ representation have many advantages which are a deadlock in DL. For
 instance, instead of repeating all compu­tations for each layer, channel
 and pixel of a hierarchical network ENN), and for which energy-greedy
 GPUs are necessary, computations need only to be performed for active
-units at the time of a spike. In particular, an developping area of
+units at the time of a spike. In particular, an developing area of
 research consists in developing dedicated hardware, such as neuromorphic
 chips, which would allow to scale the effective volume of computations
 beyond the last generations of classical semi-conductors (CPUs, GPUs)
@@ -725,7 +732,7 @@ of SNNs is the ability to represent dynamically a latent, internal
 variable (the membrane potential in neuro-physiology) and to emit a
 spike when (and only when) an internally defined threshold is reached.
 This defines each spiking neuron as an integrator (similarly to
-glassical neurons), but also as a synchrony detector. This ability to.
+classical neurons), but also as a synchrony detector. This ability to.
 modulate procuring based on the relative timing of presynaptic spikes
 constitute a novel paradigm for neural computations [@Paugam12]. In
 particular, this shows that the balance in the flux of incoming
