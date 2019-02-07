@@ -266,7 +266,7 @@ connections in an unsupervised manner. We will conclude by synthesizing
 these results and their limit. In particular, we will try to define an
 emerging notion for time as it appears in the definition of predictive
 processes for visual processing.
-<!-- what Dennett (2009) calls a “strange inversion of reasoning,”  and we will try to understand the potential role of traveling waves in shaping visual processing-->
+<!-- what Dennett (2009) calls a “strange inversion of reasoning,” and we will try to understand the potential role of traveling waves in shaping visual processing-->
 
 2 Active Inference and the "optimality" of vision {#sec:AI}
 =================================================
@@ -723,89 +723,98 @@ units at the time of a spike. In particular, an developing area of
 research consists in developing dedicated hardware, such as neuromorphic
 chips, which would allow to scale the effective volume of computations
 beyond the last generations of classical semi-conductors (CPUs, GPUs)
-which attain the limits of Moore's Law. Crucial in this new type of
-representation is the discrete nature of the addressing of neurons and
-the analog nature of the timing of spikes. Notable results have been
-made notably in real-time classification and sensor fusion [@Oconnor13]
-and in pattern recognition [@Lagorce17]. Indeed, an important property
-of SNNs is the ability to represent dynamically a latent, internal
-variable (the membrane potential in neuro-physiology) and to emit a
-spike when (and only when) an internally defined threshold is reached.
-This defines each spiking neuron as an integrator (similarly to
-classical neurons), but also as a synchrony detector. This ability to.
-modulate procuring based on the relative timing of presynaptic spikes
-constitute a novel paradigm for neural computations [@Paugam12]. In
-particular, this shows that the balance in the flux of incoming
-excitatory and inhibitory spikes is crucial to maximize the efficiency
-of such SNNs [@Hansel12].
+which attain the limits of Moore's Law.
+
+Crucial in this new type of representation is the discrete nature of the
+addressing of neurons and the analog nature of the timing of spikes.
+Notable results have been made notably in real-time classification and
+sensor fusion [@Oconnor13] and in pattern recognition [@Lagorce17].
+Indeed, an important property of SNNs is the ability to represent
+dynamically a latent, internal variable (the membrane potential in
+neuro-physiology) and to emit a spike when (and only when) an internally
+defined threshold is reached. This defines each spiking neuron as an
+integrator (similarly to classical neurons), but also as a synchrony
+detector. This ability to. modulate procuring based on the relative
+timing of presynaptic spikes constitute a novel paradigm for neural
+computations [@Paugam12]. In particular, this shows that the balance in
+the flux of incoming excitatory and inhibitory spikes is crucial to
+maximize the efficiency of such SNNs [@Hansel12].
 
 4.2 The role of cortical waves in shaping the dynamic processing of visual information {#sec:the-role-of-cortical-waves-in-shaping-the-dynamic-processing-of-visual-information}
 --------------------------------------------------------------------------------------
 
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX single trials [@Muller14] review in
-[@Muller18] XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+Another crucial point in deciphering the predictive processing
+mechanisms in V1 is given by its functional anatomy. Indeed, as in other
+cortical areas, the neural network is highly recurrent with a median
+number of 10000 connections per neuron. Surprisingly, 95% of these
+connections occur within a 2mm radius (macaque monkey) [@Markov13]. This
+suggests that a majority of neural resources is devoted to intraared
+communications . The potential functional role is to generate traveling
+waves which modify the strength and dynamics of incoming, feed-forward
+neural activity [@Muller18]. We have seen its potential role in
+disambiguating motion [@Chemla18] and it has also been shown to
+facilitate the progressive build-up of visual information
+[@Bringuier99].
 
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX
+One "holy grail" in that direction is to find canonical micro-circuits
+for predictive cooling [@Bastos12]. This follows from the observation
+that across species and areas, the cortex seem to follow some
+prototypical, layered structure. In the particular case of V1, while the
+thalamic input reaches mostly the (intermediate) granular layer, a
+feed-forward stream is propagated to efferent layers through the
+supra-granular layers while feed-back is mediated by infragranular
+layers. This segregation could correspond to different types of signals
+in predictive coding, respectively expected states and prediction error.
+Such basic micro-circuits have been applied to explain the response of
+V1 neurons to natural scenes [@Kremkow16] by using a push-pull
+mechanism. Still it is an open problem as to know how such a circuitry
+may emerge.
 
-4.3 c XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX {#sec:c-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx}
------------------------------------------------------------------------------
+4.3 Integrative properties of cortical areas: toward sparse, efficient representations {#sec:integrative-properties-of-cortical-areas-toward-sparse-efficient-representations}
+--------------------------------------------------------------------------------------
 
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX
+Another interesting perspective is the integrative nature of neural
+computations. While it is often believed that neurons would represent
+the combination of visual features, it has been found that instead,
+activity may become sharper as visual features are accumulated. For
+instance, [@Baudot13] has shown that neurons in cat's area 17 respond
+more pelectively when presenting natural images (which consist localy to
+a sum of edges) compared to a single edge. Recently, [@Ravello19] has
+shown that a similar mechanism may occur as soon as in the (rodent)
+retina. Behaviorally, this fits also with the observation in humans that
+more complex textures are driving more robustly eye movements
+[@Simoncini12]. Such phenomena are consistent with the predictive
+processing principle that by accumulating coherent information, the a
+posteriori probability and (hence the response of the system) gets more
+precise.
 
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX
+Strinkingly, this translates in the neural activity by the fact that for
+a more coherent set of input, the neural activity of the population is
+more sparse [@Vinje02; @Baudot13] This was already explained by the
+predictive coding model of [@Rao99] and implemented in [@Kremkow16] for
+instance. Importantly, the principle of sparse coding is itself
+sufficient to guide the learning of the connectivity within a population
+of neurons, such as in V1 [@Olshausen97]. This helps to solve an
+important problem, that is, that the system is auto-organized and that
+the learning of the connectivity should be unsupervised. As such the
+plasticity rules that should be developed in Suns should use similar
+governing principles.
 
 5 Summary and conclusions {#sec:summary-and-conclusions}
 =========================
 
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX
+As a summary, we have reviewed in this chapter different models of
+predictive coding applied to vision. We have seen at a macroscopic scale
+the role of dynamics using Active Inference (see sec. 2). Extending such
+model to a retinotopic map, we could describe a functional traveling
+wave to disambiguate visual stimuli (see sec. 3). However, we have also
+shown a limit of such models at the microscopic scale (see sec. 4). In
+particular, it is not yet understood at the single cell level how 1)
+information is represented in spiking activity, 2) what is the
+functional role of traveling waves on cortical surfaces 3) if a common
+efficiency principle (such as spease coding) could be used to guide the
+organisation of such highly recurrent networks into a single universal
+circuit.
 
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
