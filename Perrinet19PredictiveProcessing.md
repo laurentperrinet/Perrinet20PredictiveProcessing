@@ -118,7 +118,24 @@ Interestingly, this model extends to more
 complex stimulation trajectories. In particular, it is has been shown that gaze will be directed at the present physical position of the target (thus in anticipatory fashion) if that target follows a smooth trajectory (such as a pendulum). More striking, this is also true if the trajectory is *predictable*, for instance for a pendulum behind a static occluder [@Barnes91]. Figure [@fig:PerrinetAdamsFriston14, B] reports the simulation of smooth pursuit when the target motion is hemi-sinusoidal, as would happen for a pendulum that would be stopped at each half cycle, left of the vertical (dashed black line). The generative model has been equipped with a second hierarchical level that contains hidden states, modeling latent periodic behavior of the (hidden) causes of target motion of the pendulum. One can see clearly the initial displacement of the target that is suppressed after a few hundred milliseconds (pink shaded area). The improvement in pursuit accuracy is apparent at the onset of the second cycle of motion is observed, similar to psychophysical experiments [@Barnes91]. This is because the model has an internal representation of latent causes of target motion that can be called upon even when these causes are not expressed explicitly (occluded) in the target trajectory. A particular advantage of this model is that it provides a solution for the integration of past and future information while still being governed by online differential equations. This therefore implements some form of Bayes-optimal temporal memory.
 
 ## summary
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX laws of vision: perspective, gravity, rebounds of a ball - resolves Gestalt laws by seing it as conflicts between separate contexts time to awareness / explanatory gap
+To sum up, we have shown here that
+a full visual perception / action cycle
+could be understood as a predictive
+process arnder the Active Inference
+framework. In particular, we have
+shown that such models could
+reproduce the dynamics observed
+in eye movements, in particular
+when introducing realistic constraints
+such as sensory-motor delays.
+Further models should allow for
+the introduction of even more complex
+structural constraints such as the
+physical laws governing the motion
+of visual objects: gravity, rebounds.
+This may help synthesize most
+laws governing the organization of
+perception, as formalized in the Gestalt theory.
 
 # Predictive processing on visual maps {#sec:maps}
 ## fle
