@@ -154,7 +154,28 @@ Crucial in this new type of representation is the discrete nature of the address
 ## The role of cortical waves in shaping the dynamic processing of visual information
 Another crucial point in deciphering the predictive processing mechanisms in V1 is given by its functional anatomy. Indeed, as in other cortical areas, the neural network is highly recurrent with a median number of 10000 connections per neuron. Surprisingly, 95% of these connections occur within a 2mm radius (macaque monkey) [@Markov13]. This suggests that a majority of neural resources is devoted to intraared communications . The potential functional role is to generate traveling waves which modify the strength and dynamics of incoming, feed-forward neural activity [@Muller18]. We have seen its potential role in disambiguating motion [@Chemla18] and it has also been shown to facilitate the progressive build-up of visual information [@Bringuier99].
 
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+one "holy grail" in that direction is
+to find canonical micro-circuits for
+predictive cooling E@Basks 92J. This
+follows from the observation that across
+species and action areas, the cortex
+seem to follow some prototypical, layered
+structure. In the particular case of Va,
+while the thalamic input reaches mostly
+she (intermediate) granular layer, a
+feed-forward stream is propagated to
+efferent layers through the supra-granular
+layers while feed-back is mediated by
+infragramlar layers. This dichotomy could
+correspond to the different types of signals in
+predictive coding, respectively expected
+states and prediction error. Such basic
+micro-circuits have been applied to
+explain the response of Vg neurons to
+natural scenes [@knew how 16] by
+using a push-pull mechanism. still it
+is an open problem as to know how
+such a circuitry may emerge.
 
 ## c XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
