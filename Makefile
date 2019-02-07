@@ -23,12 +23,11 @@ figures:
 	rsvg-convert PerrinetAdamsFriston14anticip.svg -f png -d 450 -p 450 -o PerrinetAdamsFriston14anticip.png
 
 
-markdown:
+markdown: figures
 	pandoc $(OPTIONS) $(SRC).md -t markdown -o README.md
 
-doc:
+doc: figures
 	pandoc $(OPTIONS) $(SRC).md -t docx -o $(SRC).doc
 
-#  --template mytemplate.latex
-pdf:
+pdf: figures
 	pandoc $(OPTIONS) $(SRC).md -t latex  -o $(SRC).pdf

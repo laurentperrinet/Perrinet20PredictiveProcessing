@@ -176,17 +176,28 @@ TODO: move to https://greenelab.github.io/manubot-rootstock/
 ==================================================================================
 
 Vision, the capacity of making sense of the luminous environment, is a
-dynamic process. From its first stage, the retina, to the different
-areas which help in forming a representation of the visual world knowing
-its transformations as with the motion of a visual object but also to
-sensory modifications, such as with eye movements. As such, visual
-processing is not separable from the dynamics of the neural networks
-involved in vision. To make sense of such a complex system, it has been
-proposed that the organization of the visual system is such that it is
-efficient [@Attneave54]. Such an ecological framework [@Atick92] allows
-to explain many aspects of visual processing. Formalizing such
-optimization strategies in probabilistic language, these may be
-encompassed by the "Bayesian Brain" framework [@Knill04]
+dynamic process. We will focus on this cognitive ability for studying
+the philosophy and science of predictive processes. Indeed, it has the
+advantage of low-level feats such as unconscious inferences (detecting
+and reading a printed character, for instance) to higher features such
+as the interpretation of complex scenes with respect to some cognitive
+context. Furthermore, it also allows for prospective predictions such as
+those revealed during mental imagery - and is a basic groundstone for
+one's creativity, or *imagination*. As a matter of fact, the most
+surprising fact about vision is the ease with which sighted persons, as
+visual agents, may perform this abilities: It comes with for granted
+while it is largely a self-organized process. Anatomically, from its
+first stage, the retina, to the different areas which help in forming a
+representation of the visual world knowing its transformations as with
+the motion of a visual object but also to sensory modifications, such as
+with eye movements. As such, visual processing is not separable from the
+dynamics of the neural networks involved in vision. To make sense of
+such a complex system, it has been proposed that the organization of the
+visual system is such that it is efficient [@Attneave54]. Such an
+ecological framework [@Atick92] allows to explain many aspects of visual
+processing. Formalizing such optimization strategies in probabilistic
+language, these may be encompassed by the "Bayesian Brain" framework
+[@Knill04]
 
 Such principles take different forms such as redundancy reduction
 [@Barlow61], maximization of information transfer [@Linsker90] or
@@ -409,9 +420,9 @@ Here, we see horizontal excursions of oculomotor angle (red line). One
 can see clearly the initial displacement of the target that is
 suppressed by action after a few hundred milliseconds. Additionally, we
 illustrate the effects of assuming wrong sensorimotor delays on pursuit
-initiation. Under pure sensory delays ($\tau_s=0$, blue dotted line),
-one can see clearly the delay in sensory predictions, in relation to the
-true inputs. With pure motor delays (blue dashed line) and with combined
+initiation. Under pure sensory delays (blue dotted line), one can see
+clearly the delay in sensory predictions, in relation to the true
+inputs. With pure motor delays (blue dashed line) and with combined
 sensorimotor delays (blue line) there is a failure of optimal control
 with oscillatory fluctuations in oculomotor trajectories, which may
 become unstable. ***(B)*** This figure reports the simulation of smooth
@@ -431,29 +442,29 @@ cognition is to extend this model to a more realistic description of
 naturalistic constraints faced by the visual system. Indeed, the central
 nervous system has to contend with axonal delays, both at the sensory
 and the motor levels. For instance, in the human visuo-oculomotor
-system, it takes approximately $\tau_s=50 ms$ for the retinal image to
-reach the visual areas implicated in motion detection, and a further
-$\tau_m = 50 ms$ to reach the oculomotor muscles and actually realize
-action. One challenge for modeling is to understand eye movements using
-AI as a problem of optimal motor control under axonal delays. Let's take
-the example of a tennis player trying to intercept a passing-shot ball
-at a (conservative) speed of $20 m/s$. The position sensed on the
-retinal space corresponds to the instant when its image formed on the
-photoreceptors of the retina and reaches our hypothetical motion
-perception area behind: At this instant, the sensed physical position is
-in fact lagging $1 m$ behind, that is, approximately at a significative
-eccentricity of $45$ degrees. However, the position at the moment of
-emitting the motor command will be also $45$ degrees *ahead* of its
-present physical position in visual space. As a consequence, note that
-if the player's gaze is directed to the ball at its **present**
-position, it is in anticipatory fashion of the position of the ball
-during the (counterfactual) transport of this position during the
-sensory delay. Alternatively, optimal control may direct action (future
-motion of the eye) to the expected position when motor commands reach
-the periphery (muscles). Such an example illustrates that even with such
-a small delay, the visual system is faced with ambiguous choices. This
-ambiguity is obviously an interesting challenge for modeling predictive
-processing in the visual system.
+system, it takes approximately 50 ms for the retinal image to reach the
+visual areas implicated in motion detection, and a further 50 ms to
+reach the oculomotor muscles and actually realize action. One challenge
+for modeling is to understand eye movements using AI as a problem of
+optimal motor control under axonal delays. Let's take the example of a
+tennis player trying to intercept a passing-shot ball at a
+(conservative) speed of 20 m/s. The position sensed on the retinal space
+corresponds to the instant when its image formed on the photoreceptors
+of the retina and reaches our hypothetical motion perception area
+behind: At this instant, the sensed physical position is in fact lagging
+1 meter behind, that is, approximately at a significative eccentricity
+of 45 degrees. However, the position at the moment of emitting the motor
+command will be also 45 degrees *ahead* of its present physical position
+in visual space. As a consequence, note that if the player's gaze is
+directed to the ball at its **present** position, it is in anticipatory
+fashion of the position of the ball during the (counterfactual)
+transport of this position during the sensory delay. Alternatively,
+optimal control may direct action (future motion of the eye) to the
+expected position when motor commands reach the periphery (muscles).
+Such an example illustrates that even with such a small delay, the
+visual system is faced with ambiguous choices. This ambiguity is
+obviously an interesting challenge for modeling predictive processing in
+the visual system.
 
 Extending the modeling framework of [@Adams12] for SPEM, it was observed
 in [@PerrinetAdamsFriston14] that representing hidden states in
@@ -461,14 +472,14 @@ generalized coordinates provides a simple way of compensating for both
 these delays. A novelty of this approach is to include the delays in the
 dynamics at the present time by taking advantage of generalized
 coordinates to create a linear operator on those variables to travel
-back and forth in time with any delay $\tau$. It is simply formed by
-using a Taylor expansion of the successive orders in the generalized
-coordinates which takes this form in matrix form and thus simply by
-taking the exponential matrix form. Applying such an operator to the FEM
-generates a slightly different and more complicated formulation.
-However, it is important to note that to compensate for delays, there is
-no change in the structure of the network but just in how the synaptic
-weights are tuned (similar to what we had done in the first part):
+back and forth in time with any delay. It is simply formed by using a
+Taylor expansion of the successive orders in the generalized coordinates
+which takes this form in matrix form and thus simply by taking the
+exponential matrix form. Applying such an operator to the FEM generates
+a slightly different and more complicated formulation. However, it is
+important to note that to compensate for delays, there is no change in
+the structure of the network but just in how the synaptic weights are
+tuned (similar to what we had done in the first part):
 "Neurobiologically, the application of delay operators just means
 changing synaptic connection strengths to take different mixtures of
 generalized sensations and their prediction errors."
@@ -558,8 +569,8 @@ estimation. In particular, we focus on three particular epochs along the
 trajectory, corresponding to the standard, flash initiated and
 terminated cycles. The timing of these epochs flashes are indicated by
 dashed vertical lines. In dark, the physical time and in green the
-delayed input knowing $\tau=100 ms$. See text for an interpretation of
-the result.](Khoei17.png){#fig:Khoei17}
+delayed input knowing a delay of $100 ms$. See text for an
+interpretation of the result.](Khoei17.png){#fig:Khoei17}
 
 The flash-lag effect (FLE) is a visual illusion which is popular for its
 generality and simplicity. In its original form [@MacKay58], the
