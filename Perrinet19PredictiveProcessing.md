@@ -162,26 +162,7 @@ Another interesting perspective is the integrative nature of neural computations
 Strinkingly, this translates in the neural activity by the fact that for a more coherent set of input, the neural activity of the population is more sparse [@Vinje02; @Baudot13] This was already explained by the predictive coding model of [@Rao99J and implemented in [@Kremkow16] for instance. Importantly, the principle of sparse coding is itself sufficient to guide the learning of the connectivity within a population of neurons, such as in V1 [@Olshausen97]. This helps to solve an important problem, that is, that the system is auto-organized and that the learning of the connectivity should be unsupervised. As such the plasticity rules that should be developed in Suns should use similar governing principles.
 
 # Summary and conclusions
-As a summary, we have reviewed in
-this chapter different models of predictive
-coding applied to vision. We have
-seen at a macroscopic scale the role
-of dynamics using Active Inference,
-Extending puck model to a retinotopic
-map, we could describe a functional
-traveling wave to disambiguate visual
-stimuli. However, we have also shown
-a limit of such models at the microscopic
-scale. In particular, it is not yet
-understood at the single cell level how
-I information is represented in spiking
-activity, D what is the functional
-role of traveling waves on cortical surfaces
-3) if a common efficiency principle
-(such as spease coding) could be used to
-guide the organisation of such
-highly recurrent networks into a single
-universal circuit.
+As a summary, we have reviewed in this chapter different models of predictive coding applied to vision. We have seen at a macroscopic scale the role of dynamics using Active Inference (see [@sec:AI]). Extending such model to a retinotopic map, we could describe a functional traveling wave to disambiguate visual stimuli (see [@sec:maps]). However, we have also shown a limit of such models at the microscopic scale (see @sec:spikes). In particular, it is not yet understood at the single cell level how 1) information is represented in spiking activity, 2) what is the functional role of traveling waves on cortical surfaces 3) if a common efficiency principle (such as spease coding) could be used to guide the organisation of such highly recurrent networks into a single universal circuit.
 
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 
