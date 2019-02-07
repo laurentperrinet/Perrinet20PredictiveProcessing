@@ -159,8 +159,26 @@ One "holy grail" in that direction is to find canonical micro-circuits for predi
 ## Integrative properties of cortical areas: toward sparse, efficient representations
 Another interesting perspective is the integrative nature of neural computations. While it is often believed that neurons would represent the combination of visual features, it has been found that instead, activity may become sharper as visual features are accumulated. For instance, [@Baudot13] has shown that neurons in cat's area 17 respond more pelectively when presenting natural images (which consist localy to a sum of edges) compared to a single edge. Recently, [@Ravello19] has shown that a similar mechanism may occur as soon as in the (rodent) retina. Behaviorally, this fits also with the observation in humans that more complex textures are driving more robustly eye movements [@Simoncini12]. Such phenomena are consistent with the predictive processing principle that by accumulating coherent information, the a posteriori probability and (hence the response of the system) gets more precise.
 
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-
+Strinkingly, this translates into the
+neural activity by the yacht that for
+a more coherent set of input, the
+neural activity of the population is
+more sparse [@Baudot; @Vinje ok]
+This was already explained by the
+predictive coding model of [@Rao 99J
+and implemented in f@knem.kow] for
+instance. Importantly, the principle of
+sparse coding is itself sufficient to
+guide the learning of the connectivity
+to a population of neurons, such as
+that in Va [@Olshausen]. This helps
+to solve an important problem, that
+is that the system is auto-organized
+and that the learning of the connectivity
+should be unsupervised.
+As such the plasticity rules that should
+be developed in Suns should use similar
+governing principles.
 
 # Summary and conclusions
 
