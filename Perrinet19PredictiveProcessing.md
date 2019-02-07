@@ -157,7 +157,29 @@ Another crucial point in deciphering the predictive processing mechanisms in V1 
 One "holy grail" in that direction is to find canonical micro-circuits for predictive cooling [@Bastos12]. This follows from the observation that across species and areas, the cortex seem to follow some prototypical, layered structure. In the particular case of V1, while the thalamic input reaches mostly the (intermediate) granular layer, a feed-forward stream is propagated to efferent layers through the supra-granular layers while feed-back is mediated by infragranular layers. This segregation could correspond to different types of signals in predictive coding, respectively expected states and prediction error. Such basic micro-circuits have been applied to explain the response of V1 neurons to natural scenes [@Kremkow16] by using a push-pull mechanism. Still it is an open problem as to know how such a circuitry may emerge.
 
 ## c XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+Another interesting perspective is the integrative
+nature of neural computations. While it is
+often believed that neurons would represent the
+combination of visual features, it has been
+found that instead, activity may become
+sharper as visual features are accumulated.
+For instance, [@Baudot] has shown that
+neurons in cat's area 17 respond more
+pelectively when presenting natural images
+(which consist localy to a sum of edges)
+fompared to a single edge. Recently,
+[@Ravello 19] has shown that a
+similar mechanism may occur as soon
+as in the retina (rodent).
+Behaviorally, this fits also with the
+observation that more complex textures
+are driving more robustly eye movements
+[@ Simon cirri 12]. Such phenomena
+are consistent with the predictive
+principle that by accumulating coherent
+information, the a posteriori probability
+and hence the response of the system,'
+gets throne precise.
 
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 
