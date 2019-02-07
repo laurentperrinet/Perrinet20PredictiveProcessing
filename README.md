@@ -3,7 +3,7 @@ abstract: |
     Visual areas are essential in transforming the raw luminous signal into
     a representation which efficiently conveys information about the
     environment. This process is constrained by various factors such as a
-    wide variety of changes in the characteristics of the visual image but
+    wide variety of changes in the characteristics of the visual scene but
     also by the necessity to be able to respond as quickly as possible to
     the incoming sensory stream, for instance to drive a movement of the
     eyes to the location of a potential danger. To achieve this, it is
@@ -26,12 +26,13 @@ abstract: |
     light of recent neurophysiological data showing the role of traveling
     waves in shaping visual processing. Finally, we will propose some lines
     of research to understand how the previous functional models may be
-    implemented at the neural level. In particular, we will describe models
-    of cortical processing in terms of prototypical micro-circuits. These
-    allow to separate the different flows of information, from feed-forward
-    prediction error to feed-back anticipation error. Still, the particular
-    implementation of such a circuit is not known and we will review some
-    possible implementations using Spiking Neural Networks.
+    implemented at the neural level. In particular, we will describe
+    potential models of cortical processing in terms of prototypical
+    micro-circuits. These allow to separate the different flows of
+    information, from feed-forward prediction error to feed-back
+    anticipation error. Still, the particular implementation of such a
+    circuit is not known and we will review some possible implementations
+    using Spiking Neural Networks.
 author: Laurent Perrinet
 author_info:
 - affiliations:
@@ -80,6 +81,8 @@ institute: |
 keywords:
 - Vision
 - Active Inference
+- Topography
+- Spiking Neural Netwroks
 lang: 'en-US'
 lastDelim: ','
 linkReferences: False
@@ -169,8 +172,8 @@ TODO: move to https://greenelab.github.io/manubot-rootstock/
 
 -->
 
-1 Motivation : Role of dynamics in neural computations underlying visual processing {#sec:intro}
-===================================================================================
+1 Motivation: Role of dynamics in neural computations underlying visual processing {#sec:intro}
+==================================================================================
 
 Vision, the capacity of making sense of the luminous environment, is a
 dynamic process. From its first stage, the retina, to the different
@@ -193,7 +196,7 @@ different theories into a single framework, the Free-Energy Principle
 the processes that generated the visual image and the internal
 generative model that allows its representation, predictive processes
 will take advantage of *a priori* knowledge to form an optimal
-representation of the image. Such an a priori knowledge is an explicit
+representation of the image. This knowledge constitutes an explicit
 (probabilistic) representation of the structure of the world. For
 instance, an image which is composed of edges will be understood at a
 higher level using the a priori knowledge of the link between any
@@ -219,20 +222,19 @@ set of neural cells in some visual areas. Let's assume that recording
 provides with an analog signal from which we may extract the analog
 timings of spiking events for the population of cells. We may then chose
 to display this data in a "raster plot", that is, showing the timing of
-the spikes that each cell emitted. The time is thus relative to that of
-the experimenter and is given thanks to an external clock. Moreover, the
-plot is shown a posteriori, that is, after the recording of the spike
-trains. This definition of an absolute time $t$ was introduced by Newton
-and defines most of the laws of physics. Consistent with that, time
-measures the speed (or "width") of physical transformations
-(Anaximandre, Rovelli) In contrast, each neuron has no access to a
-central clock but its response is controlled by the present distribution
+the spikes that each cell emitted. Time is thus relative to that of the
+experimenter and is given thanks to an external clock. Moreover, it is
+shown a posteriori, that is, after the recording. This definition of an
+absolute time was first formalized by Newton and now defines most of the
+laws of physics. In contrast, each neuron has no access to a central
+clock: its response is solely controlled by the *present* distribution
 of electro-chemical gradients on its membrane and its dynamical
-properties. Such a notion of time is repeated for each neuron as this
-network is mostly decentralized. Such an observation is essential in
+properties. Such a notion of time is local to each neuron: the network
+is asynchronously decentralized. Such an observation is essential in
 understanding the principles guiding the organization of visual
 processes. In particular, predictive processes can be only defined in
 this interoceptive time, using only information at the present instant.
+<!-- Consistent with that, time measures the speed (or "width") of physical transformations (Anaximandre, Rovelli) -->
 
 This chapter will review such dynamical predictive processing approaches
 for vision at different scales of analysis, from the whole system to
@@ -245,16 +247,15 @@ behaviors such as eye movements (see sec. 2). Then, we will extend it to
 understand how such processes may be implemented in retinotopic maps
 (see sec. 3). In particular, we will show how such a model may explain a
 visual illusion, the Flash-lag effect. This will then be compared with
-neurophysiological data and try to understand the potential role of
-traveling waves in shaping visual processing. Finally, we will review
-possible implementations of such models in Spiking Neural Networks (see
-sec. 4). In particular, we will review some models of elementary
-micro-circuits and detail some potential rules for learning the
-structure of their connections in an unsupervised manner. We will
-conclude by synthesizing these results and their limit. In particular,
-we will try to define an emerging notion for time as it appears in the
-definition of predictive processes for visual processing.
-<!--  what Dennett (2009) calls a “strange inversion of reasoning,”  -->
+neurophysiological data. Finally, we will review possible
+implementations of such models in Spiking Neural Networks (see sec. 4).
+In particular, we will review some models of elementary micro-circuits
+and detail some potential rules for learning the structure of their
+connections in an unsupervised manner. We will conclude by synthesizing
+these results and their limit. In particular, we will try to define an
+emerging notion for time as it appears in the definition of predictive
+processes for visual processing.
+<!-- what Dennett (2009) calls a “strange inversion of reasoning,”  and we will try to understand the potential role of traveling waves in shaping visual processing-->
 
 2 Active Inference and the "optimality" of vision {#sec:AI}
 =================================================
@@ -263,25 +264,25 @@ To rephrase Wigner [@Wigner90], optimization principles seem the only
 choice to understand "The Unreasonable Effectiveness of Vision in the
 Natural World". However, trying to understand vision as an emergent
 process from efficiency principle seems like a teleological principle in
-which causation would be reversed [@Turkheimer19]. Still, it is one way
-"by which we may seek to learn how things came to be, and to take their
-places in the harmonious complexity of the world." [@DArcy-Thompson17,
-p.XXX]. Putting this another way, it is not of scientific importance to
-know if the brain is using explicitly such a principle (for instance
-that some its part may use Bayes' rule), but rather that such a set of
-rules offers a simpler explanation for the neural recordings which
-reflect the processing occurring in this complex system [@Varoquaux19].
-In this section, we will consider the visual system from the retina to
-the oculomotor muscles as an organizational closure (Autopoeise /
-maturama / varela). Then, we will follow basic principles of
+which causation would be reversed [@Turkheimer19]. Still, the "use of
+the teleological principle is but one way, not the whole or the only
+way, by which we may seek to learn how things came to be, and to take
+their places in the harmonious complexity of the world."
+[@DArcy-Thompson17, chap. 1]. Putting this another way, it is not of
+scientific importance to know if the brain is using explicitly such a
+principle (for instance that some its part may use Bayes' rule), but
+rather that such a set of rules offers a simpler explanation for the
+neural recordings by shedding light on processes occurring in this
+complex system [@Varoquaux19]. We will follow basic principles of
 self-organized behavior: namely, the imperative to minimize the entropy
 of hidden states of the world and their sensory consequences.
+<!-- In this section, we will consider the visual system from the retina to the oculomotor muscles as an organizational closure (Autopoeise / maturama / varela). Then, w -->
 
 2.1 Perceptions as hypotheses, Actions as experiments {#sec:perceptions-as-hypotheses-actions-as-experiments}
 -----------------------------------------------------
 
 As a first step, we will consider a simplistic agent that senses a
-subset of the visual scene as its projection on the (log-)polar
+subset of the visual scene as its projection on the (log-polar)
 retinotopic space. The agent has the ability to direct his gaze toward
 any position in (visual) space using fast eye movements, saccades. As
 the sensory system of our agent can actively sample the visual world, we
@@ -294,23 +295,22 @@ the basic principles of self-organized behavior [@Gibson79]: namely, the
 imperative to minimize the entropy of hidden states of the world and
 their sensory consequences. This imperative is met if agents sample
 hidden states of the world efficiently. This efficient sampling of
-salient information can be derived in a fairly straightforward way,
-using approximate Bayesian inference and variational free-energy
-minimization. One key ingredient to this process is the (internal)
-representation of counterfactual predictions, that is, of the probable
-consequences of possible hypothesis as they are realized into actions.
-This augment the FEP of an agent such as to define Active Inference.
+salient information can be derived using approximate Bayesian inference
+and variational free-energy minimization [@Friston10]. One key
+ingredient to this process is the (internal) representation of
+counterfactual predictions, that is, of the probable consequences of
+possible hypothesis as they would be realized into actions. This augment
+the FEP modelling of an agent such as to define Active Inference (AI).
 
 Using the SPM simulation environment [@SPM12], Friston and colleagues
 [@Friston12] provide with simulations of the behavior of such an agent
 which senses the image of a face, and knowing an internal model of their
-structure. In modeling the agent, we clearly delineate the hidden
+structure. In modeling the agent, they clearly delineate the hidden
 external state (the visual image, the actual position of the eye) from
 the internal state of the agent. Those internal beliefs are linked by a
-probabilistic dependency graph and evolve such as to minimize
-variational free-energy. Applying the FEP to this generative model, this
-translates (or compiles in computer science terms) to a set of
-differential equations with respect to 1) the internal belief 2) the
+probabilistic dependency graph and applying the FEP to this generative
+model, this translates (or compiles in computer science terms) to a set
+of differential equations with respect to 1) the internal belief 2) the
 counterfactual action. This action is the one which is expected to
 reduce sensory surprise and is ultimately realized by an arc reflex.
 
@@ -320,22 +320,22 @@ provide some counterintuitive insights into the way that sensory
 evidence is accumulated or assimilated into beliefs about the world. In
 particular, knowing the localized image sensed on the retina, Saccades
 will explore points of interests (eyes, mouth, nose) until an internal
-representation of the whole image is made. This Active Inference (AI)
-process allows to bridge the image in intrinsic (retinal) coordinates
-with that extrinsic world coordinates which is prevalent in visual
-perception. Interestingly, if one were to only look at the behavior of
-this agent, this could be encompassed by a set of differential
-equations, but that would miss the causal relationship with internal
-variables as defined above. In particular, this model highlights a
-solution to a common misconception about FEP as surprise minimization.
-Indeed, if the agent was to close his eyes, the sensory surprise would
-be minimal as one would then precisely expect a pitch-dark visual scene.
-However, in the graph of dependencies which defines the agent, such a
-counterfactual,(prospective) hypothesis would be highly penalized as it
-would also be a priori known that such an action would not yield any
-minimization of the surprise about the prospective visual scene.
-Globally, it is therefore more ecological to keep eyes open to explore
-the different parts of the visual scene.
+representation of the whole image is made. This AI process allows to
+bridge the image in intrinsic (retinal) coordinates with extrinsic world
+coordinates which are prevalent in visual perception. Interestingly, if
+one were to only look at the behavior of this agent, this could be
+encompassed by a set of differential equations, but that would miss the
+causal relationship with internal variables as defined above. In
+particular, this model highlights a solution to a common misconception
+about FEP as surprise minimization. Indeed, if the agent was to close
+his eyes, the sensory surprise would be minimal as one would then
+precisely expect a pitch-dark visual scene. However, in the graph of
+dependencies which defines the agent, such a counterfactual,
+(prospective) hypothesis would be highly penalized as it would also be a
+priori known that such an action would not yield a minimization of the
+surprise about the visual scene. Globally, it is therefore more
+ecological to keep eyes open to explore the different parts of the
+visual scene.
 
 2.2 Is there a neural implementation for AI? {#sec:is-there-a-neural-implementation-for-ai}
 --------------------------------------------
@@ -353,18 +353,17 @@ Taylor expansion of the temporal trajectory of any variable. As a
 consequence, the solution provided by the agent gives a plausible neural
 implementation as a set of hierarchically organized linear / non-linear
 equations [@Heeger17]. In particular these equations are the Kalman-Bucy
-filtering solution which provides with a Bayes-optimal estimate of
-hidden states and action in generalized coordinates of motion
-[@Kalman60]. In particular, this solution generalizes the predictive
-coding framework offered by [@Rao99] for explaining the processing
-mechanisms in the primary visual cortex. Similarly to that model, the
-dynamical evolution of activity at the different levels of the hierarchy
-is governed by the balance in the integration of internal (past) beliefs
-with (present) sensory information. In particular, the weights assigned
-in information passing is based on the (inferred) precision of each
-variable in the dependency graphed. This allow us to predict the
-influence of the prior knowledge of the precision at a given level on
-the final outcome.
+filtering solution [@Kalman60] which provides with a Bayes-optimal
+estimate of hidden states and action in generalized coordinates of
+motion. This generalizes the predictive coding framework offered by
+[@Rao99] for explaining the processing mechanisms in the primary visual
+cortex. Similarly to that model, the dynamical evolution of activity at
+the different levels of the hierarchy is governed by the balance in the
+integration of internal (past) beliefs with (present) sensory
+information. In particular, the weights assigned in information passing
+is based on the (inferred) precision of each variable in the dependency
+graph. This allow us to predict the influence on the final outcome of
+the prior knowledge of precision at any given level.
 
 The predictive power of the modeling of such an agent is important to
 understand deviations from the median behavior within a population of
@@ -380,52 +379,50 @@ instance as it passes behind an opaque cardboard on one side from the
 midline). In general, SPEM may still follow the target, as it is
 occluded (behind the cardboard) yet with a lower gain [@Barnes91]. As
 the target reappears from behind the occluder, schizophrenic agents
-engage more quickly to a SPEM response [@Avila06]. In [@Adams12], we
-have modeled an agent which has the capability to smoothly follow a
-moving object. This model allows in particular to understand most
-prototypical SPEM as a Bayes-optimal solution to minimize surprise in
-the perception / action loop implemented in the agent's dependency
-graph.
+engage more quickly to a SPEM response [@Avila06]. [@Adams12] modeled an
+agent which has the capability to smoothly follow a moving object. This
+model allows in particular to understand most prototypical SPEM as a
+Bayes-optimal solution to minimize surprise in the perception / action
+loop implemented in the agent's dependency graph.
 
 Especially, by manipulating the a priori precision of internal beliefs
 at the different levels of the hierarchical model, one could reproduce
-different-classes of behaviors as evidenced by SPEM to classical
-psychophysical stimuli. For the half-cycle occluded pendulum, [@Adams12]
-found that manipulating the post-synaptic gain of predictive neurons
-reproduced these observed behaviors in schizophrenia and control
-populations. Such a difference in the balance of information flow could
-have for instance a genetic origin in the expression of this gain and
-vicariously in the behavior of this population. Importantly, such a
-method thus allows to perform quantitative predictions and such
-applications of computational neuroscience seem particularly relevant
-for a better understanding of the diversity of behaviors in the human
-population (see for instance [@Karvelis18autistic; @Kent19]).
+different-classes of SPEM behaviors to classical psychophysical stimuli.
+For the half-cycle occluded pendulum, [@Adams12] found that manipulating
+the post-synaptic gain of predictive neurons reproduced these observed
+behaviors in schizophrenia and control populations. Such a difference in
+the balance of information flow could have for instance a genetic origin
+in the expression of this gain and vicariously in the behavior of this
+population. Importantly, such a method thus allows to perform
+quantitative predictions and such applications of computational
+neuroscience seem particularly relevant for a better understanding of
+the diversity of behaviors in the human population (see for instance
+[@Karvelis18autistic; @Kent19]).
 
 2.3 Introducing delays in AI: dynamics of predictive processing {#sec:introducing-delays-in-ai-dynamics-of-predictive-processing}
 ---------------------------------------------------------------
 
 ![Figure 1: ***(A)*** This figure reports the response of predictive
 processing during the simulation of pursuit initiation, using a single
-rightward (positive) sweep of a visual target, while compensating for
-sensory motor delays. Here, we see horizontal excursions of oculomotor
-angle. One can see clearly the initial displacement of the target that
-is suppressed by action after a few hundred milliseconds. Additionally,
-we illustrate the effects of sensorimotor delays on pursuit initiation
-(red lines) in relation to compensated (optimal) active inference. Under
-pure sensory delays (blue line), one can see clearly the delay in
-sensory predictions, in relation to the true inputs. With pure motor
-delays (blue line) and with combined sensorimotor delays (black line)
-there is a failure of optimal control with oscillatory fluctuations in
-oculomotor trajectories, which may become unstable. ***(B)*** This
-figure reports the simulation of smooth pursuit when the target motion
-is hemi-sinusoidal, as would happen for a pendulum that would be stopped
-at each half cycle left of the vertical (broken black lines in the
-lower-right panel). We report the horizontal excursions of oculomotor
-angle. The generative model used here has been equipped with a second
-hierarchical level that contains hidden states, modeling latent periodic
-behavior of the (hidden) causes of target motion (states not shown here)
-With this addition, the improvement in pursuit accuracy apparent at the
-onset of the second cycle of motion is observed, similar to
+sweep of a visual target, while compensating for sensory motor delays.
+Here, we see horizontal excursions of oculomotor angle (red line). One
+can see clearly the initial displacement of the target that is
+suppressed by action after a few hundred milliseconds. Additionally, we
+illustrate the effects of assuming wrong sensorimotor delays on pursuit
+initiation. Under pure sensory delays ($\tau_s=0$, blue dotted line),
+one can see clearly the delay in sensory predictions, in relation to the
+true inputs. With pure motor delays (blue dashed line) and with combined
+sensorimotor delays (blue line) there is a failure of optimal control
+with oscillatory fluctuations in oculomotor trajectories, which may
+become unstable. ***(B)*** This figure reports the simulation of smooth
+pursuit when the target motion is hemi-sinusoidal, as would happen for a
+pendulum that would be stopped at each half cycle left of the vertical
+(broken black lines in the lower-right panel). We report the horizontal
+excursions of oculomotor angle. The generative model used here has been
+equipped with a second hierarchical level that contains hidden states,
+modeling latent periodic behavior of the (hidden) causes of target
+motion. With this addition, the improvement in pursuit accuracy apparent
+at the onset of the second cycle of motion is observed, similar to
 psychophysical experiments
 [@Barnes91].](PerrinetAdamsFriston14anticip.png){#fig:PerrinetAdamsFriston14}
 
@@ -671,18 +668,69 @@ a priori knowledge of smoothly-moving visual objects.
 3.3 summary {#sec:summary-1}
 -----------
 
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+As a summary, we have seen that it is possible to extend predictive
+processing to topographic maps. In particular, such resulting
+computations are particularly adapted to visual processing and we have
+shown here (see fig. 2) a model which represents (at any given time)
+different variables (here "Source" and "Target"). In a more realistic
+model, neural activity is more likely to form intermediate
+representations, at different levels of adaptation. As a consequence,
+such processes are observed phenomenologically as the propagation of
+neural information tangentially to the cortical surface, modulating
+dynamically the feed-forward and feed-back stream. In particular it is
+an open question whether such neural computations [@Muller18] could be
+implemented by travelling waves on the cortical surface.
 
 4 Open problems in the science of visual predictive processing {#sec:spikes}
 ==============================================================
 
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+In sec. 2, we have studied the dynamics of predictive processing at the
+macroscopic scale, that is, by considering different cortical areas as
+different modes of a dependency graph. In sec. 3, we have extended such
+models to fields of such nodes, organized on the topography of a single
+visual area . At a finer scale than this intermediate mesoscopic scale
+is the microscopic scale of' actual neural cells. Indeed to better
+understand the mechanisms of predictive processing, we need now to
+finesse the granularity of the modelling to this scale. In particular,
+in addition to the asynchronous nature of the neural representation,
+communication between neurons has the property of being event-based.
+Indeed, in a vast majority of neural cells across the biosphere
+communicate using prototypical, short pulses called action potentials or
+*spikes*. In this section, we will propose three open problems which are
+raised when modelling such Spiking Neural Networks (SNNs) in the context
+of predictive processing.
 
-4.1 The role of cortical waves in shaping the dynamic processing of visual information {#sec:the-role-of-cortical-waves-in-shaping-the-dynamic-processing-of-visual-information}
+4.1 The challenges of representing visual information in Spiking Neunal Networks (SNNs) {#sec:the-challenges-of-representing-visual-information-in-spiking-neunal-networks-snns}
+---------------------------------------------------------------------------------------
+
+Following the first generations of ANNs, present machine learning
+algorithms (DL) constitute a breakthrough, second generation. SNNs
+constitute a potential, third generation [@Ghosh09]. Indeed, event-based
+representation have many advantages which are a deadlock in DL. For
+instance, instead of repeating all compu­tations for each layer, channel
+and pixel of a hierarchical network ENN), and for which energy-greedy
+GPUs are necessary, computations need only to be performed for active
+units at the time of a spike. In particular, an developping area of
+research consists in developing dedicated hardware, such as neuromorphic
+chips, which would allow to scale the effective volume of computations
+beyond the last generations of classical semi-conductors (CPUs, GPUs)
+which attain the limits of Moore's Law. Crucial in this new type of
+representation is the discrete nature of the addressing of neurons and
+the analog nature of the timing of spikes. Notable results have been
+made notably in real-time classification and sensor fusion [@Oconnor13]
+and in pattern recognition [@Lagorce17]. Indeed, an important property
+of SNNs is the ability to represent dynamically a latent, internal
+variable (the membrane potential in neuro-physiology) and to emit a
+spike when (and only when) an internally defined threshold is reached.
+This defines each spiking neuron as an integrator (similarly to
+glassical neurons), but also as a synchrony detector. This ability to.
+modulate procuring based on the relative timing of presynaptic spikes
+constitute a novel paradigm for neural computations [@Paugam12]. In
+particular, this shows that the balance in the flux of incoming
+excitatory and inhibitory spikes is crucial to maximize the efficiency
+of such SNNs [@Hansel12].
+
+4.2 The role of cortical waves in shaping the dynamic processing of visual information {#sec:the-role-of-cortical-waves-in-shaping-the-dynamic-processing-of-visual-information}
 --------------------------------------------------------------------------------------
 
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
@@ -697,32 +745,6 @@ XXX XXX XXX XXX XXX XXX XXX XXX XXX single trials [@Muller14] review in
 [@Muller18] XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX
-
-4.2 b XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX {#sec:b-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx}
------------------------------------------------------------------------------
-
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX
 
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
@@ -760,5 +782,31 @@ XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 XXX XXX XXX XXX XXX XXX XXX XXX XXX
 
-5 Summary and conclusions {#sec:summary-and-conclusions .unnumbered}
+5 Summary and conclusions {#sec:summary-and-conclusions}
 =========================
+
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+XXX XXX XXX XXX XXX XXX
+
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+XXX XXX XXX XXX XXX XXX XXX XXX XXX
+
+6 References {#sec:references .unnumbered}
+============
