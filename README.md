@@ -433,8 +433,8 @@ excursions of oculomotor angle. The generative model used here has been
 equipped with a second hierarchical level that contains hidden states,
 modeling latent periodic behavior of the (hidden) causes of target
 motion. With this addition, the improvement in pursuit accuracy apparent
-at the onset of the second cycle of motion is observed, similar to
-psychophysical experiments
+at the onset of the second cycle of motion is observed (pink shaded
+area), similar to psychophysical experiments
 [@Barnes91].](PerrinetAdamsFriston14anticip.png){#fig:PerrinetAdamsFriston14}
 
 An interesting perspective to study the role of such dynamics in
@@ -449,37 +449,35 @@ for modeling is to understand eye movements using AI as a problem of
 optimal motor control under axonal delays. Let's take the example of a
 tennis player trying to intercept a passing-shot ball at a
 (conservative) speed of 20 m/s. The position sensed on the retinal space
-corresponds to the instant when its image formed on the photoreceptors
-of the retina and reaches our hypothetical motion perception area
-behind: At this instant, the sensed physical position is in fact lagging
-1 meter behind, that is, approximately at a significative eccentricity
-of 45 degrees. However, the position at the moment of emitting the motor
-command will be also 45 degrees *ahead* of its present physical position
-in visual space. As a consequence, note that if the player's gaze is
-directed to the ball at its **present** position, it is in anticipatory
-fashion of the position of the ball during the (counterfactual)
-transport of this position during the sensory delay. Alternatively,
-optimal control may direct action (future motion of the eye) to the
-expected position when motor commands reach the periphery (muscles).
-Such an example illustrates that even with such a small delay, the
-visual system is faced with ambiguous choices. This ambiguity is
-obviously an interesting challenge for modeling predictive processing in
-the visual system.
+corresponds to the instant when the image was formed on the
+photoreceptors of the retina and until it reaches our hypothetical
+motion perception area. At this instant, the sensed physical position is
+in fact lagging 1 meter behind, that is, approximately at an
+eccentricity of 45 degrees. However, the position at the moment of
+emitting the motor command will be also 45 degrees *ahead* of its
+present physical position in visual space. As a consequence, note that
+if the player's gaze is directed to the ball at its **present**
+position, it is in anticipatory fashion of the position of the ball
+during the (counterfactual) transport of this position during the
+sensory delay. Alternatively, optimal control may direct action (future
+motion of the eye) to the expected position when motor commands reach
+the periphery (muscles). Such an example illustrates that even with such
+a small delay, the visual system is faced with significative
+perturbations leading to ambiguous choices. This ambiguity is obviously
+an interesting challenge for modeling predictive processing in the
+visual system.
 
 Extending the modeling framework of [@Adams12] for SPEM, it was observed
 in [@PerrinetAdamsFriston14] that representing hidden states in
 generalized coordinates provides a simple way of compensating for both
-these delays. A novelty of this approach is to include the delays in the
-dynamics at the present time by taking advantage of generalized
-coordinates to create a linear operator on those variables to travel
-back and forth in time with any delay. It is simply formed by using a
-Taylor expansion of the successive orders in the generalized coordinates
-which takes this form in matrix form and thus simply by taking the
-exponential matrix form. Applying such an operator to the FEM generates
-a slightly different and more complicated formulation. However, it is
-important to note that to compensate for delays, there is no change in
-the structure of the network but just in how the synaptic weights are
-tuned (similar to what we had done in the first part):
+delays. A novelty of this approach is to include the delays in the
+dynamics by taking advantage of generalized coordinates. Technically,
+this defines a linear operator on those variables to travel back and
+forth in time with any delay. Applying such an operator to the FEM
+generates a slightly different and more complicated formulation.
+However, it is important to note that to compensate for delays, there is
+no change in the structure of the network but just in how the synaptic
+weights are tuned (similar to what we had done in the first part):
 "Neurobiologically, the application of delay operators just means
 changing synaptic connection strengths to take different mixtures of
 generalized sensations and their prediction errors."
@@ -492,48 +490,41 @@ First, The efficacy of this scheme will be illustrated using neuronal
 simulations of pursuit initiation responses, with and without
 compensation. Figure fig. 1, A reports the conditional estimates of
 hidden states and causes during the simulation of pursuit initiation,
-using a single rightward (positive) sweep of a visual target, while
-compensating for sensory motor delays. Here, we see horizontal
-excursions of oculomotor angle and the angular position of the target in
-an intrinsic frame of reference. This is effectively the distance of the
-target from the centre of gaze and reports the spatial lag of the target
-that is being followed (solid red line). One can see clearly the initial
-displacement of the target that is suppressed after a few hundred
-milliseconds. One can see the motion that elicits following responses
-and the oculomotor excursion that follows with a short delay of about
-64ms. This figure also illustrates the effects of sensorimotor delays on
-pursuit initiation (red lines) in relation to compensated (optimal)
-active inference. Under pure sensory delays (top row), one can see
-clearly the delay in sensory predictions, in relation to the true
-inputs. Of note here is the failure of optimal control with oscillatory
-fluctuations in oculomotor trajectories, which become unstable under
-combined sensorimotor delays.
+using a simple sweep of a visual target, while compensating for sensory
+motor delays. Here, we see horizontal excursions of oculomotor angle
+(blue line) and the angular position of the target (dashed black line).
+One can see clearly the initial displacement of the target that is
+suppressed after a few hundred milliseconds. This figure also
+illustrates the effects of sensorimotor delays on pursuit initiation
+(red lines) in relation to compensated (optimal) active inference. Under
+pure sensory delays (dotted line), one can see clearly the delay in
+sensory predictions, in relation to the true inputs. Of note here is the
+failure of optimal control with oscillatory fluctuations in oculomotor
+trajectories, which become unstable under combined sensorimotor delays.
 
 Interestingly, this model extends to more complex stimulation
 trajectories. In particular, it is has been shown that gaze will be
 directed at the present physical position of the target (thus in
 anticipatory fashion) if that target follows a smooth trajectory (such
-as pendulum). More striking, this is also true if the trajectory is
+as a pendulum). More striking, this is also true if the trajectory is
 *predictable*, for instance for a pendulum behind a static occluder
 [@Barnes91]. Figure fig. 1, B reports the simulation of smooth pursuit
 when the target motion is hemi-sinusoidal, as would happen for a
 pendulum that would be stopped at each half cycle, left of the vertical
-(broken black lines). The generative model has been equipped with a
+(dashed black line). The generative model has been equipped with a
 second hierarchical level that contains hidden states, modeling latent
 periodic behavior of the (hidden) causes of target motion of the
-pendulum. With this addition, the improvement in pursuit accuracy
-apparent at the onset of the second cycle of motion is observed, similar
-to psychophysical experiments [@Barnes91]. One can see clearly the
-initial displacement of the target that is suppressed after a few
-hundred milliseconds. With this addition, the improvement in pursuit
-accuracy apparent at the onset of the second cycle of motion is
-reinstated. This is because the model has an internal representation of
-latent causes of target motion that can be called upon even when these
-causes are not expressed explicitly in the target trajectory. A
-particular advantage of this model is that it provides a solution for
-the integration of past and future information while still being
-governed by online differential equations. This therefore implements
-some form of Bayes-optimal temporal memory.
+pendulum. One can see clearly the initial displacement of the target
+that is suppressed after a few hundred milliseconds (pink shaded area).
+The improvement in pursuit accuracy is apparent at the onset of the
+second cycle of motion is observed, similar to psychophysical
+experiments [@Barnes91]. This is because the model has an internal
+representation of latent causes of target motion that can be called upon
+even when these causes are not expressed explicitly (occluded) in the
+target trajectory. A particular advantage of this model is that it
+provides a solution for the integration of past and future information
+while still being governed by online differential equations. This
+therefore implements some form of Bayes-optimal temporal memory.
 
 2.4 summary {#sec:summary}
 -----------
