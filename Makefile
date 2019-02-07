@@ -12,8 +12,14 @@ install:
 	brew install librsvg
 	tlmgr install collection-fontsrecommended
 
-figures:
+figures_auto:
 	rsvg-convert $f -f pdf -o ./$BASENAME/$(basename "$f" .svg).pdf
+
+
+figures:
+	rsvg-convert PerrinetAdamsFriston14anticip.svg -f pdf -o PerrinetAdamsFriston14anticip.pdf
+	rsvg-convert PerrinetAdamsFriston14anticip.svg -f png -o PerrinetAdamsFriston14anticip.png
+
 
 markdown:
 	pandoc $(OPTIONS) $(SRC).md -t markdown -o README.md
