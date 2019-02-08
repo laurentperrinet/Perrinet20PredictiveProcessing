@@ -435,7 +435,7 @@ modeling latent periodic behavior of the (hidden) causes of target
 motion. With this addition, the improvement in pursuit accuracy apparent
 at the onset of the second cycle of motion is observed (pink shaded
 area), similar to psychophysical experiments
-[@Barnes91].](PerrinetAdamsFriston14anticip.png){#fig:PerrinetAdamsFriston14}
+[@Barnes91].](figures/PerrinetAdamsFriston14anticip.svg){#fig:PerrinetAdamsFriston14}
 
 An interesting perspective to study the role of such dynamics in
 cognition is to extend this model to a more realistic description of
@@ -567,7 +567,8 @@ particular epochs along the trajectory, corresponding to the standard,
 flash initiated and terminated cycles. The timing of these epochs
 flashes are indicated by dashed vertical lines. In dark, the physical
 time and in green the delayed input knowing a delay of $100 ms$. See
-text for an interpretation of the result.](Khoei17.png){#fig:Khoei17}
+text for an interpretation of the
+result.](figures/Khoei17.pdf){#fig:Khoei17}
 
 The flash-lag effect (FLE) is a visual illusion which is popular for its
 generality and simplicity. In its original form [@MacKay58], the
