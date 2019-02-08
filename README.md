@@ -568,7 +568,7 @@ flash initiated and terminated cycles. The timing of these epochs
 flashes are indicated by dashed vertical lines. In dark, the physical
 time and in green the delayed input knowing a delay of $100 ms$. See
 text for an interpretation of the
-result.](figures/Khoei17.pdf){#fig:Khoei17}
+result.](figures/Khoei17.svg){#fig:Khoei17}
 
 The flash-lag effect (FLE) is a visual illusion which is popular for its
 generality and simplicity. In its original form [@MacKay58], the
