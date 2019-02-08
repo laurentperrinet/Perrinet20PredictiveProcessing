@@ -681,8 +681,9 @@ processing to topographic maps. In particular, resulting computations
 are particularly adapted to vision. We have shown (see fig. 2) a model
 which represents (at any given present time) different variables (here
 "Source" and "Target"). In a more realistic model, neural activity is
-more likely to form intermediate representations, at different levels of
-adaptation as illustrated for the lrAM stimulus [@Chemla18]. As a
+more likely to form intermediate representations between past, present
+and and also future representations [@Glaser18] and at different levels
+of adaptation as illustrated for the lrAM stimulus [@Chemla18]. As a
 consequence, such processes are observed phenomenologically as the
 propagation of neural information tangentially to the cortical surface,
 modulating dynamically the feed-forward and feed-back stream. In
@@ -774,19 +775,19 @@ may emerge.
 --------------------------------------------------------------------------------------
 
 Another interesting perspective is the integrative nature of neural
-computations. While it is often believed that neurons would represent
-the combination of visual features, it has been found that instead,
-activity may become sharper as visual features are accumulated. For
-instance, [@Baudot13] has shown that neurons in cat's area 17 respond
-more pelectively when presenting natural images (which consist localy to
-a sum of edges) compared to a single edge. Recently, [@Ravello19] has
-shown that a similar mechanism may occur as soon as in the (rodent)
-retina. Behaviorally, this fits also with the observation in humans that
-more complex textures are driving more robustly eye movements
-[@Simoncini12]. Such phenomena are consistent with the predictive
-processing principle that by accumulating coherent information, the a
-posteriori probability and (hence the response of the system) gets more
-precise.
+computations. While it was believed that neurons would represent the
+combination of visual features, this is in general not correct
+[@Tring18]. Instead, it has been found that activity may become sharper
+as visual features are accumulated. For instance, [@Baudot13] has shown
+that neurons in cat's area 17 respond more pelectively when presenting
+natural images (which consist localy to a sum of edges) compared to a
+single edge. Recently, [@Ravello19] has shown that a similar mechanism
+may occur as soon as in the (rodent) retina. Behaviorally, this fits
+also with the observation in humans that more complex textures are
+driving more robustly eye movements [@Simoncini12]. Such phenomena are
+consistent with the predictive processing principle that by accumulating
+coherent information, the a posteriori probability and (hence the
+response of the system) gets more precise.
 
 Strinkingly, this translates in the neural activity by the fact that for
 a more coherent set of input, the neural activity of the population is
