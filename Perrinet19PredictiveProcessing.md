@@ -3,14 +3,14 @@ title: "From the retina to action: Dynamics of predictive processing in the visu
 author: Laurent Perrinet
 author_info:
   -
-    github: johndoe
-    name: John Doe
-    initials: JD
-    orcid: XXXX-XXXX-XXXX-XXXX
-    twitter: johndoe
-    email: john.doe@something.com
+    github: laurentperrinet
+    name: Laurent U Perrinet
+    initials: LuP
+    orcid: 0000-0002-9536-010X
+    twitter: laurentperrinet
+    email: laurent.perrinet@univ-amu.fr
     affiliations:
-      - Department of Something, University of Whatever
+      - Institut de Neurosciences de la Timone, CNRS / Aix-Marseille Université
     funders: Grant XXXXXXXX
 
 date: 2019-02-17
@@ -18,7 +18,7 @@ date-meta: 2019-02-17
 institute: Institut de Neurosciences de la Timone, CNRS / Aix-Marseille Université - Marseille, France
 subject: XXX document subject, included in ODT, docx and pptx metadata
 description: Book chapter proposal for "The Philosophy and Science of Predictive Processing" to be published by Bloomsbury
-category: XXX document category, included in docx and pptx metadata
+category: XXX document category, included in docx  metadata
 keywords:
     - Vision
     - Active Inference
