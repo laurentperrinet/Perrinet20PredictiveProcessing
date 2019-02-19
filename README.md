@@ -6,26 +6,23 @@ abstract: |
     wide variety of changes in the characteristics of the visual scene but
     also by the necessity to be able to respond as quickly as possible to
     the incoming sensory stream, for instance to drive a movement of the
-    eyes to the location of a potential danger. To achieve this, it is
-    believed that the visual system takes advantage of a priori knowledge
-    about the structure of visual information, such as the regularity in the
-    shape and motion of visual objects. As such, the predictive processing
-    framework offers a unified theory to explain many of the dynamical
-    mechanisms which were progressively unveiled by decades of study in
+    eyes to the location of a potential danger. Decades of study in
     neurophysiology and psychophysics at the different levels of the visual
-    system. However, we still lack a global normative approach unifying
-    those mechanisms and we will review here some of the promising
-    approaches which allow to explain the processing of visual information
-    in the visual hierarchy. In particular, we will describe how Active
-    Inference, that is predictive coding with the ability to actively sample
-    the visual space, can provide a unified account of visual mechanisms
-    from the sensory information to the generation of an appropriate action.
-    Then, we will extend this paradigm to the case where information is
-    distributed on a topography, such as is the case for retinotopically
-    organized visual areas. In particular, we will compare such models in
-    light of recent neurophysiological data showing the role of traveling
-    waves in shaping visual processing. Finally, we will propose some lines
-    of research to understand how the previous functional models may be
+    system have shwon that it takes advantage of a priori knowledge about
+    the structure of visual information, such as the regularity in the shape
+    and motion of visual objects. The predictive processing framework offers
+    a unified theory to explain many of these dynamical mechanisms. However,
+    we still lack a global normative approach unifying those mechanisms and
+    we will review here some of the promising approaches which allow to
+    explain the processing of visual information in the visual hierarchy. In
+    particular, we will describe how Active Inference, that is predictive
+    coding with the ability to actively sample the visual space. Then, we
+    will extend this paradigm to the case where information is distributed
+    on a topography, such as is the case for retinotopically organized
+    visual areas. In particular, we will compare such models in light of
+    recent neurophysiological data showing the role of traveling waves in
+    shaping visual processing. Finally, we will propose some lines of
+    research to understand how the previous functional models may be
     implemented at the neural level. In particular, we will describe
     potential models of cortical processing in terms of prototypical
     micro-circuits. These allow to separate the different flows of
@@ -36,18 +33,18 @@ abstract: |
 author: Laurent Perrinet
 author_info:
 - affiliations:
-  - 'Department of Something, University of Whatever'
-  email: 'john.doe\@something.com'
+  - 'Institut de Neurosciences de la Timone, CNRS / Aix-Marseille Université'
+  email: 'laurent.perrinet\@univ-amu.fr'
   funders: Grant XXXXXXXX
-  github: johndoe
-  initials: JD
-  name: John Doe
-  orcid: 'XXXX-XXXX-XXXX-XXXX'
-  twitter: johndoe
+  github: laurentperrinet
+  initials: LuP
+  name: Laurent U Perrinet
+  orcid: '0000-0002-9536-010X'
+  twitter: laurentperrinet
 autoEqnLabels: False
 autoSectionLabels: True
 bibliography: 'Perrinet19PredictiveProcessing.bib'
-category: 'XXX document category, included in docx and pptx metadata'
+category: 'XXX document category, included in docx metadata'
 ccsDelim: ','
 ccsLabelSep: '---'
 ccsTemplate: $$i$$$$ccsLabelSep$$$$t$$
@@ -132,7 +129,7 @@ tblPrefix:
 - 'tbl.'
 - 'tbls.'
 tblPrefixTemplate: $$p$$ $$i$$
-thanks: XXX
+thanks: XXX thanks XXX
 title: |
     From the retina to action: Dynamics of predictive processing in the
     visual system
@@ -172,45 +169,51 @@ TODO: move to https://greenelab.github.io/manubot-rootstock/
 
 -->
 
-1 Motivation: Role of dynamics in neural computations underlying visual processing {#sec:intro}
-==================================================================================
+1 Motivation: Role of dynamics in the neural computations underlying visual processing {#sec:intro}
+======================================================================================
 
 Vision, the capacity of making sense of the luminous environment, is a
-dynamic process. We will focus on this cognitive ability for studying
-the philosophy and science of predictive processes. Indeed, it has the
-advantage of low-level feats such as unconscious inferences (detecting
-and reading a printed character, for instance) to higher features such
-as the interpretation of complex scenes with respect to some cognitive
-context. Furthermore, it also allows for prospective predictions such as
-those revealed during mental imagery - and is a basic groundstone for
-one's creativity, or *imagination*. As a matter of fact, the most
-surprising fact about vision is the ease with which sighted persons, as
-visual agents, may perform this abilities: It comes with for granted
-while it is largely a self-organized process. Anatomically, from its
-first stage, the retina, to the different areas which help in forming a
-representation of the visual world knowing its transformations as with
-the motion of a visual object but also to sensory modifications, such as
-with eye movements. As such, visual processing is not separable from the
-dynamics of the neural networks involved in vision. To make sense of
-such a complex system, it has been proposed that the organization of the
-visual system is such that it is efficient [@Attneave54]. Such an
-ecological framework [@Atick92] allows to explain many aspects of visual
-processing. Formalizing such optimization strategies in probabilistic
-language, these may be encompassed by the "Bayesian Brain" framework
-[@Knill04]
+highly complex process which is still out of reach for most computers.
+Indeed, such algorithms can learn complex categorization tasks on
+precise datasets but are outperformed by any infant when it comes to a
+naturalistic, flexible and generic context. As a matter of fact, the
+most surprising fact about vision is the ease with which sighted persons
+may perform these abilities: It comes for granted while it is largely a
+self-organized process using a low metabolic cost. As a consequence, and
+to rephrase Wigner [@Wigner90], "The Unreasonable Effectiveness of
+Vision in the Natural World" invites us to focus on this cognitive
+ability for a better understanding of the brain in general. Indeed,
+studying vision allows to span from low-level feats such as unconscious
+inferences (detecting and reading a printed character, for instance) to
+higher capacities such as the interpretation of complex scenes with
+respect to some cognitive context. Furthermore, vision also allows for
+prospective predictions such as those revealed during mental imagery -
+and is a basic groundstone for one's creativity, or *imagination*.
 
-Such principles take different forms such as redundancy reduction
+To make sense of such a complex system, it has been proposed that the
+organization of the visual system is such that it is efficient
+[@Attneave54]. Such an ecological framework [@Atick92] allows to explain
+many aspects of visual processing. Anatomically, visual processing is a
+dynamical process implemented by dynamics of the hierarchy of neural
+networks involved in that process, from its first stage, the retina, to
+the different areas which help in forming a representation of the visual
+world. Such principles take different forms such as redundancy reduction
 [@Barlow61], maximization of information transfer [@Linsker90] or
-minimization of metabolic energy. However, it is possible to link these
-different theories into a single framework, the Free-Energy Principle
-(FEP) [@Friston10]. Key to this principle is the notion that, knowing
-the processes that generated the visual image and the internal
-generative model that allows its representation, predictive processes
-will take advantage of *a priori* knowledge to form an optimal
-representation of the image. This knowledge constitutes an explicit
-(probabilistic) representation of the structure of the world. For
-instance, an image which is composed of edges will be understood at a
-higher level using the a priori knowledge of the link between any
+minimization of metabolic energy. Visual representations should handle
+geometrical transformations (such as the motion of a visual object) but
+also sensory modifications, such as with eye movements. Formalizing such
+optimization strategies in probabilistic language, these may be
+encompassed by the "Bayesian Brain" framework [@Knill04]. Moreover, it
+is possible to link these different theories into a single framework,
+the Free-Energy Principle (FEP) [@Friston10] and is crucial to study the
+philosophy and science of predictive processes. Key to this principle is
+the notion that, knowing the processes that generated the visual image
+and the internal generative model that allows its representation,
+predictive processes will take advantage of *a priori* knowledge to form
+an optimal representation of the image. This knowledge constitutes an
+explicit (probabilistic) representation of the structure of the world.
+For instance, an image which is composed of edges will be understood at
+a higher level using the a priori knowledge of the link between any
 individual edges to form a representation of the *contours* of visual
 objects. In the time domain, the knowledge of the motion of visual
 objects will help predict their future positions and to ultimately track
@@ -271,22 +274,22 @@ processes for visual processing.
 2 Active Inference and the "optimality" of vision {#sec:AI}
 =================================================
 
-To rephrase Wigner [@Wigner90], optimization principles seem the only
-choice to understand "The Unreasonable Effectiveness of Vision in the
-Natural World". However, trying to understand vision as an emergent
-process from efficiency principle seems like a teleological principle in
-which causation would be reversed [@Turkheimer19]. Still, the "use of
-the teleological principle is but one way, not the whole or the only
-way, by which we may seek to learn how things came to be, and to take
-their places in the harmonious complexity of the world."
-[@DArcy-Thompson17, chap. 1]. Putting this another way, it is not of
-scientific importance to know if the brain is using explicitly such a
-principle (for instance that some its part may use Bayes' rule), but
-rather that such a set of rules offers a simpler explanation for the
-neural recordings by shedding light on processes occurring in this
-complex system [@Varoquaux19]. We will follow basic principles of
-self-organized behavior: namely, the imperative to minimize the entropy
-of hidden states of the world and their sensory consequences.
+Optimization principles seem the only choice to understand "The
+Unreasonable Effectiveness of Vision in the Natural World". However,
+trying to understand vision as an emergent process from efficiency
+principle seems like a teleological principle in which causation would
+be reversed [@Turkheimer19]. Still, the "use of the teleological
+principle is but one way, not the whole or the only way, by which we may
+seek to learn how things came to be, and to take their places in the
+harmonious complexity of the world." [@DArcy-Thompson17, chap. 1].
+Putting this another way, it is not of scientific importance to know if
+the brain is using explicitly such a principle (for instance that some
+its part may use Bayes' rule), but rather that such a set of rules
+offers a simpler explanation for the neural recordings by shedding light
+on processes occurring in this complex system [@Varoquaux19]. We will
+follow basic principles of self-organized behavior: namely, the
+imperative to minimize the entropy of hidden states of the world and
+their sensory consequences.
 <!-- In this section, we will consider the visual system from the retina to the oculomotor muscles as an organizational closure (Autopoeise / maturama / varela). Then, w -->
 
 2.1 Perceptions as hypotheses, Actions as experiments {#sec:perceptions-as-hypotheses-actions-as-experiments}
@@ -416,25 +419,25 @@ the diversity of behaviors in the human population (see for instance
 ![Figure 1: **(A)** This figure reports the response of predictive
 processing during the simulation of pursuit initiation, using a single
 sweep of a visual target, while compensating for sensory motor delays.
-Here, we see horizontal excursions of oculomotor angle (red line). One
-can see clearly the initial displacement of the target that is
+Here, we see horizontal excursions of oculomotor angle (dark blue line).
+One can see clearly the initial displacement of the target that is
 suppressed by action after a few hundred milliseconds. Additionally, we
 illustrate the effects of assuming wrong sensorimotor delays on pursuit
 initiation. Under pure sensory delays (blue dotted line), one can see
 clearly the delay in sensory predictions, in relation to the true
-inputs. With pure motor delays (blue dashed line) and with combined
-sensorimotor delays (blue line) there is a failure of optimal control
-with oscillatory fluctuations in oculomotor trajectories, which may
-become unstable. **(B)** This figure reports the simulation of smooth
-pursuit when the target motion is hemi-sinusoidal, as would happen for a
-pendulum that would be stopped at each half cycle left of the vertical
-(broken black lines in the lower-right panel). We report the horizontal
-excursions of oculomotor angle. The generative model used here has been
-equipped with a second hierarchical level that contains hidden states,
-modeling latent periodic behavior of the (hidden) causes of target
-motion. With this addition, the improvement in pursuit accuracy apparent
-at the onset of the second cycle of motion is observed (pink shaded
-area), similar to psychophysical experiments
+inputs. With pure motor delays (light red dashed line) and with combined
+sensorimotor delays (light red line) there is a failure of optimal
+control with oscillatory fluctuations in oculomotor trajectories, which
+may become unstable. **(B)** This figure reports the simulation of
+smooth pursuit when the target motion is hemi-sinusoidal, as would
+happen for a pendulum that would be stopped at each half cycle left of
+the vertical (broken black lines in the lower-right panel). We report
+the horizontal excursions of oculomotor angle. The generative model used
+here has been equipped with a second hierarchical level that contains
+hidden states, modeling latent periodic behavior of the (hidden) causes
+of target motion. With this addition, the improvement in pursuit
+accuracy apparent at the onset of the second cycle of motion is observed
+(light shaded area), similar to psychophysical experiments
 [@Barnes91].](figures/PerrinetAdamsFriston14anticip.svg){#fig:PerrinetAdamsFriston14}
 
 An interesting perspective to study the role of such dynamics in
@@ -553,22 +556,22 @@ scale, is there any evidence for such processes in visual space?
 in a topographic map. **(A)** the model consists of a two-layered map:
 an input source target integrates information from visual sensors. This
 map represents both position and velocity, and we display here a
-projection on a single variable. Using this belief (as represented here
-by the probability distribution function), it is possible to project
-this information to a second target layer that integrates information
-knowing a compensation for the delay. In that particular case, speed is
-positive and thus information of position is transported to the right.
-**(B)** Response of a model compensating for a 100ms delay to a moving
-dot. Representation of the inferred probability of position and velocity
-with delay compensation as a function of the iterations of the model
-(time). Darker colors denote higher probabilities, while a light color
-corresponds to an unlikely estimation. In particular, we focus on three
-particular epochs along the trajectory, corresponding to the standard,
-flash initiated and terminated cycles. The timing of these epochs
-flashes are indicated by dashed vertical lines. In dark, the physical
-time and in green the delayed input knowing a delay of $100 ms$. See
-text for an interpretation of the
-result.](figures/Khoei17.svg){#fig:Khoei17}
+projection on a single spatial dimension. Using this belief (as
+represented here by the probability distribution function), it is
+possible to project this information to a second target layer that
+integrates information knowing a compensation for the delay. In that
+particular case, speed is positive and thus information of position is
+transported to the right. **(B)** Response of a model compensating for a
+100 ms delay to a moving dot. Representation of the inferred probability
+of position and velocity with delay compensation as a function of the
+iterations of the model (time). Darker colors denote higher
+probabilities, while a light color corresponds to an unlikely
+estimation. In particular, we focus on three particular epochs along the
+trajectory, corresponding to the standard, flash initiated and
+terminated cycles. The timing of these epochs flashes are indicated by
+dashed vertical lines. In dark, the physical time and in lighter green
+the delayed input knowing a delay of 100 ms. See text for an
+interpretation of the results.](figures/Khoei17.svg){#fig:Khoei17}
 
 The flash-lag effect (FLE) is a visual illusion which is popular for its
 generality and simplicity. In its original form [@MacKay58], the
@@ -678,19 +681,19 @@ a priori knowledge of smoothly-moving visual objects.
 -----------
 
 As a summary, we have seen that it is possible to extend predictive
-processing to topographic maps. In particular, resulting computations
-are particularly adapted to vision. We have shown (see fig. 2) a model
-which represents (at any given present time) different variables (here
-"Source" and "Target"). In a more realistic model, neural activity is
-more likely to form intermediate representations between past, present
-and and also future representations [@Glaser18] and at different levels
-of adaptation as illustrated for the lrAM stimulus [@Chemla18]. As a
-consequence, such processes are observed phenomenologically as the
-propagation of neural information tangentially to the cortical surface,
-modulating dynamically the feed-forward and feed-back stream. In
-particular it is an open question whether such neural computations
-[@Muller18] could be implemented by travelling waves on the cortical
-surface.
+processing to topographic maps. In particular, the resulting
+computations are particularly adapted to vision. We have shown (see
+fig. 2) a model which represents (at any given present time) different
+variables (here "Source" and "Target"). In a more realistic model,
+neural activity is more likely to form intermediate representations
+between past, present and also future representations [@Glaser18] and at
+different levels of adaptation as illustrated for the lrAM stimulus
+[@Chemla18]. As a consequence, such processes are observed
+phenomenologically as the propagation of neural information tangentially
+to the cortical surface, modulating dynamically the feed-forward and
+feed-back stream. In particular it is an open question whether such
+neural computations [@Muller18] could be implemented by travelling waves
+on the cortical surface.
 
 4 Open problems in the science of visual predictive processing {#sec:spikes}
 ==============================================================
