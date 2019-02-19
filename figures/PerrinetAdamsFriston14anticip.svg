@@ -381,7 +381,7 @@
      showgrid="false"
      units="cm"
      inkscape:zoom="3.1277358"
-     inkscape:cx="244.71731"
+     inkscape:cx="323.34859"
      inkscape:cy="139.03584"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -390,7 +390,11 @@
      id="g861"
      inkscape:groupmode="layer"
      inkscape:label="PerrinetAdamsFriston14anticip"
-     transform="matrix(1.3333333,0,0,-1.3333333,0,302.36223)"><g
+     transform="matrix(1.3333333,0,0,-1.3333333,0,302.36223)"><path
+       inkscape:connector-curvature="0"
+       id="path1113"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:2.51348329"
+       d="M 1.1427466,-0.60898628 H 424.51301 V 225.92724 H 1.1427466 Z" /><g
        id="g2456"
        transform="matrix(0.1,0,0,0.1,-3.5753136,-425.16987)" /><path
        inkscape:connector-curvature="0"
