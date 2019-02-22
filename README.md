@@ -8,7 +8,7 @@ abstract: |
     the incoming sensory stream, for instance to drive a movement of the
     eyes to the location of a potential danger. Decades of study in
     neurophysiology and psychophysics at the different levels of the visual
-    system have shwon that it takes advantage of a priori knowledge about
+    system have shown that it takes advantage of a priori knowledge about
     the structure of visual information, such as the regularity in the shape
     and motion of visual objects. The predictive processing framework offers
     a unified theory to explain many of these dynamical mechanisms. However,
@@ -823,16 +823,37 @@ efficiency principle (such as sparse coding) could be used to guide the
 organization of such highly recurrent networks into a single universal
 circuit.
 
-To further explore predictive (see sec. 4) XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX
+To further extend our knowledge of predictive processing in vision (see
+sec. 4), it thus seems necessary to be able to implement full-scale SNNs
+implementing complex visual processes. However, the three different
+anatomical scales that we have highlighted above (feed-forward, lateral,
+feedback) seem to be tightly coupled and can difficulty be modeled
+separately. As such, it is highly difficult to produce models which are
+simple enough to be useful for our understanding of the underlying
+processing [@Brette19]. For instance, all the models that we have
+presented here are pre-connected, that is, that we have fixed the hyper
+parameters controlling the interconnection of neurons. Though we have
+provided with simulations showing the role of these hyper-parameters, it
+seems necessary for a better understanding to further explore their
+relative effects.
+
+Indeed, a normative theory for predictive processing should not only
+provide a possible solution (one given model with one set of hyper
+parameters) but with an exploration of all *possible* solutions. One
+first methodology is to have a complete understanding of the set of
+models using mathematical analysis. However, this can be difficult,
+especially for such complex systems and using simplifying assumptions
+are often leading to a shallow complexity. Another venue is to develop
+adaptive strategies to explore the functional space of different models.
+This can be for instance developed using machine learning techniques
+such as the stochastic gradient descent commonly used in deep learning.
+Another promising solution is to explore bio-inspired adaptive
+strategies. Those exist at different time-scales, from rapid adaption
+mechanisms, to a slower learning of connections, or to the long-term
+evolution of hyper- parameters. In particular, it is yet not completely
+understood how SNNs perform a spike-lime dependent plasticity. This is a
+future challenge in our understanding of the science of predictive
+processes in vision.
 
 6 References {#sec:references .unnumbered}
 ============
