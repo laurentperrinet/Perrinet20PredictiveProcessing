@@ -79,7 +79,7 @@ keywords:
 - Vision
 - Active Inference
 - Topography
-- Spiking Neural Netwroks
+- Spiking Neural Networks
 lang: 'en-US'
 lastDelim: ','
 linkReferences: False
@@ -134,7 +134,7 @@ title: |
     From the retina to action: Dynamics of predictive processing in the
     visual system
 titleDelim: ':'
-website: 'http://invibe.net/LaurentPerrinet'
+website: 'https://laurentperrinet.github.io/'
 ---
 
 <!--
