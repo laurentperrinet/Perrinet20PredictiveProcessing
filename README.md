@@ -702,63 +702,65 @@ In sec. 2, we have studied the dynamics of predictive processing at the
 macroscopic scale, that is, by considering different cortical areas as
 different modes of a dependency graph. In sec. 3, we have extended such
 models to fields of such nodes, organized on the topography of a single
-visual area . At a finer scale than this intermediate mesoscopic scale
-is the microscopic scale of' actual neural cells. Indeed to better
-understand the mechanisms of predictive processing, we need now to
-finesse the granularity of the modeling to this scale. In particular, in
-addition to the asynchronous nature of the neural representation,
-communication between neurons has the property of being event-based.
-Indeed, in a vast majority of neural cells across the biosphere
-communicate using prototypical, short pulses called action potentials or
-*spikes*. In this section, we will propose three open problems which are
-raised when modeling such Spiking Neural Networks (SNNs) in the context
-of predictive processing.
+visual area. At a finer scale than this intermediate mesoscopic scale is
+the microscopic scale of actual neural cells. To better understand the
+mechanisms of predictive processing, we now need to finesse the
+granularity of the modeling to this scale. In particular, in addition to
+the asynchronous nature of the neural representation that we explored
+above, communication between neurons has the property of being
+event-based. Indeed, in a vast majority of neural cells across the
+living kingdom communicate using prototypical, short pulses called
+action potentials or *spikes*. In this section, we will propose three
+open problems which are raised when modeling such Spiking Neural
+Networks (SNNs) in the context of predictive processing.
 
-4.1 The challenges of representing visual information in Spiking Neunal Networks (SNNs) {#sec:the-challenges-of-representing-visual-information-in-spiking-neunal-networks-snns}
+4.1 The challenges of representing visual information in Spiking Neural Networks (SNNs) {#sec:the-challenges-of-representing-visual-information-in-spiking-neural-networks-snns}
 ---------------------------------------------------------------------------------------
 
 Following the first generations of ANNs, present machine learning
-algorithms (DL) constitute a breakthrough, second generation. SNNs
-constitute a potential, third generation [@Ghosh09]. Indeed, event-based
+algorithms such as Deep Learning (DL) algorithms constitute a
+breakthrough which formed a second generation of ANNs. SNNs constitute a
+potential, third generation [@Ghosh09]. Indeed, event-based
 representation have many advantages which are a deadlock in DL. For
 instance, instead of repeating all compu­tations for each layer, channel
-and pixel of a hierarchical network ENN), and for which energy-greedy
-GPUs are necessary, computations need only to be performed for active
-units at the time of a spike. In particular, an developing area of
-research consists in developing dedicated hardware, such as neuromorphic
-chips, which would allow to scale the effective volume of computations
-beyond the last generations of classical semi-conductors (CPUs, GPUs)
-which attain the limits of Moore's Law.
+and pixel of a hierarchical network ANN, and for which energy-greedy
+GPUs are necessary, event-based computations need only to be performed
+for active units at the time of a spike. In particular, a fast
+developing area of research consists in developing dedicated hardware,
+such as neuromorphic chips, which would allow to scale the effective
+volume of computations beyond the last generations of classical
+semi-conductors (CPUs, GPUs) which attain the limits of Moore's Law.
 
-Crucial in this new type of representation is the discrete nature of the
-addressing of neurons and the analog nature of the timing of spikes.
-Notable results have been made notably in real-time classification and
-sensor fusion [@Oconnor13] and in pattern recognition [@Lagorce17].
-Indeed, an important property of SNNs is the ability to represent
-dynamically a latent, internal variable (the membrane potential in
-neuro-physiology) and to emit a spike when (and only when) an internally
-defined threshold is reached. This defines each spiking neuron as an
-integrator (similarly to classical neurons), but also as a synchrony
-detector. This ability to. modulate procuring based on the relative
-timing of presynaptic spikes constitute a novel paradigm for neural
-computations [@Paugam12]. In particular, this shows that the balance in
-the flux of incoming excitatory and inhibitory spikes is crucial to
-maximize the efficiency of such SNNs [@Hansel12].
+Crucial in this new type of representation is on one hand the discrete
+nature of the addressing of neurons and on the other hand the analog
+nature of the timing of spikes. Notable results using such architectures
+have been made in real-time classification and sensor fusion
+[@Oconnor13] and in pattern recognition [@Lagorce17]. Indeed, an
+important property of SNNs is the ability to represent dynamically a
+latent, internal variable (the membrane potential in neuro-physiology)
+and to emit a spike when (and only when) an internally defined threshold
+is reached. This defines each spiking neuron as an integrator (similarly
+to classical neurons), but also potentially as a synchrony detector.
+This ability to modulate the processing based on the relative timing of
+presynaptic spikes constitute a novel paradigm for neural computations
+[@Paugam12]. In particular, this shows that the balance in the flux of
+incoming excitatory and inhibitory spikes is crucial to maximize the
+efficiency of such SNNs [@Hansel12].
 
 4.2 The role of cortical waves in shaping the dynamic processing of visual information {#sec:the-role-of-cortical-waves-in-shaping-the-dynamic-processing-of-visual-information}
 --------------------------------------------------------------------------------------
 
 Another crucial point in deciphering the predictive processing
-mechanisms in V1 is given by its functional anatomy. Indeed, as in other
+mechanisms is given by the functional anatomy. Indeed, in V1 as in other
 cortical areas, the neural network is highly recurrent with a median
 number of 10000 connections per neuron. Surprisingly, 95% of these
 connections occur within a 2mm radius (macaque monkey) [@Markov13]. This
-suggests that a majority of neural resources is devoted to intraared
-communications . The potential functional role is to generate traveling
-waves which modify the strength and dynamics of incoming, feed-forward
-neural activity [@Muller18]. We have seen its potential role in
-disambiguating motion [@Chemla18] and it has also been shown to
-facilitate the progressive build-up of visual information
+suggests that a majority of neural resources is devoted to intra-areal
+communications. One putative functional role of this dense network is to
+generate traveling waves which modulates the strength and dynamics of
+the incoming feed-forward neural activity [@Muller18]. We have seen its
+potential role in disambiguating motion [@Chemla18] and it has also been
+shown to facilitate the progressive build-up of visual information
 [@Bringuier99].
 
 One "holy grail" in that direction is to find canonical micro-circuits
@@ -766,14 +768,14 @@ for predictive cooling [@Bastos12]. This follows from the observation
 that across species and areas, the cortex seem to follow some
 prototypical, layered structure. In the particular case of V1, while the
 thalamic input reaches mostly the (intermediate) granular layer, a
-feed-forward stream is propagated to efferent layers through the
-supra-granular layers while feed-back is mediated by infragranular
-layers. This segregation could correspond to different types of signals
-in predictive coding, respectively expected states and prediction error.
-Such basic micro-circuits have been applied to explain the response of
-V1 neurons to natural scenes [@Kremkow16] by using a push-pull
-mechanism. Still it is an open problem as to know how such a circuitry
-may emerge.
+feed-forward stream is mostly propagated to efferent layers through the
+supra-granular layers while feed-back is in majority mediated by
+infragranular layers. This anatomical segregation could correspond to
+different types of signals in predictive coding, respectively expected
+states and prediction error [@Bastos12]. Such basic micro-circuits have
+been applied to explain the response of V1 neurons to natural scenes
+[@Kremkow16] by using a push-pull mechanism. Still it is an open problem
+as to know how such a circuitry may emerge.
 
 4.3 Integrative properties of cortical areas: toward sparse, efficient representations {#sec:integrative-properties-of-cortical-areas-toward-sparse-efficient-representations}
 --------------------------------------------------------------------------------------
@@ -783,17 +785,17 @@ computations. While it was believed that neurons would represent the
 combination of visual features, this is in general not correct
 [@Tring18]. Instead, it has been found that activity may become sharper
 as visual features are accumulated. For instance, [@Baudot13] has shown
-that neurons in cat's area 17 respond more pelectively when presenting
-natural images (which consist localy to a sum of edges) compared to a
-single edge. Recently, [@Ravello19] has shown that a similar mechanism
-may occur as soon as in the (rodent) retina. Behaviorally, this fits
-also with the observation in humans that more complex textures are
-driving more robustly eye movements [@Simoncini12]. Such phenomena are
+that neurons in cat's area 17 respond more selectively when presenting
+natural images (which consist locally to a sum of edges) compared to a
+single edge. Recently, [@Ravello19] has shown that a similar result may
+occur as soon as in the (rodent) retina. Behaviorally, this fits also
+with the observation in humans that more complex textures are driving
+more robustly eye movements [@Simoncini12]. Such phenomena are
 consistent with the predictive processing principle that by accumulating
-coherent information, the a posteriori probability and (hence the
+coherent information, the *a posteriori* probability and (hence the
 response of the system) gets more precise.
 
-Strinkingly, this translates in the neural activity by the fact that for
+Strikingly, this translates in the neural activity by the fact that for
 a more coherent set of input, the neural activity of the population is
 more sparse [@Vinje02; @Baudot13] This was already explained by the
 predictive coding model of [@Rao99] and implemented in [@Kremkow16] for
@@ -802,7 +804,7 @@ sufficient to guide the learning of the connectivity within a population
 of neurons, such as in V1 [@Olshausen97]. This helps to solve an
 important problem, that is, that the system is auto-organized and that
 the learning of the connectivity should be unsupervised. As such the
-plasticity rules that should be developed in Suns should use similar
+plasticity rules that should be developed in SNNs should use similar
 governing principles.
 
 5 Summary and conclusions {#sec:summary-and-conclusions}
@@ -817,10 +819,11 @@ shown a limit of such models at the microscopic scale (see sec. 4). In
 particular, it is not yet understood at the single cell level how 1)
 information is represented in spiking activity, 2) what is the
 functional role of traveling waves on cortical surfaces 3) if a common
-efficiency principle (such as spease coding) could be used to guide the
-organisation of such highly recurrent networks into a single universal
+efficiency principle (such as sparse coding) could be used to guide the
+organization of such highly recurrent networks into a single universal
 circuit.
 
+To further explore predictive (see sec. 4) XXX XXX XXX XXX XXX XXX XXX
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
@@ -829,7 +832,7 @@ XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
 XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
-XXX XXX XXX XXX XXX XXX XXX XXX XXX
+XXX XXX
 
 6 References {#sec:references .unnumbered}
 ============
