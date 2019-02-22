@@ -164,5 +164,53 @@ Strikingly, this translates in the neural activity by the fact that for a more c
 As a summary, we have reviewed in this chapter different models of predictive coding applied to vision. We have seen at a macroscopic scale the role of dynamics using Active Inference (see [@sec:AI]). Extending such model to a retinotopic map, we could describe a functional traveling wave to disambiguate visual stimuli (see [@sec:maps]). However, we have also shown a limit of such models at the microscopic scale (see @sec:spikes). In particular, it is not yet understood at the single cell level how 1) information is represented in spiking activity, 2) what is the functional role of traveling waves on cortical surfaces 3) if a common efficiency principle (such as sparse coding) could be used to guide the organization of such highly recurrent networks into a single universal circuit.
 
 To further explore predictive  (see @sec:spikes) XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX XXX
+To further extend our knowledge of
+predictive processing in vision, it thus seems
+necessary to be able to implement full-
+scale SAMs implementing visual processes.
+However, the three different anatomical
+seals that we have highlighted above
+(feed-forward, doteral, feedback) seem
+to be tightly coupled and can difficulty
+be modeled separately. As such, It
+is highly difficult to produce models which
+are useful for our understanding [@Brute is].
+For instance, all the models that we have
+presented here are pre-connected, that is
+that we have fixed the hyper parameters
+controlling the interconnection of neurons.
+Though we have provided with simulations
+showing the role of these hyper-parameters,
+it seems necessary for a better understanding
+to further explore their relative effects.
+Indeed, a normative theory for predictive
+processing should not only provide one
+possible solution (a given model with
+one set of hyper parameters)g but
+with an exploration of all * possible *
+solutions. One first solution is
+to have a complete understanding of the
+set of models using mathematical
+analysis. However, this can be
+difficult, especially for such complex
+systems. Another venue is to develop
+adaptive strategies to explore the space
+of different models. This can be
+for instance dichopped using machine
+learning techniques such as the
+stochastic gradient descent used in
+deep learning. Another promising
+solution is to explore bio-inspired
+adaptive strategies. Those exist at
+different time-scales, from rapid
+apdaption, slower learning of connections
+of long-term evolution of hyper-
+parameters. In particular, it
+is yet not completely understood how
+SNNs perform a spike-lime dependent
+plasticity. This is a future
+challenge in our understanding of
+the science of predictive processes
+in vision.
 
 # References
