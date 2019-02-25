@@ -442,7 +442,7 @@ hidden states, modeling latent periodic behavior of the (hidden) causes
 of target motion. With this addition, the improvement in pursuit
 accuracy apparent at the onset of the second cycle of motion is observed
 (light shaded area), similar to psychophysical experiments
-[@Barnes91].](figures/PerrinetAdamsFriston14anticip.svg){#fig:PerrinetAdamsFriston14}
+[@Barnes91].](figures/PerrinetAdamsFriston14.svg){#fig:PerrinetAdamsFriston14}
 
 An interesting perspective to study the role of such dynamics in
 cognition is to extend this model to a more realistic description of
