@@ -7,29 +7,28 @@ abstract: |
     also by the necessity to be able to respond as quickly as possible to
     the incoming sensory stream, for instance to drive a movement of the
     eyes to the location of a potential danger. Decades of study in
-    neurophysiology and psychophysics at the different levels of the visual
-    system have shown that it takes advantage of a priori knowledge about
-    the structure of visual information, such as the regularity in the shape
-    and motion of visual objects. The predictive processing framework offers
-    a unified theory to explain many of these dynamical mechanisms. However,
-    we still lack a global normative approach unifying those mechanisms and
-    we will review here some of the promising approaches which allow to
-    explain the processing of visual information in the visual hierarchy. In
-    particular, we will describe how Active Inference, that is predictive
+    neurophysiology and psychophysics at the different levels of vision have
+    shown that this system takes advantage of a priori knowledge about the
+    structure of visual information, such as the regularity in the shape and
+    motion of visual objects. As such, the predictive processing framework
+    offers a unified theory to explain many visual mechanisms. However, we
+    still lack a global normative approach unifying those dynamical
+    mechanisms and we will review here some of promising approaches which
+    allow to explain the processing of visual information in the visual
+    hierarchy. First, we will describe Active Inference, that is predictive
     coding with the ability to actively sample the visual space. Then, we
     will extend this paradigm to the case where information is distributed
     on a topography, such as is the case for retinotopically organized
     visual areas. In particular, we will compare such models in light of
     recent neurophysiological data showing the role of traveling waves in
     shaping visual processing. Finally, we will propose some lines of
-    research to understand how the previous functional models may be
-    implemented at the neural level. In particular, we will describe
-    potential models of cortical processing in terms of prototypical
-    micro-circuits. These allow to separate the different flows of
-    information, from feed-forward prediction error to feed-back
-    anticipation error. Still, the particular implementation of such a
-    circuit is not known and we will review some possible implementations
-    using Spiking Neural Networks.
+    research to understand how these functional models may be implemented at
+    the neural level. In particular, we will describe potential models of
+    cortical processing in terms of prototypical micro-circuits. These allow
+    to separate the different flows of information, from feed-forward
+    prediction error to feed-back anticipation error. Still, the design of
+    such a circuit is still not known and we will review some possible
+    implementations using Spiking Neural Networks.
 author: Laurent Perrinet
 author_info:
 - affiliations:
@@ -146,8 +145,7 @@ get https://zoteromusings.wordpress.com/tag/bibtex/
 
 ## some formatting tricks
 Blah blah [@Atick92, pp. 33-35, 38-39 and *passim*] by Atick  [-@Atick92].
--->
-<!--
+
 
 https://lierdakil.github.io/pandoc-crossref/
 
@@ -175,29 +173,30 @@ TODO: move to https://greenelab.github.io/manubot-rootstock/
 Vision, the capacity of making sense of the luminous environment, is a
 highly complex process which is still out of reach for most computers.
 Indeed, such algorithms can learn complex categorization tasks on
-precise datasets but are outperformed by any infant when it comes to a
-naturalistic, flexible and generic context. As a matter of fact, the
-most surprising fact about vision is the ease with which sighted persons
-may perform these abilities: It comes for granted while it is largely a
-self-organized process using a low metabolic cost. As a consequence, and
-to rephrase Wigner [@Wigner90], "The Unreasonable Effectiveness of
-Vision in the Natural World" invites us to focus on this cognitive
-ability for a better understanding of the brain in general. Indeed,
-studying vision allows to span from low-level feats such as unconscious
-inferences (detecting and reading a printed character, for instance) to
-higher capacities such as the interpretation of complex scenes with
-respect to some cognitive context. Furthermore, vision also allows for
-prospective predictions such as those revealed during mental imagery -
-and is a basic groundstone for one's creativity, or *imagination*.
+precise datasets but are easily outperformed by an infant when it comes
+to a naturalistic, flexible and generic context. As a matter of fact,
+the most surprising fact about vision is the ease with which sighted
+persons may perform these abilities: It comes for granted while it is
+largely a self-organized process and using a low metabolic cost. As a
+consequence, and to rephrase Wigner [@Wigner90], "the Unreasonable
+Effectiveness of Vision in the Natural World" invites us to focus on
+this cognitive ability for a better understanding of the brain in
+general. Indeed, studying vision allows to span from low-level feats
+such as unconscious inferences (detecting and reading a printed
+character, for instance) to higher capacities such as the interpretation
+of complex scenes with respect to some cognitive context. Furthermore,
+vision also allows for prospective predictions such as those revealed
+during mental imagery - and is a basic ground-stone for one's
+creativity, or *imagination*.
 
-To make sense of such a complex system, it has been proposed that the
-organization of the visual system is such that it is efficient
-[@Attneave54]. Such an ecological framework [@Atick92] allows to explain
-many aspects of visual processing. Anatomically, visual processing is a
-dynamical process implemented by dynamics of the hierarchy of neural
-networks involved in that process, from its first stage, the retina, to
-the different areas which help in forming a representation of the visual
-world. Such principles take different forms such as redundancy reduction
+Anatomically, visual processing is a dynamical process implemented by
+dynamics of the hierarchy of neural networks involved in that process,
+from its first stage, the retina, to the different areas which help in
+forming a representation of the visual world. To make sense of such a
+complex system, it has been proposed that the organization of the visual
+system is such that it is efficient [@Attneave54]. This ecological
+approach [@Atick92] allows to explain many aspects of visual processing.
+Such principles take different forms such as redundancy reduction
 [@Barlow61], maximization of information transfer [@Linsker90] or
 minimization of metabolic energy. Visual representations should handle
 geometrical transformations (such as the motion of a visual object) but
@@ -217,7 +216,8 @@ a higher level using the a priori knowledge of the link between any
 individual edges to form a representation of the *contours* of visual
 objects. In the time domain, the knowledge of the motion of visual
 objects will help predict their future positions and to ultimately track
-the different bits of motion.
+the different bits of motion, but also to represent contours invariantly
+to this motion.
 
 However, there are limits to this efficiency. First, luminous
 information can be noisy and ambiguous, such as in dim light conditions.
@@ -226,49 +226,53 @@ always need some delay to convey and process information. In humans for
 instance, the delay for the transmission of retinal information is
 approx 80 ms, while the minimal latency to perform a motor action is
 approximately an additional 50 ms. While this constrains a lot the
-capacity of the visual system, we will take advantage of these delays to
-better unravel visual processes as they unfold in time. In particular,
-we will focus in this chapter in a fundamental constraint on the
-dynamics of such predictive processes in the central nervous system.
+capacity of the visual system, we will herein take advantage of these
+delays to better unravel visual processes as they unfold in time. In
+particular, we will focus in this chapter in a fundamental constraint on
+the dynamics of such predictive processes in the central nervous system
+as they unroll with the passage of time.
 
 Indeed, as an illustration, let's use the example of the recording of a
-set of neural cells in some visual areas. Let's assume that recording
-provides with an analog signal from which we may extract the analog
-timings of spiking events for the population of cells. We may then chose
-to display this data in a "raster plot", that is, showing the timing of
-the spikes that each cell emitted. Time is thus relative to that of the
-experimenter and is given thanks to an external clock. Moreover, it is
+set of neural cells in some visual areas. Let's assume that these
+recordings provide with an analog signal from which we may extract the
+analog timings of spiking events for the population of cells. We may
+then chose to display this data in a "raster plot", that is, showing the
+timing of the spikes that each cell emitted. Time is thus relative to
+that of the experimenter and is given thanks to an external clock: It is
 shown a posteriori, that is, after the recording. This definition of an
 absolute time was first formalized by Newton and now defines most of the
-laws of physics. In contrast, each neuron has no access to a central
-clock: its response is solely controlled by the *present* distribution
-of electro-chemical gradients on its membrane and its dynamical
-properties. Such a notion of time is local to each neuron: the network
-is asynchronously decentralized. Such an observation is essential in
-understanding the principles guiding the organization of visual
-processes. In particular, predictive processes can be only defined in
-this interoceptive time, using only information at the present instant.
+laws of physics as an external parameter. In contrast, each neuron has
+no access to a central clock: its response is solely controlled by the
+*present* distribution of electro-chemical gradients on its membrane and
+its dynamical properties. Such a notion of time is local to each neuron:
+the network is asynchronous (that is, timing is decentralized).
+Moreover, this local notion of (processing) time is *a priori* disjoint
+from the external time that this analog signal may represent. Such an
+observation is essential in understanding the principles guiding the
+organization of visual processes. In particular, a neural theory of
+predictive processes can be only defined in this interoceptive time,
+using only locally available information at the present instant.
 <!-- Consistent with that, time measures the speed (or "width") of physical transformations (Anaximandre, Rovelli) -->
 
 This chapter will review such dynamical predictive processing approaches
 for vision at different scales of analysis, from the whole system to
-intermediate representations and finally to neurons (following the
-levels of analysis from [@Marr83]). First, we will apply the FEP to
-vision as a normative approach. Extending this principle with the
-capacity of actively sampling sensory input, we will define Active
-Inference (AI) and its potential role in understanding vision, and also
-behaviors such as eye movements (see sec. 2). Then, we will extend it to
-understand how such processes may be implemented in retinotopic maps
-(see sec. 3). In particular, we will show how such a model may explain a
-visual illusion, the Flash-lag effect. This will then be compared with
-neurophysiological data. Finally, we will review possible
-implementations of such models in Spiking Neural Networks (see sec. 4).
-In particular, we will review some models of elementary micro-circuits
-and detail some potential rules for learning the structure of their
-connections in an unsupervised manner. We will conclude by synthesizing
-these results and their limit. In particular, we will try to define an
-emerging notion for time as it appears in the definition of predictive
-processes for visual processing.
+intermediate representations and finally to neurons (following in a
+decreasing order the levels of analysis from [@Marr83]). First, we will
+apply the FEP to vision as a normative approach. Extending this
+principle with the capacity of actively sampling sensory input, we will
+define Active Inference (AI) and its potential role in understanding
+vision, and also behaviors such as eye movements (see sec. 2). Then, we
+will extend it to understand how such processes may be implemented in
+retinotopic maps (see sec. 3). In particular, we will show how such a
+model may explain a visual illusion, the Flash-lag effect. This will
+then be compared with neurophysiological data. Finally, we will review
+possible implementations of such models in Spiking Neural Networks (see
+sec. 4). In particular, we will review some models of elementary
+micro-circuits and detail some potential rules for learning the
+structure of their connections in an unsupervised manner. We will
+conclude by synthesizing these results and their limit. In particular,
+we will try to define an emerging notion for time as it appears in the
+definition of predictive processes for visual processing.
 <!-- what Dennett (2009) calls a “strange inversion of reasoning,” and we will try to understand the potential role of traveling waves in shaping visual processing-->
 
 2 Active Inference and the "optimality" of vision {#sec:AI}
@@ -539,9 +543,9 @@ reproduce the dynamics observed in eye movements, in particular when
 introducing realistic constraints such as sensory-motor delays. Further
 models should allow for the introduction of even more complex structural
 constraints such as the physical laws governing the motion of visual
-objects such as gravity or external cues [@Kowler14]. This may help
-synthesize most laws governing the organization of perception, as
-formalized in the Gestalt theory.
+objects such as an *a priori* bias [@Damasse18], gravity or external
+cues [@Kowler14]. This may help synthesize most laws governing the
+organization of perception, as formalized in the Gestalt theory.
 
 3 Predictive processing on visual maps {#sec:maps}
 ======================================
@@ -552,13 +556,13 @@ scale, is there any evidence for such processes in visual space?
 3.1 The flash-lag effect as evidence for predictive processing in topographic maps {#sec:the-flash-lag-effect-as-evidence-for-predictive-processing-in-topographic-maps}
 ----------------------------------------------------------------------------------
 
-![Figure 2: In [@Khoei17], we propose a model of predictive processing
-in a topographic map. **(A)** the model consists of a two-layered map:
-an input source target integrates information from visual sensors. This
-map represents both position and velocity, and we display here a
-projection on a single spatial dimension. Using this belief (as
-represented here by the probability distribution function), it is
-possible to project this information to a second target layer that
+![Figure 2: In [@KhoeiMassonPerrinet17], we propose a model of
+predictive processing in a topographic map. **(A)** the model consists
+of a two-layered map: an input source target integrates information from
+visual sensors. This map represents both position and velocity, and we
+display here a projection on a single spatial dimension. Using this
+belief (as represented here by the probability distribution function),
+it is possible to project this information to a second target layer that
 integrates information knowing a compensation for the delay. In that
 particular case, speed is positive and thus information of position is
 transported to the right. **(B)** Response of a model compensating for a
@@ -571,7 +575,8 @@ trajectory, corresponding to the standard, flash initiated and
 terminated cycles. The timing of these epochs flashes are indicated by
 dashed vertical lines. In dark, the physical time and in lighter green
 the delayed input knowing a delay of 100 ms. See text for an
-interpretation of the results.](figures/Khoei17.svg){#fig:Khoei17}
+interpretation of the
+results.](figures/KhoeiMassonPerrinet17.svg){#fig:KhoeiMassonPerrinet17}
 
 The flash-lag effect (FLE) is a visual illusion which is popular for its
 generality and simplicity. In its original form [@MacKay58], the
@@ -586,15 +591,15 @@ differential latency of postdiction (Eagleman) were also proposed, such
 that it is yet not clear what is the neural substrate of the FLE. Here,
 similarly to the model compensating for delays, we define a model of
 predictive processing defined on the visual topography using an internal
-representation of visual motion [@Perrinet12] to define an anisotropic
-diffusion of information fig. 2, A.
+representation of visual motion [@Perrinet12pred] to define an
+anisotropic diffusion of information fig. 2, A.
 
 The model that we used for the FLE can be used with any image. In
 particular, a single flashed dot evokes an expanding then contracting
 isotropic activity while a moving dot may produce a soliton-like wave
-which may traverse an occlusion [@Khoei13]. More generally, this model
-may be described as a simplification of the Navier Stokes equation of
-fluid dynamics using the advection term. As such, solutions to these
+which may traverse an occlusion [@Khoei13jpp]. More generally, this
+model may be described as a simplification of the Navier Stokes equation
+of fluid dynamics using the advection term. As such, solutions to these
 equations are typically waves which are traveling on the retinotopic
 map. A particular feature of these maps is that these include an
 amplification term for rectilinear motions. As a consequence, once an
@@ -761,7 +766,9 @@ generate traveling waves which modulates the strength and dynamics of
 the incoming feed-forward neural activity [@Muller18]. We have seen its
 potential role in disambiguating motion [@Chemla18] and it has also been
 shown to facilitate the progressive build-up of visual information
-[@Bringuier99].
+[@Bringuier99]. We have modeled successfully such a predictive process
+[@Perrinet12pred, @Khoei13jpp, @KhoeiMassonPerrinet17] in a SNN
+[@Kaplan13].
 
 One "holy grail" in that direction is to find canonical micro-circuits
 for predictive cooling [@Bastos12]. This follows from the observation
