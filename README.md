@@ -402,11 +402,11 @@ half cycles (for instance as it passes behind an opaque cardboard on one
 side from the midline). In general, SPEM may still follow the target, as
 it is occluded (behind the cardboard) yet with a lower gain [@Barnes91].
 As the target reappears from behind the occluder, schizophrenic agents
-engage more quickly to a SPEM response [@Avila06]. [@Adams12] modeled an
-agent which has the capability to smoothly follow a moving object. This
-model allows in particular to understand most prototypical SPEM as a
-Bayes-optimal solution to minimize surprise in the perception / action
-loop implemented in the agent's dependency graph.
+engage more quickly to a SPEM response [@Avila06]. An agent was modeled
+in [@Adams12] which has the capability to smoothly follow such moving
+object. This model allows in particular to understand most prototypical
+SPEM as a Bayes-optimal solution to minimize surprise in the perception
+/ action loop implemented in the agent's dependency graph.
 
 Especially, by manipulating the a priori precision of internal beliefs
 at the different levels of the hierarchical model, one could reproduce
@@ -713,19 +713,19 @@ cortical surface [@Muller18].
 
 In sec. 2, we have studied the dynamics of predictive processing at the
 macroscopic scale, that is, by considering (cortical) areas as nodes of
-a dependency graph. In sec. 3, we have extended such models to fields of
-such nodes, organized on the topography of a single visual area. At a
-finer scale than this intermediate mesoscopic scale is the microscopic
-scale of actual neural cells. To better understand the mechanisms of
-predictive processing, we now need to finesse the granularity of the
-modeling to this scale. In particular, in addition to the asynchronous
-nature of the neural representation that we explored above,
-communication between neurons has the property of being event-based.
-Indeed, in a vast majority of neural cells across the living kingdom
-communicate using prototypical, short pulses called action potentials or
-*spikes*. In this section, we will propose three open problems which are
-raised when modeling such Spiking Neural Networks (SNNs) in the context
-of predictive processing.
+a dependency graph. In sec. 3, we have extended such models within such
+nodes as fields organized on the topography of each visual area. At an
+even finer scale than this intermediate mesoscopic scale is the
+microscopic scale of actual neural cells. To better understand the
+mechanisms of predictive processing, we now need to finesse the
+granularity of the modeling to this scale. In particular, in addition to
+the asynchronous nature of the neural representation that we explored
+above, communication between neurons has the property of being
+event-based. Indeed, in a vast majority of neural cells across the
+living kingdom communicate using prototypical, short pulses called
+action potentials or *spikes*. In this section, we will propose three
+open problems which are raised when modeling such Spiking Neural
+Networks (SNNs) in the context of predictive processing.
 
 4.1 The challenges of representing visual information in Spiking Neural Networks (SNNs) {#sec:the-challenges-of-representing-visual-information-in-spiking-neural-networks-snns}
 ---------------------------------------------------------------------------------------
@@ -774,18 +774,19 @@ generate traveling waves which modulates the strength and dynamics of
 the incoming feed-forward neural activity [@Muller18]. We have seen its
 potential role in disambiguating motion [@Chemla18] and it has also been
 shown to facilitate the progressive build-up of visual information
-[@Bringuier99]. We have modeled successfully such a predictive process
-[@Perrinet12pred, @Khoei13jpp, @KhoeiMassonPerrinet17] in a SNN
+[@Bringuier99]. Previously, we have successfully modeled such a
+predictive process
+[@Perrinet12pred; @Khoei13jpp; @KhoeiMassonPerrinet17] in a SNN
 [@Kaplan13].
 
 One "holy grail" in that direction is to find canonical micro-circuits
-for predictive cooling [@Bastos12]. This follows from the observation
+for predictive coding [@Bastos12]. This follows from the observation
 that across species and areas, the cortex seem to follow some
 prototypical, layered structure. In the particular case of V1, while the
 thalamic input reaches mostly the (intermediate) granular layer, a
 feed-forward stream is mostly propagated to efferent layers through the
 supra-granular layers while feed-back is in majority mediated by
-infragranular layers. This anatomical segregation could correspond to
+infra-granular layers. This anatomical segregation could correspond to
 different types of signals in predictive coding, respectively expected
 states and prediction error [@Bastos12]. Such basic micro-circuits have
 been applied to explain the response of V1 neurons to natural scenes
@@ -811,16 +812,16 @@ coherent information, the *a posteriori* probability and (hence the
 response of the system) gets more precise.
 
 Strikingly, this translates in the neural activity by the fact that for
-a more coherent set of input, the neural activity of the population is
-more sparse [@Vinje02; @Baudot13] This was already explained by the
+a more coherent set of inputs, the neural activity of the population is
+more sparse [@Vinje02; @Baudot13]. This was already explained by the
 predictive coding model of [@Rao99] and implemented in [@Kremkow16] for
 instance. Importantly, the principle of sparse coding is itself
 sufficient to guide the learning of the connectivity within a population
-of neurons, such as in V1 [@Olshausen97]. This helps to solve an
-important problem, that is, that the system is auto-organized and that
-the learning of the connectivity should be unsupervised. As such the
-plasticity rules that should be developed in SNNs should use similar
-governing principles.
+of neurons, such as in V1 [@Olshausen97; @Perrinet15bicv]. This helps to
+solve an important problem, that is, that the system is auto-organized
+and that the learning of the connectivity should be unsupervised. As
+such, the plasticity rules that should be developed in SNNs should use
+similar governing principles.
 
 5 Summary and conclusions {#sec:summary-and-conclusions}
 =========================
@@ -843,14 +844,16 @@ sec. 4), it thus seems necessary to be able to implement full-scale SNNs
 implementing complex visual processes. However, the three different
 anatomical scales that we have highlighted above (feed-forward, lateral,
 feedback) seem to be tightly coupled and can difficulty be modeled
-separately. As such, it is highly difficult to produce models which are
-simple enough to be useful for our understanding of the underlying
-processing [@Brette19]. For instance, all the models that we have
-presented here are pre-connected, that is, that we have fixed the hyper
-parameters controlling the interconnection of neurons. Though we have
-provided with simulations showing the role of these hyper-parameters, it
-seems necessary for a better understanding to further explore their
-relative effects.
+separately. More generally, this is also true for the scales that we
+have defined, from the macroscopic, to the mesoscopic and microscopic.
+As such, it is highly difficult to produce models which are simple
+enough to be useful for our understanding of the underlying processing
+[@Varoquaux19; @Brette19]. For instance, after deducing them from
+optimization principles, all the models that we have presented here are
+pre-connected: The hyper-parameters controlling the interconnection of
+neurons are fixed. Though we have provided with simulations showing the
+role of these hyper-parameters, it seems necessary for a better
+understanding to further explore their relative effects.
 
 Indeed, a normative theory for predictive processing should not only
 provide a possible solution (one given model with one set of hyper
