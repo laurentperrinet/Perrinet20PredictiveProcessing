@@ -4,6 +4,8 @@ SRC=Perrinet19PredictiveProcessing
 
 OPTIONS=-F pandoc-crossref -F pandoc-citeproc -f markdown+tex_math_dollars+smart --standalone --mathjax  --bibliography=$(SRC).bib
 
+edit:
+	atom Perrinet19PredictiveProcessing.md
 install:
 	# https://pandoc.org/installing.html
 	brew install pandoc
