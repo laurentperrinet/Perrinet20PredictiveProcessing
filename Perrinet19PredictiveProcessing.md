@@ -67,6 +67,8 @@ Here is some text.[^fn]
 http://lierdakil.github.io/pandoc-crossref/
 
 TODO: move to https://greenelab.github.io/manubot-rootstock/
+TODO: focus on the "predicting the present" idea
+TODO: check terminology for Active Inference
 
 -->
 
