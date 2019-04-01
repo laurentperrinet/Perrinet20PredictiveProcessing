@@ -483,7 +483,9 @@ of the second cycle of motion is observed (light shaded area), similar
 to psychophysical experiments [@Barnes91]. (Reproduced from
 [@PerrinetAdamsFriston14] under the terms of the [Creative Commons
 Attribution
-License](https://link.springer.com/article/10.1007/s00422-014-0620-8#copyrightInformation).)](figures/PerrinetAdamsFriston14.svg){#fig:PerrinetAdamsFriston14}
+License](https://link.springer.com/article/10.1007/s00422-014-0620-8#copyrightInformation),
+© The Authors
+2014.)](figures/PerrinetAdamsFriston14.svg){#fig:PerrinetAdamsFriston14}
 
 An interesting perspective to study the role of neural dynamics in
 cognition is to extend this model to a more realistic description of
@@ -603,11 +605,6 @@ is there any evidence for such processes in visual space?
 3.1 The flash-lag effect as evidence for predictive processing in topographic maps {#sec:the-flash-lag-effect-as-evidence-for-predictive-processing-in-topographic-maps}
 ----------------------------------------------------------------------------------
 
-<!-- TODO
-Figure 2: https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005068
-
-Copyright: © 2017 Khoei et al. This is an open access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited. -->
-
 ![Figure 2: In [@KhoeiMassonPerrinet17], we propose a model of
 predictive processing in a topographic map. **(A)** the model consists
 of a two-layered map: an input source target integrates information from
@@ -630,7 +627,8 @@ the delayed input knowing a delay of 100 ms. See text for an
 interpretation of the results. (Reproduced from [@KhoeiMassonPerrinet17]
 under the terms of the [Creative Commons Attribution
 License](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005068),
-© 2017.)](figures/KhoeiMassonPerrinet17.svg){#fig:KhoeiMassonPerrinet17}
+© The Authors
+2017.)](figures/KhoeiMassonPerrinet17.svg){#fig:KhoeiMassonPerrinet17}
 
 The [flash-lag effect](https://en.wikipedia.org/wiki/Flash_lag_illusion)
 (FLE) is a visual illusion which is popular for its generality and
