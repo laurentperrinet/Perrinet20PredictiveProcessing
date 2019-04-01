@@ -3,38 +3,41 @@ abstract: |
     Within the central nervous system, visual areas are essential in
     transforming the raw luminous signal into a representation which
     efficiently conveys information about the environment. This process is
-    constrained by various factors such as a wide variety of changes in the
-    characteristics of the visual scene but also by the necessity to be able
-    to respond as quickly as possible to the incoming sensory stream, for
+    constrained by the necessity of being robust and rapid. Indeed, there
+    exists both a wide variety of potential changes in the geometrical
+    characteristics of the visual scene and also a necessity to be able to
+    respond as quickly as possible to the incoming sensory stream, for
     instance to drive a movement of the eyes to the location of a potential
     danger. Decades of study in neurophysiology and psychophysics at the
     different levels of vision have shown that this system takes advantage
     of a priori knowledge about the structure of visual information, such as
     the regularity in the shape and motion of visual objects. As such, the
-    predictive processing framework offers a unified theory to explain many
-    visual mechanisms. However, we still lack a global normative approach
-    unifying those dynamical mechanisms and we will review here some of the
-    promising approaches which explain visual information processing in the
-    visual hierarchy. First, we will describe Active Inference, that is
-    predictive coding with the ability to actively sample the visual space.
-    Then, we will extend this paradigm to the case where information is
-    distributed on a topography, such as is the case for retinotopically
-    organized visual areas. In particular, we will compare such models in
-    light of recent neurophysiological data showing the role of traveling
-    waves in shaping visual processing. Finally, we will propose some lines
-    of research to understand how these functional models may be implemented
-    at the neural level. In particular, we will describe potential models of
-    cortical processing in terms of prototypical micro-circuits. These allow
-    to separate the different flows of information, from feed-forward
-    prediction error to feed-back anticipation error. Still, the design of
-    such a circuit is still not known and we will review some possible
-    implementations using Spiking Neural Networks.
+    predictive processing framework offers a unified theory to explain a
+    variety of visual mechanisms. However, we still lack a global normative
+    approach unifying those mechanisms and we will review here some recent
+    and promising approaches. First, we will describe Active Inference, a
+    form of predictive processing equipped with the ability to actively
+    sample the visual space. Then, we will extend this paradigm to the case
+    where information is distributed on a topography, such as is the case
+    for retinotopically organized visual areas. In particular, we will
+    compare such models in light of recent neurophysiological data showing
+    the role of traveling waves in shaping visual processing. Finally, we
+    will propose some lines of research to understand how these functional
+    models may be implemented at the neural level. In particular, we will
+    describe potential models of cortical processing in terms of
+    prototypical micro-circuits. These allow to separate the different flows
+    of information, from feed-forward prediction error to feed-back
+    anticipation error. Still, the design of such a generic predictive
+    processing circuit is still not fully understood and we will review some
+    possible implementations using Spiking Neural Networks.
 author: Laurent Perrinet
 author_info:
 - affiliations:
   - 'Institut de Neurosciences de la Timone, CNRS / Aix-Marseille Université'
   email: 'laurent.perrinet\@univ-amu.fr'
-  funders: Grant XXXXXXXX
+  funders: |
+      This work was supported by ANR project "Horizontal-V1"
+      N°ANR-17-CE37-0006.
   github: laurentperrinet
   initials: LuP
   name: Laurent U Perrinet
@@ -43,7 +46,7 @@ author_info:
 autoEqnLabels: False
 autoSectionLabels: True
 bibliography: 'Perrinet19PredictiveProcessing.bib'
-category: 'XXX document category, included in docx metadata'
+category: review
 ccsDelim: ','
 ccsLabelSep: '---'
 ccsTemplate: $$i$$$$ccsLabelSep$$$$t$$
@@ -53,8 +56,8 @@ chaptersDepth: 1
 codeBlockCaptions: False
 cref: False
 crossrefYaml: 'pandoc-crossref.yaml'
-date: '2019-02-17'
-date-meta: '2019-02-17'
+date: '2019-04-01'
+date-meta: '2019-04-01'
 description: |
     Book chapter proposal for "The Philosophy and Science of Predictive
     Processing" to be published by Bloomsbury
@@ -119,7 +122,9 @@ subfigLabels: alpha a
 subfigureChildTemplate: $$i$$
 subfigureRefIndexTemplate: '$$i$$$$suf$$ ($$s$$)'
 subfigureTemplate: '$$figureTitle$$ $$i$$$$titleDelim$$ $$t$$. $$ccs$$'
-subject: 'XXX document subject, included in ODT, docx and pptx metadata'
+subject: |
+    Book chapter proposal for "The Philosophy and Science of Predictive
+    Processing" to be published by Bloomsbury
 tableEqns: False
 tableTemplate: $$tableTitle$$ $$i$$$$titleDelim$$ $$t$$
 tableTitle: Table
@@ -129,8 +134,8 @@ tblPrefix:
 - 'tbls.'
 tblPrefixTemplate: $$p$$ $$i$$
 thanks: |
-    XXX thanks to Berk Mirza, Hugo Ladret and Manivannan Subramaniyan... for
-    careful reading and insightful remarks. XXX
+    The author would like to thank Berk Mirza, Hugo Ladret and Manivannan
+    Subramaniyan for careful reading and insightful remarks.
 title: |
     From the retina to action: Dynamics of predictive processing in the
     visual system
@@ -146,7 +151,7 @@ get https://zoteromusings.wordpress.com/tag/bibtex/
 
 
 ## some formatting tricks
-Blah blah [@Atick92, pp. 33-35, 38-39 and *passim*] by Atick  [-@Atick92].
+Blah blah [@Atick92, pp. 33-35, 38-39 and *passim*] by Atick [-@Atick92].
 
 
 https://lierdakil.github.io/pandoc-crossref/
@@ -175,25 +180,24 @@ TODO: move to https://greenelab.github.io/manubot-rootstock/
 Vision, the capacity of making sense of the luminous environment, is
 traditionally thought as a sequence of processing steps from the input
 retinal image to some higher-level representation. It is often thought
-that this "pipeline" is implemented by a strictly feedforward process in
-the visual pathways, from the retina to the thalamus and then to the
-cortex. Indeed, vision allows for instance for the simple detection of
-the printed character you are currently looking at and allowing the
-reading of this sentence. This involves rapid and unconscious low-level
-processes. However, such processes are largely immune to changes in
-luminance (like a shadow on this page) or to geometrical deformations,
-such as when reading a text from a slanted perspective. More generally,
-vision will correctly complete the image of a word with a missing letter
-(such as "EY-") or with ambiguous or incorrect detections such as in
-"UN1V3RS4L", showing that such processes may involve predictive
-processes. This illustrates vision is also the hallmark of higher
-capacities and can learn a generative model of sensory data: However
-simple or complex, a retinal image will always be interpreted as a
-visual scene with respect to some cognitive context. Furthermore, vision
-also allows for prospective predictions such as those revealed during
-mental imagery - and is a basic ground-stone for one's creativity, or
-*imagination*. As a consequence, vision is a highly complex process and
-it is still not known how that is possible. In particular, models of
+that this "pipeline", that is, this sequence of processing steps, is
+implemented by a strictly feedforward process in the visual pathways,
+from the retina to the thalamus and then to the cortex. For instance,
+vision allows for the simple detection of the printed character you are
+currently looking at, and thus for the reading of this sentence. This
+involves rapid and unconscious low-level processes. Importantly, such
+processes are largely immune to changes in luminance (like a shadow on
+this page) or to geometrical deformations, such as when reading a text
+from a slanted perspective. More generally, vision will correctly
+complete the image of a word with missing letters (such as in
+"PR-DI-T-ON") or with ambiguous or incorrect detections such as in
+"UN1V3RS4L". This illustrates that vision is also characterized by
+higher level processes which involve learning a generative model of
+sensory data. Furthermore, vision also allows for prospective
+predictions such as those revealed during mental imagery - and is a
+basic ground-stone for one's creativity, or *imagination*. As a
+consequence, vision is a highly complex process and it is still not
+completely understood how that is possible. In particular, models of
 vision as implemented in computers can learn complex categorization
 tasks on precise datasets but are easily outperformed by an infant when
 it comes to a naturalistic, flexible and generic context. As a matter of
@@ -202,6 +206,7 @@ sighted persons may perform these abilities. As a consequence, and to
 rephrase [@Wigner90], "the Unreasonable Effectiveness of Vision in the
 Natural World" invites us to focus on this cognitive ability for a
 better understanding of the brain in general.
+<!-- More generally, however simple or complex, a retinal image will always be interpreted as a visual scene with respect to some cognitive context.  -->
 
 Anatomically, visual processing is the result of the interplay of neural
 networks which are organized in a hierarchy of visual areas. Each visual
@@ -219,21 +224,22 @@ representations should handle geometrical transformations (such as the
 motion of a visual object) but also sensory modifications, such as with
 eye movements. Formalizing such optimization strategies in probabilistic
 language, these may be encompassed by the "Bayesian Brain" framework
-[@Knill04]. Moreover, it is possible to link these different theories
-into a single framework, the Free-Energy Principle (FEP) [@Friston10]
-and is crucial to study the philosophy and science of predictive
-processes. Key to this principle is the notion that, knowing the
-processes that generated the visual image and the internal generative
-model that allows its representation, predictive processes will take
-advantage of *a priori* knowledge to form an optimal representation of
-the image. This knowledge constitutes an explicit (probabilistic)
-representation of the structure of the world. For instance, an image
-which is composed of edges will be understood at a higher level using
-the a priori knowledge of the link between any individual edges to form
-a representation of the *contours* of visual objects. In the time
-domain, the knowledge of the motion of visual objects will help predict
-their future positions and to ultimately track the different bits of
-motion, but also to represent contours invariantly to this motion.
+[@Knill04]. More generally, it is possible to link these different
+theories into a single framework, the Free-Energy Principle (FEP)
+[@Friston10]. This principle constitutes a crucial paradigm shift to
+study predictive processes at both philosophical and scientific levels.
+Key to this principle is the notion that, knowing the processes that
+generated the visual image and the internal generative model that allows
+its representation, predictive processes will take advantage of *a
+priori* knowledge to form an optimal representation of the visual scene.
+This knowledge constitutes an explicit (probabilistic) representation of
+the structure of the world. For instance, an image which is composed of
+edges will be understood at a higher level using the a priori knowledge
+of the link between any individual edges to form a representation of the
+*contours* of visual objects. In the time domain, the knowledge of the
+motion of visual objects will help predict their future positions and to
+ultimately track the different bits of motion, but also to represent
+contours invariantly to this motion.
 
 However, there are limits and constrains to this efficiency. First,
 luminous information can be noisy and ambiguous, such as in dim light
@@ -242,38 +248,39 @@ capacities and always need some delay to convey and process information.
 In humans for instance, the delay for the transmission of retinal
 information to the cortex is approximately 80 ms, while the minimal
 latency to perform an oculomotor action is approximately an additional
-50 ms [@Kirchner06] (for monkeys, see [@Lamme00]). While this constrains
-the capacity of the visual system, we will herein take advantage of
-these delays to better unravel visual processes as they unfold in time.
-In particular, we will focus in this chapter in a fundamental constraint
-on the dynamics of such predictive processes in the central nervous
-system as they unroll with the passage of time.
+50 ms [@Kirchner06] (see [@Lamme00] for those values in monkeys). While
+this naturally constrains the capacity of the visual system, we will
+herein take advantage of these delays to dissect the different visual
+processes. In particular, we will focus in this chapter on the role of
+these fundamental temporal constraints on the dynamics of such
+predictive processes as they unravel with the passage of time.
 
 As an illustration, let's use the example of the recording of a set of
 neural cells in some visual areas. Let's assume that these recordings
-provide with an analog signal from which we may extract the analog
-timings of spiking events for the population of cells. We may then
-choose to display this data in a "raster plot", that is, showing the
-timing of the spikes that each cell emitted. Time is thus relative to
-that of the experimenter and is given thanks to an external clock: It is
-shown a posteriori, that is, after the recording. This definition of an
-absolute time was first formalized by Newton and now defines most of the
-laws of physics as an external parameter. But there is yet no evidence
-that the brain would posses such a central clock. As a consequence, each
-neuron has no access to absolute, physical time: its response is solely
+are evoked by an analog visual signal (as a light signal projected on
+retinal sensory cells) and that we may extract the analog timings of
+spiking events for a population of cells. We may then choose to display
+this data in a "raster plot", that is, showing the timing of the spikes
+for each of the identified cell. Time is thus relative to that of the
+experimenter and is given thanks to an external clock: It is shown a
+posteriori, that is, after the recording. In general, this definition of
+an absolute time was first formalized by Newton and defines most of the
+laws of physics using time as an external parameter. But there is yet no
+evidence that neurons would have access to such a central clock giving a
+reference to the absolute, physical time. Rather, its response is solely
 controlled by the *present* distribution of electro-chemical gradients
-on its membrane and its dynamical properties. Such a notion of time is
-local to each neuron: the network is asynchronous (that is, timing is
-decentralized). Moreover, this local notion of (processing) time is *a
-priori* disjoint from the external time that this analog signal may
-represent. Such an observation is essential in understanding the
+on its membrane. Such a notion of time is local to each neuron. As a
+consequence, the network is asynchronous, that is, that timing is
+decentralized. Moreover, this local notion of (processing) time is *a
+priori* disjoint from the external time which is used to represent the
+visual signal. Such an observation is essential in understanding the
 principles guiding the organization of visual processes: A neural theory
-of predictive processes can be only defined in this interoceptive time,
-using only locally available information at the present instant. In
-particular, we will propose that neural processes in vision aim at
-"predict the present" [@Changizi08] by using an internal generative
-model of the visual work and using sensory data to validate this
-internal representation.
+of predictive processes can be only defined in this local
+(interoceptive) time, using only locally available information at the
+present instant. In particular, we will propose that neural processes in
+vision aim at "predicting the present" [@Changizi08] by using an
+internal generative model of the visual work and using sensory data to
+validate this internal representation.
 
 This chapter will review such dynamical predictive processing approaches
 for vision at different scales of analysis, from the whole system to
@@ -291,9 +298,9 @@ possible implementations of such models in Spiking Neural Networks (see
 sec. 4). In particular, we will review some models of elementary
 micro-circuits and detail some potential rules for learning the
 structure of their connections in an unsupervised manner. We will
-conclude by synthesizing these results and their limit. In particular,
-we will try to define an emerging notion for time as it appears in the
-definition of predictive processes for visual processing.
+conclude by synthesizing these results and their limits. In particular,
+we will try to define a novel notion for time as an emerging property of
+predictive processes for visual processing.
 <!-- what Dennett (2009) calls a “strange inversion of reasoning,” and we will try to understand the potential role of traveling waves in shaping visual processing-->
 
 2 Active Inference and the "optimality" of vision {#sec:AI}
@@ -920,6 +927,14 @@ evolution of hyper- parameters. In particular, it is yet not completely
 understood how SNNs perform a spike-lime dependent plasticity. This is a
 future challenge in our understanding of the science of predictive
 processes in vision.
+
+5.1 Acknowledgments {#sec:acknowledgments}
+-------------------
+
+This work was supported by ANR project "Horizontal-V1"
+N°ANR-17-CE37-0006. The author would like to thank Berk Mirza, Hugo
+Ladret and Manivannan Subramaniyan for careful reading and insightful
+remarks.
 
 6 References {#sec:references .unnumbered}
 ============
