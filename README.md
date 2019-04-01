@@ -29,7 +29,7 @@ abstract: |
     of information, from feed-forward prediction error to feed-back
     anticipation error. Still, the design of such a generic predictive
     processing circuit is still not fully understood and we will review some
-    possible implementations using Spiking Neural Networks.
+    possible implementations using biomimetic neural networks.
 author: Laurent Perrinet
 author_info:
 - affiliations:
@@ -190,28 +190,28 @@ processes are largely immune to changes in luminance (like a shadow on
 this page) or to geometrical deformations, such as when reading a text
 from a slanted perspective. More generally, vision will correctly
 complete the image of a word with missing letters (such as in
-"PR-DI-T-ON") or with ambiguous or incorrect detections such as in
+"PR-D-CT-ON") or with ambiguous or incorrect detections such as in
 "UN1V3RS4L". This illustrates that vision is also characterized by
-higher level processes which involve learning a generative model of
-sensory data. Furthermore, vision also allows for prospective
-predictions such as those revealed during mental imagery - and is a
-basic ground-stone for one's creativity, or *imagination*. As a
-consequence, vision is a highly complex process and it is still not
-completely understood how that is possible. In particular, models of
-vision as implemented in computers can learn complex categorization
-tasks on precise datasets but are easily outperformed by an infant when
-it comes to a naturalistic, flexible and generic context. As a matter of
-fact, the most surprising fact about vision is the ease with which
-sighted persons may perform these abilities. As a consequence, and to
-rephrase [@Wigner90], "the Unreasonable Effectiveness of Vision in the
-Natural World" invites us to focus on this cognitive ability for a
-better understanding of the brain in general.
+higher level processes. Furthermore, it is believed these involve
+learning a generative model of sensory data. Indeed, vision also allows
+for prospective predictions such as those revealed during mental imagery
+--- and is a basic ground-stone for one's creativity, or *imagination*.
+As a consequence, vision is a highly complex process which is still not
+completely understood. In particular, models of vision as implemented in
+computers can learn complex categorization tasks on very precise
+datasets but are easily outperformed by an infant when it comes to a
+naturalistic, flexible and generic context. As a matter of fact, the
+most surprising fact about vision is the ease with which sighted persons
+may perform these abilities. As a consequence, and to rephrase
+[@Wigner90], "the Unreasonable Effectiveness of Vision in the Natural
+World" invites us to focus on this cognitive ability for a better
+understanding of the brain in general.
 <!-- More generally, however simple or complex, a retinal image will always be interpreted as a visual scene with respect to some cognitive context.  -->
 
 Anatomically, visual processing is the result of the interplay of neural
 networks which are organized in a hierarchy of visual areas. Each visual
 area is itself a dynamical process, from its first stage, the retina, to
-the different areas which help in forming a parallel and distributed
+the different areas which help in forming this parallel and distributed
 representation of the visual world. Moreover, this organization is
 largely self-organized and very efficient metabolic-wise. To make sense
 of such complex network of visual areas, it has been proposed that this
@@ -231,13 +231,14 @@ study predictive processes at both philosophical and scientific levels.
 Key to this principle is the notion that, knowing the processes that
 generated the visual image and the internal generative model that allows
 its representation, predictive processes will take advantage of *a
-priori* knowledge to form an optimal representation of the visual scene.
-This knowledge constitutes an explicit (probabilistic) representation of
-the structure of the world. For instance, an image which is composed of
-edges will be understood at a higher level using the a priori knowledge
-of the link between any individual edges to form a representation of the
-*contours* of visual objects. In the time domain, the knowledge of the
-motion of visual objects will help predict their future positions and to
+priori* knowledge to form an optimal representation of the visual scene
+[@Rao99]. This knowledge constitutes an explicit (probabilistic)
+representation of the structure of the world. For instance, an image
+which is composed of edges will be understood at a higher level using
+the a priori knowledge of the link between any individual edges to form
+a representation of the *contours* of visual objects. In the time
+domain, the knowledge of geometric transforms such as the motion of
+visual objects will help predict their future positions and to
 ultimately track the different bits of motion, but also to represent
 contours invariantly to this motion.
 
@@ -248,39 +249,40 @@ capacities and always need some delay to convey and process information.
 In humans for instance, the delay for the transmission of retinal
 information to the cortex is approximately 80 ms, while the minimal
 latency to perform an oculomotor action is approximately an additional
-50 ms [@Kirchner06] (see [@Lamme00] for those values in monkeys). While
-this naturally constrains the capacity of the visual system, we will
-herein take advantage of these delays to dissect the different visual
-processes. In particular, we will focus in this chapter on the role of
-these fundamental temporal constraints on the dynamics of such
+50 ms [@Kirchner06] (see [@Lamme00] for equivalent values in monkeys).
+While this naturally constrains the capacity of the visual system, we
+will herein take advantage of these delays to dissect the different
+visual processes. In particular, we will focus in this chapter on the
+role of these fundamental temporal constraints on the dynamics of such
 predictive processes as they unravel with the passage of time.
 
 As an illustration, let's use the example of the recording of a set of
 neural cells in some visual areas. Let's assume that these recordings
-are evoked by an analog visual signal (as a light signal projected on
-retinal sensory cells) and that we may extract the analog timings of
-spiking events for a population of cells. We may then choose to display
-this data in a "raster plot", that is, showing the timing of the spikes
-for each of the identified cell. Time is thus relative to that of the
-experimenter and is given thanks to an external clock: It is shown a
-posteriori, that is, after the recording. In general, this definition of
-an absolute time was first formalized by Newton and defines most of the
-laws of physics using time as an external parameter. But there is yet no
-evidence that neurons would have access to such a central clock giving a
-reference to the absolute, physical time. Rather, its response is solely
-controlled by the *present* distribution of electro-chemical gradients
-on its membrane. Such a notion of time is local to each neuron. As a
-consequence, the network is asynchronous, that is, that timing is
-decentralized. Moreover, this local notion of (processing) time is *a
-priori* disjoint from the external time which is used to represent the
-visual signal. Such an observation is essential in understanding the
-principles guiding the organization of visual processes: A neural theory
-of predictive processes can be only defined in this local
-(interoceptive) time, using only locally available information at the
-present instant. In particular, we will propose that neural processes in
-vision aim at "predicting the present" [@Changizi08] by using an
-internal generative model of the visual work and using sensory data to
-validate this internal representation.
+are evoked by an analog visual signal (as a luminous signal projected on
+a population of retinal sensory cells) and that we may extract the
+analog timings of spiking events for a population of cells. We may then
+choose to display this data in a "raster plot", that is, showing the
+timing of the spikes for each of the identified cell. Time is thus
+relative to that of the experimenter and is given thanks to an external
+clock: It is shown a posteriori, that is, after the recording. In
+general, this definition of an absolute time was first formalized by
+Newton and defines most of the laws of physics, using time as an
+external parameter. But there is yet no evidence that neurons would have
+access to such a central clock giving a reference to absolute, physical
+time. Rather, neural responses are solely controlled by the *present*
+distribution of electro-chemical gradients on their membrane. Such a
+notion of time is local to each neuron. As a consequence, the network's
+dynamics is asynchronous, that is, that timing is decentralized.
+Moreover, this local notion of (processing) time is *a priori* disjoint
+from the external time which is used to represent the visual signal.
+Such an observation is essential in understanding the principles guiding
+the organization of visual processes: A neural theory of predictive
+processes can be only defined in this local (interoceptive) time, using
+only locally available information at the present instant. In
+particular, we will propose that neural processes in vision aim at
+"predicting the present" [@Changizi08] by using an internal generative
+model of the visual work and using sensory data to validate this
+internal representation.
 
 This chapter will review such dynamical predictive processing approaches
 for vision at different scales of analysis, from the whole system to
@@ -298,10 +300,7 @@ possible implementations of such models in Spiking Neural Networks (see
 sec. 4). In particular, we will review some models of elementary
 micro-circuits and detail some potential rules for learning the
 structure of their connections in an unsupervised manner. We will
-conclude by synthesizing these results and their limits. In particular,
-we will try to define a novel notion for time as an emerging property of
-predictive processes for visual processing.
-<!-- what Dennett (2009) calls a “strange inversion of reasoning,” and we will try to understand the potential role of traveling waves in shaping visual processing-->
+conclude by synthesizing these results and their limits.
 
 2 Active Inference and the "optimality" of vision {#sec:AI}
 =================================================
@@ -333,47 +332,54 @@ consequences.
 
 <!-- This paragraph could be reorganized for easy reading. You may want to start with clearly stating what problem an agent or the brain is facing. This will make the reader think about solutions. You can give examples of old ideas that didn’t work. Then you say that the idea of FEP is an elegant solution and you then go on to convince the readers why and how. You can say that visual search could be used as paradigm to demonstrate FEP. -->
 
-As a first step, we will consider a simplistic agent that senses a
-subset of the visual scene as its projection on the retinotopic space.
-The agent has the ability to direct his gaze toward any position in
-(visual) space using saccades, that is, fast eye movements. Equipping
-the agent with the ability to actively sample the visual world enables
-us to explore the idea that actions (saccadic eye movements) are optimal
-experiments, by which the agent seeks to confirm predictive models of
-the hidden world. This is reminiscent of Helmholtz's definition of
-perception [@vonHelmholtz1867] as hypothesis testing [@Gregory80]. This
-provides a plausible model of visual search that can be motivated from
-the basic principles of self-organized behavior [@Gibson79]: namely, the
-imperative to minimize the entropy of hidden states of the world and
-their sensory consequences. This imperative is met if agents sample
-hidden states of the world efficiently. This efficient sampling of
-salient information can be derived using approximate Bayesian inference
-and variational free-energy minimization [@Friston10]. One key
-ingredient to this process is the (internal) representation of
-counterfactual predictions, that is, of the probable consequences of
-possible hypothesis as they would be realized into actions. This
-augments models of an agent using the FEP such as to define Active
-Inference (AI).
+For instance, it is not yet known why the fast mechanism that directs
+our gaze toward any position in (visual) space, the saccadic system, is
+at the same time fast and flexible. For instance, this system may
+quickly adapt for contextual cues, for instance when instructing the
+observer to count faces in a painting. Most theories will explain such
+mechanisms using sensory or motor control models, yet few theories
+integrates the system as a whole. As a first step, we will consider a
+simplistic agent that senses a subset of the visual scene as its
+projection on the retinotopic space. The agent has the ability to direct
+his gaze using saccades. Equipping the agent with the ability to
+actively sample the visual world enables us to explore the idea that
+actions (saccadic eye movements) are optimal experiments, by which the
+agent seeks to confirm predictive models of the hidden world. This is
+reminiscent of Helmholtz's definition of perception [@vonHelmholtz1867]
+as hypothesis testing [@Gregory80]. This provides a plausible model of
+visual search that can be motivated from the basic principles of
+self-organized behavior. In mathematical terms, this imperative to
+maximize the outcome of predicted actions is equivalent to minimizing
+the entropy of hidden states of the world and their sensory
+consequences. This imperative is met if agents sample hidden states of
+the world efficiently. In practice, once the generative model is
+defined, this efficient sampling of salient information can be derived
+using approximate Bayesian inference and variational free-energy
+minimization [@Friston10]. One key ingredient to this process is the
+(internal) representation of counterfactual predictions, that is, of the
+probable consequences of possible hypothesis as they would be realized
+into actions. This augments models of an agent using the FEP such as to
+define Active Inference (AI).
 
 Using the SPM simulation environment [@SPM12], Friston and colleagues
 [@Friston12] provide with simulations of the behavior of such an agent
-which senses the image of a face, and knowing an internal model of their
+which senses images of faces, and knowing an internal model of their
 structure. In modeling the agent, they clearly delineate the hidden
 external state (the visual image, the actual position of the eye or
 motor command) from the internal state of the agent. Those internal
 beliefs are linked by a probabilistic dependency graph that is referred
-to as generative model and applying the FEP to this generative model
+to as the generative model. Applying the FEP to this generative model
 translates (or compiles in computer science terms) to a set of
-differential equations with respect to 1) the dynamics of internal
-beliefs 2) the counterfactual action. An agent forms expectations over
-sensory consequences it expects in the future under each possible
-action. This formulation of active inference forms what is called a
-Markov decision process [@Mirza18]. As a system following the FEP, this
-process is predictive. Yet it extends the classical predictive
-processing of [@Rao99] by including action (and priors related to motor
-commands) to the overall optimization scheme. The chosen action is the
-one which is expected to reduce sensory surprise and is ultimately
-realized by an arc reflex.
+differential equations with respect to first, the dynamics of internal
+beliefs and second, the counterfactual actions. An agent forms
+expectations over sensory consequences it expects in the future under
+each possible action. This formulation of active inference forms what is
+called a Markov decision process [@Mirza18]. As a system following the
+FEP, this process is predictive. Yet, it extends the classical
+predictive processing of [@Rao99] by including action (and priors
+related to motor commands) to the overall optimization scheme. The
+chosen action is the one which is expected to reduce sensory surprise
+and is ultimately realized by an arc reflex.
 
 Simulations of the resulting AI scheme reproduce sequential eye
 movements that are reminiscent of empirically observed saccades and
@@ -412,44 +418,47 @@ multidimensional Gaussian probability distribution functions. This holds
 true in all generality when transforming variables in higher dimensions,
 such is the case for generalized coordinates [@Friston10generalized].
 Such coordinates represent at any (present) time the Taylor expansion of
-the temporal trajectory of any variable. Consequently, the solution
-provided by these equations gives a plausible neural implementation as a
-set of hierarchically organized linear / non-linear equations
-[@Heeger17]. In particular these equations are the Kalman-Bucy filtering
-solution [@Kalman60] which provides with a Bayes-optimal estimate of
-hidden states and actions in generalized coordinates of motion. This
-generalizes the predictive coding framework offered by [@Rao99] for
-explaining the processing mechanisms in the primary visual cortex.
-Similar to that model, the dynamical evolution of activity at the
-different levels of the hierarchy is governed by the balance in the
-integration of internal (past) beliefs with (present) sensory
-information [@Heeger17]. In particular, the relative weights assigned to
-the modulation of information passing is proportional to the (inferred)
-precision of each individual variable in the dependency graph. This
-allow us to predict the influence of the prior knowledge of precision at
-any given level on the final outcome.
+the temporal trajectory of any variable, that is the vector containing
+the position, velocity, acceleration and further motion orders.
+Consequently, the solution provided by these equations gives a plausible
+neural implementation as a set of hierarchically organized linear /
+non-linear equations [@Heeger17]. In particular these equations are the
+Kalman-Bucy filtering solution [@Kalman60] which provides with a
+Bayes-optimal estimate of hidden states and actions in generalized
+coordinates of motion. This generalizes the predictive coding framework
+offered by [@Rao99] for explaining the processing mechanisms in the
+primary visual cortex. Similar to that model, the dynamical evolution of
+activity at the different levels of the hierarchy is governed by the
+balance in the integration of internal (past) beliefs with (present)
+sensory information [@Heeger17]. In particular, the relative weights
+assigned to the modulation of information passing is proportional to the
+(inferred) precision of each individual variable in the dependency
+graph. This allow us to predict the influence of the prior knowledge of
+precision at any given level on the final outcome.
 
 Practically, the predictive power of the modeling of such an agent is
 important to understand deviations from the median behavior within a
 population of agents. For instance, there are acute differences in the
-smooth pursuit eye movements (SPEM) between control and schizophrenic
-patients. First, SPEM are distinct from saccades as they are voluntary
-eye movements which aim at stabilizing the retinal image of a smoothly
-moving visual object. For a target following the motion of a pendulum
-for instance, the eye will produce a prototypical response to follow
-this predictable target. Interestingly, schizophrenic agents tend to
-produce a different pattern of SPEM when the pendulum is occluded on
-half cycles (e.g., as it passes behind an opaque cardboard on one side
-from the midline). In general, SPEM may still follow the target, as it
-is occluded (behind the cardboard) yet with a lower gain [@Barnes91]. As
-the target reappears from behind the occluder, schizophrenic agents
-engage more quickly to a SPEM response [@Avila06]. An agent was modeled
-in [@Adams12] has the capability to smoothly follow such moving object.
-This model allows in particular to understand most prototypical SPEM as
-a Bayes-optimal solution to minimize surprise in the perception / action
-loop implemented in the agent's dependency graph.
+smooth pursuit eye movements (SPEM) between (control) neurotypic and
+schizophrenic patients. First, SPEM are distinct from saccades as they
+are voluntary eye movements which aim at stabilizing the retinal image
+of a smoothly moving visual object. For a target following the motion of
+a pendulum for instance, the eye will produce a prototypical response to
+follow this predictable target. Interestingly, schizophrenic agents tend
+to produce a different pattern of SPEM in the case that the pendulum is
+occluded on half cycles (for instance, as it passes behind an opaque
+cardboard on one side from the midline). In general, SPEM may still
+follow the target, as it is occluded (behind the cardboard) yet with a
+lower gain [@Barnes91]. As the target reappears from behind the
+occluder, schizophrenic agents engage more quickly to a SPEM response
+[@Avila06]. Extending the agent modeled in [@Friston12], an agent which
+has the capability to smoothly follow such moving object was modeled in
+[@Adams12]. This model allows in particular to understand most
+prototypical SPEM as a Bayes-optimal solution to minimize surprise in
+the perception / action loop implemented in the agent's dependency
+graph.
 
-Especially, by manipulating the a priori precision of internal beliefs
+Especially, by manipulating the *a priori* precision of internal beliefs
 at the different levels of the hierarchical model, one could reproduce
 different classes of SPEM behaviors which reproduce classical
 psychophysical stimuli. For instance, [@Adams12] found for the
@@ -467,11 +476,11 @@ population (see for instance [@Karvelis18autistic; @Kent19]).
 ---------------------------------------------------------------
 
 ![Figure 1: **(A)** This figure reports the response of predictive
-processing during the simulation of pursuit initiation, using a single
-sweep of a visual target, while compensating for sensory motor delays.
-Here, we see horizontal excursions of oculomotor angle (dark blue line).
-One can see clearly the initial displacement of the target that is
-suppressed by action after a few approximately 200 ms, modeling a
+processing during the simulation of pursuit initiation while
+compensating for sensory motor delays, using a single sweep of a visual
+target. Here, we see horizontal excursions of oculomotor angle (dark
+blue line). One can see clearly the initial displacement of the target
+that is suppressed by action after approximately 200 ms, modeling a
 prototypical pursuit eye movement. Additionally, we illustrate the
 effects of assuming wrong sensorimotor delays on pursuit initiation.
 Under pure sensory delays (red dotted line), one can see clearly the
@@ -513,15 +522,16 @@ in fact lagging 1 meter behind, that is, approximately at an
 eccentricity of 45 degrees. However, the position at the moment of
 emitting the motor command will be also 45 degrees *ahead* of its
 present physical position in visual space. As a consequence, if the
-player's gaze is directed to the ball at its present position, this may
-be because of taking into account, in an anticipatory fashion, the
-distance the ball travels during the sensory delay. Alternatively,
-optimal control may direct action (future motion of the eye) to the
-expected position when motor commands reach the periphery (muscles).
-Such an example illustrates that even with such relatively short delay,
-the visual system is faced with significant perturbations leading to
-ambiguous choices. This ambiguity is obviously an interesting challenge
-for modeling predictive processing in the visual system.
+player's gaze is not directed to the image of the ball on the retina but
+to the ball at its present (physical) position, this may be because he
+takes into account, in an anticipatory fashion, the distance the ball
+travels during the sensory delay. Alternatively, optimal control may
+direct action (future motion of the eye) to the expected position when
+motor commands reach the periphery (muscles). Such an example
+illustrates that even with such relatively short delay, the visual
+system is faced with significant perturbations leading to ambiguous
+choices. This ambiguity is obviously an interesting challenge for
+modeling predictive processing in the visual system.
 
 Extending the modeling framework of [@Adams12] for SPEM, it was observed
 in [@PerrinetAdamsFriston14] that representing hidden states in
@@ -529,27 +539,27 @@ generalized coordinates provides a simple way of compensating for both
 delays. A novelty of this approach is to include the delays in the
 dynamics by taking advantage of generalized coordinates. Technically,
 this defines a linear operator on those variables to travel back and
-forth in time with interval of time, allowing in particular to represent
-the state variables in the past (sensory delay) or in the future (motor
-delay). Note that (1) this representation is done at the present time,
-(2) that it allows for the concomitant representation of precision of
-state variables, and (3) that this allows for the evaluation of
-counterfactual hypothesis of sensory states (based on past sensory
-states) and of an action which has to be inferred now, knowing it will
-be effective after the motor delay. Applying such an operator to the FEP
-generates a slightly different and more complicated formulation.
-However, it is important to note that to compensate for delays, there is
-no change in the structure of the network but just in how the synaptic
-weights are tuned (similar to what we had done in the first section of
-this chapter): "Neurobiologically, the application of delay operators
-just means changing synaptic connection strengths to take different
-mixtures of generalized sensations and their prediction errors."
-[@PerrinetAdamsFriston14, sec 3.1]. In particular, when the agent has
-some belief about these delays, it can Bayes-optimally integrate
-internal beliefs. Such a behavior is still regulated by the same type of
-internal equation.
+forth in time with arbitrary intervals of time, allowing in particular
+to represent the state variables in the past (sensory delay) or in the
+future (motor delay). Note that (1) this representation is done at the
+present time, (2) that it allows for the concomitant representation of
+precision of state variables, and (3) that this allows for the
+evaluation of counterfactual hypothesis of sensory states (based on past
+sensory states) and of an action which has to be inferred now, knowing
+it will be effective after the motor delay. Applying such an operator to
+the FEP generates a slightly different and more complicated mathematical
+formulation. However, it is important to note that to compensate for
+delays, there is no change in the structure of the network but just in
+how the synaptic weights are tuned (similar to what we had done in the
+first section of this chapter): "Neurobiologically, the application of
+delay operators just means changing synaptic connection strengths to
+take different mixtures of generalized sensations and their prediction
+errors." [@PerrinetAdamsFriston14, sec 3.1]. In particular, when the
+agent has some belief about these delays, it can Bayes-optimally
+integrate internal beliefs. Such a behavior is still regulated by the
+same type of internal equation.
 
-I illustrate the efficacy of this scheme using neuronal simulations of
+We illustrated the efficacy of this scheme using neuronal simulations of
 pursuit initiation responses, with and without compensation. Figure
 fig. 1, A reports the conditional estimates of hidden states and causes
 during the simulation of pursuit initiation, using a simple sweep of a
@@ -565,15 +575,17 @@ relation to the true inputs. Of note here is the failure of optimal
 control with oscillatory fluctuations in oculomotor trajectories, which
 become unstable under combined sensorimotor delays.
 
-Interestingly, this model extends to more complex stimulation
-trajectories. In particular, it is has been shown that gaze will be
-directed at the present physical position of the target (thus in an
-anticipatory fashion) if that target follows a smooth trajectory (such
-as a pendulum). More striking, this is also true if the trajectory is
+Interestingly, this model extends to more complex visual trajectories.
+In particular, it is has been shown that gaze will be directed at the
+present physical position of the target (thus in an anticipatory
+fashion) if that target follows a smooth trajectory (such as a
+pendulum). More striking, this is also true if the trajectory is
 *predictable*, for instance for a pendulum behind a static occluder
-[@Barnes91]. Figure fig. 1, B reports the simulation of smooth pursuit
-when the target motion is hemi-sinusoidal, as would happen for a
+[@Barnes91; @Adams12]. Figure fig. 1, B reports the simulation of smooth
+pursuit when target's motion is hemi-sinusoidal, as would happen for a
 pendulum that would be stopped at each half cycle, left of the vertical.
+Note that contrary to the agent modeled in [@Adams12], this agent has
+the biological constraint that sensory and motor processing is delayed.
 The generative model has been equipped with a second hierarchical level
 that contains hidden states that account for the latent periodic
 behavior of target motion. One can clearly see the initial displacement
@@ -616,12 +628,12 @@ is there any evidence for such processes in visual space?
 predictive processing in a topographic map. **(A)** the model consists
 of a two-layered map: an input source target integrates information from
 visual sensors. This map represents both position and velocity, and for
-simplicity we display here the horizontal dimension. Using this belief
-(as represented here by the probability distribution function at each
-time step), it is possible to project this information to a second
+simplicity we only display here the horizontal dimension. Using this
+belief (as represented here by the probability distribution function at
+each time step), it is possible to project this information to a second
 target layer that integrates information knowing a compensation for the
 delay. In that particular case, speed is positive and thus information
-of position is transported to the right. **(B)** Response of a model
+of position is transported toward the right. **(B)** Response of a model
 compensating for a 100 ms delay to a moving dot. Representation of the
 inferred probability of position and velocity with delay compensation as
 a function of the iterations of the model (time). Darker colors denote
@@ -647,7 +659,7 @@ they are vertically perfectly aligned, the flashed dot is perceived as
 *lagging* the moving dot. This visual illusion saw a resurgence of
 scientific interest with the motion extrapolation model
 [@Nijhawan02; @Nijhawan09]. However, other models such as differential
-latency of postdiction were also proposed, such that it is yet not clear
+latency or postdiction were also proposed, such that it is yet not clear
 what is the neural substrate of the FLE. Here, similarly to the model
 compensating for delays [@PerrinetAdamsFriston14], we define a model of
 predictive processing defined on the visual topography using an internal
@@ -702,17 +714,18 @@ presentation of a discrete pattern into a continuous one. This visual
 illusion is called [apparent
 motion](https://en.wikipedia.org/wiki/Beta_movement) and can persist
 over a relatively long range (superior to the characteristic size of the
-RF of a V1 neuron). Similarly to the study above for the FLE, it is
-believed that this long-range Apparent Motion (lrAM) can be explained by
-predictive processes. Due to the dynamical characteristics of lrAM, a
-neural implementation of this illusion may consist in the propagation of
-visual information through intra-cortical interactions. In particular,
-these lateral interactions may evoke waves of activity in V1 which may
-modulate the integration of the sensory information coming from
-thalamocortical connections. An interesting prospect is thus to record
-neural activity during the presentation of the lrAM stimulus. This
-allows to quantitatively assess why the superposition of two dots as in
-lrAM is "more" than the sum of the two dots in isolation.
+RF of a neuron in primary visual cortex, V1). Similarly to the study
+above for the FLE, it is believed that this long-range Apparent Motion
+(lrAM) can be explained by predictive processes. Due to the dynamical
+characteristics of lrAM, a neural implementation of this illusion may
+consist in the propagation of visual information through intra-cortical
+interactions. In particular, these lateral interactions may evoke waves
+of activity in V1 which may modulate the integration of the sensory
+information coming from thalamocortical connections. An interesting
+prospect is thus to record neural activity during the presentation of
+the lrAM stimulus. This allows to quantitatively assess why the
+superposition of two dots as in lrAM is "more" than the sum of the two
+dots in isolation.
 
 In a recent study [@Chemla19], we used VSDI to record the activity of
 the primary visual cortex (V1) of awake macaque monkeys. Is there any
@@ -736,13 +749,13 @@ Importantly, this model allowed to show that the observed activity was
 best fitted when the speed of lateral connections within the mean-field
 was about 1 m/s, a propagation speed which is of the order of that
 measured for intra-cortical connections in the primary visual cortex
-(for a review, see[@Muller18]). A more functional (probabilistic) model
+(for a review, see [@Muller18]). A more functional (probabilistic) model
 also showed that the cortical suppressive wave allowed to disambiguate
 the stimulus by explaining away (that is, suppressing) ambiguous
-alternatives. As a consequence, 1) lateral interactions are key to
-generate traveling waves on the surface of the cortex and 2) these waves
-help disambiguate the input stimulus. This corresponds to the
-implementation of a predictive process using an a priori knowledge of
+alternatives. As a consequence, (1) lateral interactions are key to
+generate traveling waves on the surface of the cortex and (2) these
+waves help disambiguate the input stimulus. This corresponds to the
+implementation of a predictive process using an *a priori* knowledge of
 smoothly-moving visual objects.
 
 3.3 Summary {#sec:summary-1}
@@ -759,8 +772,8 @@ different levels of adaptation as illustrated for the lrAM stimulus
 [@Chemla19]. As a consequence, such processes are observed
 phenomenologically as the propagation of neural information tangentially
 to the cortical surface, modulating dynamically the feed-forward and
-feed-back stream. In particular it is an open question whether such
-neural computations could be implemented by travelling waves on the
+feed-back streams. In particular it is an open question whether such
+neural computations could be implemented by traveling waves on the
 cortical surface [@Muller18].
 
 4 Open problems in the science of visual predictive processing {#sec:spikes}
@@ -776,11 +789,11 @@ mechanisms of predictive processing, we now need to finesse the
 granularity of the modeling to this scale. In particular, in addition to
 the asynchronous nature of the neural representation that we explored
 above, communication between neurons has the property of being
-event-based. Indeed, in a vast majority of neural cells across the
-living kingdom communicate using prototypical, short pulses called
-action potentials or *spikes*. In this section, we will propose three
-open problems which are raised when modeling such Spiking Neural
-Networks (SNNs) in the context of predictive processing.
+event-based. Indeed, the vast majority of neural cells across the living
+kingdom communicate using prototypical, short pulses called action
+potentials or *spikes*. In this section, we will propose three open
+problems which are raised when modeling such Spiking Neural Networks
+(SNNs) in the context of predictive processing.
 
 4.1 The challenges of representing visual information in Spiking Neural Networks (SNNs) {#sec:the-challenges-of-representing-visual-information-in-spiking-neural-networks-snns}
 ---------------------------------------------------------------------------------------
@@ -808,27 +821,28 @@ important property of SNNs is the ability to represent dynamically a
 latent, internal variable (the membrane potential in neuro-physiology)
 and to emit a spike when (and only when) an internally defined threshold
 is reached. This defines each spiking neuron as an integrator (similarly
-to classical neurons), but also potentially as a synchrony detector.
-This ability to modulate the processing based on the relative timing of
-presynaptic spikes constitute a novel paradigm for neural computations
-[@Paugam12]. In particular, this shows that the balance in the flux of
-incoming excitatory and inhibitory spikes is crucial to maximize the
-efficiency of such SNNs [@Hansel12].
+to classical neurons), but also potentially as a synchrony detector
+[@Perrinet02]. This ability to modulate the processing based on the
+relative timing of presynaptic spikes constitute a novel paradigm for
+neural computations [@Paugam12]. In particular, this shows that the
+balance in the flux of incoming excitatory and inhibitory spikes is
+crucial to maximize the efficiency of such SNNs [@Hansel12].
 
 4.2 The role of cortical waves in shaping the dynamic processing of visual information {#sec:the-role-of-cortical-waves-in-shaping-the-dynamic-processing-of-visual-information}
 --------------------------------------------------------------------------------------
 
 Another crucial point in deciphering the predictive processing
-mechanisms is given by the functional anatomy. Indeed, in V1 as in other
-cortical areas, the neural network is highly recurrent with a median
-number of 10000 connections per neuron. Surprisingly, 95% of these
-connections occur within a 2mm radius (macaque monkey) [@Markov13]. This
-suggests that a majority of neural resources is devoted to intra-areal
-communications. One putative functional role of this dense network is to
-generate traveling waves which modulates the strength and dynamics of
-the incoming feed-forward neural activity [@Muller18]. We have seen its
-potential role in disambiguating motion [@Chemla19] and it has also been
-shown to facilitate the progressive build-up of visual information
+mechanisms is given by the functional anatomy. Indeed, in primary visual
+cortex (V1) as in other cortical areas, the neural network is highly
+recurrent with a median number of 10000 connections per neuron.
+Surprisingly, 95% of these connections occur within a 2mm radius
+(macaque monkey) [@Markov13]. This suggests that a majority of neural
+resources is devoted to intra-areal communications. One putative
+functional role of this dense network is to generate traveling waves
+which modulates the strength and dynamics of the incoming feed-forward
+neural activity [@Muller18]. We have seen its potential role in
+disambiguating motion [@Chemla19] and it has also been shown to
+facilitate the progressive build-up of visual information
 [@Bringuier99]. Previously, we have successfully modeled such a
 predictive process
 [@Perrinet12pred; @Khoei13jpp; @KhoeiMassonPerrinet17] in a SNN
@@ -859,7 +873,7 @@ as visual features are accumulated. For instance, [@Baudot13] has shown
 that neurons in cat's area 17 respond more selectively when presenting
 natural images (which consist locally to a sum of edges) compared to a
 single edge. Recently, [@Ravello19] has shown that a similar result may
-occur as soon as in the (rodent) retina. Behaviorally, this fits also
+occur in rodents as soon as in the retina. Behaviorally, this fits also
 with the observation in humans that more complex textures are driving
 more robustly eye movements [@Simoncini12]. Such phenomena are
 consistent with the predictive processing principle that by accumulating
@@ -872,11 +886,12 @@ more sparse [@Vinje02; @Baudot13]. This was already explained by the
 predictive coding model of [@Rao99] and implemented in [@Kremkow16] for
 instance. Importantly, the principle of sparse coding is itself
 sufficient to guide the learning of the connectivity within a population
-of neurons, such as in V1 [@Olshausen97; @Perrinet15bicv]. This helps to
-solve an important problem, that is, that the system is self-organized
-and that the learning of the connectivity should be unsupervised. As
-such, the plasticity rules that should be developed in SNNs should use
-similar governing principles.
+of neurons, such as in V1
+[@Olshausen97; @Perrinet10shl; @Perrinet15bicv]. This helps to solve an
+important problem, that is, that the system is self-organized and that
+the learning of the connectivity should be unsupervised. As such, the
+plasticity rules that should be developed in SNNs should use similar
+governing principles.
 
 5 Summary and conclusions {#sec:summary-and-conclusions}
 =========================
@@ -887,9 +902,9 @@ the role of dynamics using Active Inference (see sec. 2). Extending such
 model to a retinotopic map, we could describe a functional traveling
 wave to disambiguate visual stimuli (see sec. 3). However, we have also
 shown a limit of such models at the microscopic scale (see sec. 4). In
-particular, it is not yet understood at the single cell level how 1)
-information is represented in spiking activity, 2) what is the
-functional role of traveling waves on cortical surfaces 3) if a common
+particular, it is not yet understood at the single cell level how (1)
+information is represented in spiking activity, (2) what is the
+functional role of traveling waves on cortical surfaces (3) if a common
 efficiency principle (such as sparse coding) could be used to guide the
 organization of such highly recurrent networks into a single universal
 circuit.
@@ -908,7 +923,11 @@ optimization principles, all the models that we have presented here are
 pre-connected: The hyper-parameters controlling the interconnection of
 neurons are fixed. Though we have provided with simulations showing the
 role of these hyper-parameters, it seems necessary for a better
-understanding to further explore their relative effects.
+understanding to further explore their relative effects. In particular,
+we envision that such self-organized architectures could define time as
+an emerging variable synchronizing predictive processes at the multiple
+levels of visual processing.
+<!-- what Dennett (2009) calls a “strange inversion of reasoning,” and we will try to understand the potential role of traveling waves in shaping visual processing-->
 
 Indeed, a normative theory for predictive processing should not only
 provide a possible solution (one given model with one set of hyper
@@ -924,7 +943,7 @@ Another promising solution is to explore bio-inspired adaptive
 strategies. Those exist at different time-scales, from rapid adaption
 mechanisms, to a slower learning of connections, or to the long-term
 evolution of hyper- parameters. In particular, it is yet not completely
-understood how SNNs perform a spike-lime dependent plasticity. This is a
+understood how SNNs perform a spike-time dependent plasticity. This is a
 future challenge in our understanding of the science of predictive
 processes in vision.
 
