@@ -24,12 +24,12 @@ abstract: |
     the role of traveling waves in shaping visual processing. Finally, we
     will propose some lines of research to understand how these functional
     models may be implemented at the neural level. In particular, we will
-    describe potential models of cortical processing in terms of
-    prototypical micro-circuits. These allow to separate the different flows
-    of information, from feed-forward prediction error to feed-back
+    review potential models of cortical processing in terms of prototypical
+    micro-circuits. These allow to separate the different flows of
+    information, from feed-forward prediction error to feed-back
     anticipation error. Still, the design of such a generic predictive
-    processing circuit is still not fully understood and we will review some
-    possible implementations using biomimetic neural networks.
+    processing circuit is still not fully understood and we will enumerate
+    some possible implementations using biomimetic neural networks.
 author: Laurent Perrinet
 author_info:
 - affiliations:
@@ -180,23 +180,23 @@ TODO: move to https://greenelab.github.io/manubot-rootstock/
 Vision, the capacity of making sense of the luminous environment, is
 traditionally thought as a sequence of processing steps from the input
 retinal image to some higher-level representation. It is often thought
-that this "pipeline", that is, this sequence of processing steps, is
-implemented by a strictly feedforward process in the visual pathways,
-from the retina to the thalamus and then to the cortex. For instance,
-vision allows for the simple detection of the printed character you are
-currently looking at, and thus for the reading of this sentence. This
-involves rapid and unconscious low-level processes. Importantly, such
-processes are largely immune to changes in luminance (like a shadow on
-this page) or to geometrical deformations, such as when reading a text
-from a slanted perspective. More generally, vision will correctly
-complete the image of a word with missing letters (such as in
-"PR-D-CT-ON") or with ambiguous or incorrect detections such as in
-"UN1V3RS4L". This illustrates that vision is also characterized by
-higher level processes. Furthermore, it is believed these involve
-learning a generative model of sensory data. Indeed, vision also allows
-for prospective predictions such as those revealed during mental imagery
---- and is a basic ground-stone for one's creativity, or *imagination*.
-As a consequence, vision is a highly complex process which is still not
+that this "pipeline", that is, this sequence of independent processing
+steps, is implemented by a strictly feedforward process in the visual
+pathways, from the retina to the thalamus and then to the cortex. For
+instance, vision allows for the simple detection of the printed
+character you are currently looking at, and thus for the reading of this
+sentence. This involves rapid and unconscious low-level processes.
+Importantly, such processes are largely immune to changes in luminance
+(like a shadow on this page) or to geometrical deformations, such as
+when reading a text from a slanted perspective. More generally, vision
+will correctly complete the image of a word with missing letters (such
+as in "PR-D-CT-ON") or with ambiguous or incorrect detections such as in
+"UN1V3RS4L". Such a robustness is characteristic of biological systems,
+hence it's use in security algorithms such as CAPTCHAs. But vision is
+also characterized by higher level processes and allows for prospective
+predictions such as those revealed during mental imagery --- and is a
+basic ground-stone for one's creativity, or *imagination*. As a
+consequence, vision is a highly complex process which is still not
 completely understood. In particular, models of vision as implemented in
 computers can learn complex categorization tasks on very precise
 datasets but are easily outperformed by an infant when it comes to a
@@ -244,17 +244,27 @@ contours invariantly to this motion.
 
 However, there are limits and constrains to this efficiency. First,
 luminous information can be noisy and ambiguous, such as in dim light
-conditions. Second, neural networks have limited information transfer
-capacities and always need some delay to convey and process information.
-In humans for instance, the delay for the transmission of retinal
-information to the cortex is approximately 80 ms, while the minimal
-latency to perform an oculomotor action is approximately an additional
-50 ms [@Kirchner06] (see [@Lamme00] for equivalent values in monkeys).
-While this naturally constrains the capacity of the visual system, we
-will herein take advantage of these delays to dissect the different
-visual processes. In particular, we will focus in this chapter on the
-role of these fundamental temporal constraints on the dynamics of such
-predictive processes as they unravel with the passage of time.
+conditions. This constrains the system to be robust to uncertainties.
+This highlights a key advantage of predictive processing as this
+involves learning a generative model of sensory data. On one hand, by
+explicitly representing the precision of variables (the inverse of the
+variance with that is inferred), one can optimally integrate distributed
+information, even in the case that this uncertainty is not uniform and
+dynamically evolving in the system. On the other hand, a generative
+model allows to explicitly represent transformations of the data (such
+as a geometrical transform of the image) and therefore to make
+predictions about future states. Second, neural networks have limited
+information transfer capacities and always need some delay to convey and
+process information. In humans for instance, the delay for the
+transmission of retinal information to the cortex is approximately 80
+ms, while the minimal latency to perform an oculomotor action is
+approximately an additional 50 ms [@Kirchner06] (see [@Lamme00] for
+equivalent values in monkeys). While this naturally constrains the
+capacity of the visual system, we will herein take advantage of these
+delays to dissect the different visual processes. In particular, we will
+focus in this chapter on the role of these fundamental temporal
+constraints on the dynamics of such predictive processes as they unravel
+with the passage of time.
 
 As an illustration, let's use the example of the recording of a set of
 neural cells in some visual areas. Let's assume that these recordings
