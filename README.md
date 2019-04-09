@@ -265,33 +265,33 @@ focus in this chapter on the role of these fundamental temporal
 constraints on the dynamics of such predictive processes as they unravel
 with the passage of time.
 
-As an illustration, let's use the example of the recording of a set of
-neural cells in some visual areas. Let's assume that these recordings
-are evoked by an analog visual signal (as a luminous signal projected on
-a population of retinal sensory cells) and that we may extract the
-analog timings of spiking events for a population of cells. We may then
-choose to display this data in a "raster plot", that is, showing the
-timing of the spikes for each of the identified cell. Time is thus
-relative to that of the experimenter and is given thanks to an external
-clock: It is shown a posteriori, that is, after the recording. In
-general, this definition of an absolute time was first formalized by
-Newton and defines most of the laws of physics, using time as an
-external parameter. But there is yet no evidence that neurons would have
-access to such a central clock giving a reference to absolute, physical
-time. Rather, neural responses are solely controlled by the *present*
-distribution of electro-chemical gradients on their membrane. Such a
-notion of time is local to each neuron. As a consequence, the network's
-dynamics is asynchronous, that is, that timing is decentralized.
-Moreover, this local notion of (processing) time is *a priori* disjoint
-from the external time which is used to represent the visual signal.
-Such an observation is essential in understanding the principles guiding
-the organization of visual processes: A neural theory of predictive
-processes can be only defined in this local (interoceptive) time, using
-only locally available information at the present instant. In
-particular, we will propose that neural processes in vision aim at
-"predicting the present" [@Changizi08] by using an internal generative
-model of the visual work and using sensory data to validate this
-internal representation.
+To illustrate the challenge of representating a dynamic signal, let's
+use the example of the recording of a set of neural cells in some visual
+areas. Let's assume that these recordings are evoked by an analog visual
+signal (as a luminous signal projected on a population of retinal
+sensory cells) and that we may extract the analog timings of spiking
+events for a population of cells. We may then choose to display this
+data in a "raster plot", that is, showing the timing of the spikes for
+each of the identified cell. Time is thus relative to that of the
+experimenter and is given thanks to an external clock: It is shown a
+posteriori, that is, after the recording. In general, this definition of
+an absolute time was first formalized by Newton and defines most of the
+laws of physics, using time as an external parameter. But there is yet
+no evidence that neurons would have access to a central clock which give
+a reference to the absolute, physical time. Rather, neural responses are
+solely controlled by the *present* distribution of electro-chemical
+gradients on their membrane. Such a notion of time is local to each
+neuron. As a consequence, the network's dynamics is asynchronous, that
+is, that timing is decentralized. Moreover, this local notion of
+(processing) time is *a priori* disjoint from the external time which is
+used to represent the visual signal. Such an observation is essential in
+understanding the principles guiding the organization of visual
+processes: A neural theory of predictive processes can be only defined
+in this local (interoceptive) time, using only locally available
+information at the present instant. In particular, we will propose that
+neural processes in vision aim at "predicting the present" [@Changizi08]
+by using an internal generative model of the visual work and using
+sensory data to validate this internal representation.
 
 This chapter will review such dynamical predictive processing approaches
 for vision at different scales of analysis, from the whole system to
@@ -300,18 +300,19 @@ decreasing order the levels of analysis from [@Marr83]). First, we will
 apply the FEP to vision as a normative approach. Furthermore, visual
 representations should handle geometrical transformations (such as the
 motion of a visual object) but also sensory modifications, such as with
-eye movements. Extending this principle with the capacity of actively
-sampling sensory input, we will define Active Inference (AI) and its
-potential role in understanding vision, and also behaviors such as eye
-movements (see sec. 2). Then, we will extend it to understand how such
-processes may be implemented in retinotopic maps (see sec. 3). In
-particular, we will show how such a model may explain a visual illusion,
-the Flash-lag effect. This will then be compared with neurophysiological
-data. Finally, we will review possible implementations of such models in
-Spiking Neural Networks (see sec. 4). In particular, we will review some
-models of elementary micro-circuits and detail some potential rules for
-learning the structure of their connections in an unsupervised manner.
-We will conclude by synthesizing these results and their limits.
+eye movements. Extending the previous principle with the capacity of
+actively sampling sensory input, we will define Active Inference (AI)
+and illustrate its potential role in understanding vision, and also
+behaviors such as eye movements (see sec. 2). Then, we will extend it to
+understand how such processes may be implemented in retinotopic maps
+(see sec. 3). In particular, we will show how such a model may explain a
+visual illusion, the Flash-lag effect. This will then be compared with
+neurophysiological data. Finally, we will review possible
+implementations of such models in Spiking Neural Networks (see sec. 4).
+In particular, we will review some models of elementary micro-circuits
+and detail some potential rules for learning the structure of their
+connections in an unsupervised manner. We will conclude by synthesizing
+these results and their limits.
 
 2 Active Inference and the "optimality" of vision {#sec:AI}
 =================================================
