@@ -726,7 +726,7 @@ presentation of a discrete pattern into a continuous one. This visual
 illusion is called [apparent
 motion](https://en.wikipedia.org/wiki/Beta_movement) and can persist
 over a relatively long range (superior to the characteristic size of the
-RF of a neuron in primary visual cortex, V1). Similarly to the study
+RF of a neuron in the primary visual cortex, V1). Similarly to the study
 above for the FLE, it is believed that this long-range Apparent Motion
 (lrAM) can be explained by predictive processes. Due to the dynamical
 characteristics of lrAM, a neural implementation of this illusion may
@@ -797,15 +797,15 @@ a dependency graph. In sec. 3, we have extended such models within such
 nodes as fields organized on the topography of each visual area. At an
 even finer scale than this intermediate mesoscopic scale is the
 microscopic scale of actual neural cells. To better understand the
-mechanisms of predictive processing, we now need to finesse the
-granularity of the modeling to this scale. In particular, in addition to
-the asynchronous nature of the neural representation that we explored
-above, communication between neurons has the property of being
-event-based. Indeed, the vast majority of neural cells across the living
-kingdom communicate using prototypical, short pulses called action
-potentials or *spikes*. In this section, we will propose three open
-problems which are raised when modeling such Spiking Neural Networks
-(SNNs) in the context of predictive processing.
+mechanisms of predictive processing, we will now finesse the granularity
+of the modeling to this scale. In particular, in addition to the
+asynchronous nature of the neural representation that we explored above,
+communication between neurons has the property of being event-based.
+Indeed, the vast majority of neural cells across the living kingdom
+communicate using prototypical, short pulses called action potentials or
+*spikes*. In this section, we will propose three open problems which are
+raised when modeling such Spiking Neural Networks (SNNs) in the context
+of predictive processing.
 
 4.1 The challenges of representing visual information in Spiking Neural Networks (SNNs) {#sec:the-challenges-of-representing-visual-information-in-spiking-neural-networks-snns}
 ---------------------------------------------------------------------------------------
@@ -844,9 +844,9 @@ crucial to maximize the efficiency of such SNNs [@Hansel12].
 --------------------------------------------------------------------------------------
 
 Another crucial point in deciphering the predictive processing
-mechanisms is given by the functional anatomy. Indeed, in primary visual
-cortex (V1) as in other cortical areas, the neural network is highly
-recurrent with a median number of 10000 connections per neuron.
+mechanisms is given by the functional anatomy. Indeed, in the primary
+visual cortex (V1) as in other cortical areas, the neural network is
+highly recurrent with a median number of 10000 connections per neuron.
 Surprisingly, 95% of these connections occur within a 2mm radius
 (macaque monkey) [@Markov13]. This suggests that a majority of neural
 resources is devoted to intra-areal communications. One putative
@@ -857,8 +857,8 @@ disambiguating motion [@Chemla19] and it has also been shown to
 facilitate the progressive build-up of visual information
 [@Bringuier99]. Previously, we have successfully modeled such a
 predictive process
-[@Perrinet12pred; @Khoei13jpp; @KhoeiMassonPerrinet17] in a SNN
-[@Kaplan13].
+[@Perrinet12pred; @Khoei13jpp; @KhoeiMassonPerrinet17], and implemented
+it in a SNN [@Kaplan13].
 
 One "holy grail" in that direction is to find canonical micro-circuits
 for predictive coding [@Bastos12]. This follows from the observation
@@ -904,6 +904,10 @@ important problem, that is, that the system is self-organized and that
 the learning of the connectivity should be unsupervised. As such, the
 plasticity rules that should be developed in SNNs should use similar
 governing principles.
+
+<!--
+Boutin19
+-->
 
 5 Summary and conclusions {#sec:summary-and-conclusions}
 =========================
