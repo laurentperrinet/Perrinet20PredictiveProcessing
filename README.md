@@ -203,10 +203,10 @@ those revealed during mental imagery --- and is a basic ground-stone for
 one's creativity, or *imagination*. Vision is thus a highly complex
 process, yet, it is still not completely understood. As a matter of
 fact, the most surprising fact about vision is the ease with which
-sighted persons may perform these abilities. As a consequence, and to
-rephrase [@Wigner90], "the Unreasonable Effectiveness of Vision in the
-Natural World" invites us to focus on this cognitive ability for a
-better understanding of the brain in general.
+sighted persons may perform these abilities. To rephrase [@Wigner90],
+"the Unreasonable Effectiveness of Vision in the Natural World" invites
+us to focus on this cognitive ability for a better understanding of the
+brain in general.
 <!-- More generally, however simple or complex, a retinal image will always be interpreted as a visual scene with respect to some cognitive context.  -->
 
 Anatomically, vision is the result of the interplay of neural networks
