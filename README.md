@@ -209,21 +209,19 @@ Natural World" invites us to focus on this cognitive ability for a
 better understanding of the brain in general.
 <!-- More generally, however simple or complex, a retinal image will always be interpreted as a visual scene with respect to some cognitive context.  -->
 
-Anatomically, visual processing is the result of the interplay of neural
-networks which are organized in a hierarchy of visual areas. Each visual
-area is itself a dynamical process, from its first stage, the retina, to
-the different areas which help in forming this parallel and distributed
+Anatomically, vision is the result of the interplay of neural networks
+which are organized in a hierarchy of visual areas. Each visual area is
+itself a dynamical process, from its first stage, the retina, to the
+different areas which help in forming this parallel and distributed
 representation of the visual world. Moreover, this organization is
 largely self-organized and very efficient metabolic-wise. To make sense
 of such complex network of visual areas, it has been proposed that this
-system is organized such that it efficiently predicts sensory data
+system is organized such that it efficiently *predicts* sensory data
 [@Attneave54]. This ecological approach [@Atick92] allows to explain
-many aspects of visual processing. Such principles take different forms
-such as redundancy reduction [@Barlow61], maximization of information
-transfer [@Linsker90] or minimization of metabolic energy. Visual
-representations should handle geometrical transformations (such as the
-motion of a visual object) but also sensory modifications, such as with
-eye movements. Formalizing such optimization strategies in probabilistic
+many aspects of vision as predictive processing. Such an approach takes
+different forms such as redundancy reduction [@Barlow61], maximization
+of information transfer [@Linsker90] or minimization of metabolic
+energy. Formalizing such optimization strategies in probabilistic
 language, these may be encompassed by the "Bayesian Brain" framework
 [@Knill04]. More generally, it is possible to link these different
 theories into a single framework, the Free-Energy Principle (FEP)
@@ -241,29 +239,31 @@ a representation of the *contours* of visual objects. In the time
 domain, the knowledge of geometric transforms such as the motion of
 visual objects will help predict their future positions and to
 ultimately track the different bits of motion, but also to represent
-contours invariantly to this motion. However, there are limits and
-constrains to this efficiency. First, luminous information can be noisy
-and ambiguous, such as in dim light conditions. This constrains the
-system to be robust to uncertainties. This highlights a key advantage of
-predictive processing as this involves learning a generative model of
-sensory data. On one hand, by explicitly representing the precision of
-variables (the inverse of the variance with that is inferred), one can
-optimally integrate distributed information, even in the case that this
-uncertainty is not uniform and dynamically evolving in the system. On
-the other hand, a generative model allows to explicitly represent
-transformations of the data (such as a geometrical transform of the
-image) and therefore to make predictions about future states. Second,
-neural networks have limited information transfer capacities and always
-need some delay to convey and process information. In humans for
-instance, the delay for the transmission of retinal information to the
-cortex is approximately 80 ms, while the minimal latency to perform an
-oculomotor action is approximately an additional 50 ms [@Kirchner06]
-(see [@Lamme00] for equivalent values in monkeys). While this naturally
-constrains the capacity of the visual system, we will herein take
-advantage of these delays to dissect the different visual processes. In
-particular, we will focus in this chapter on the role of these
-fundamental temporal constraints on the dynamics of such predictive
-processes as they unravel with the passage of time.
+contours invariantly to this motion.
+
+However, there are limits and constrains to this efficiency. First,
+luminous information can be noisy and ambiguous, such as in dim light
+conditions. This constrains the system to be robust to uncertainties.
+This highlights a key advantage of predictive processing as this
+involves learning a generative model of sensory data. On one hand, by
+explicitly representing the precision of variables (the inverse of the
+variance of its inferred value), one can optimally integrate distributed
+information, even in the case that this uncertainty is not uniform and
+dynamically evolving in the system. On the other hand, a generative
+model allows to explicitly represent transformations of the data (such
+as a geometrical transform of the image) and therefore to make
+predictions about future states. Second, neural networks have limited
+information transfer capacities and always need some delay to convey and
+process information. In humans for instance, the delay for the
+transmission of retinal information to the cortex is approximately 80
+ms, while the minimal latency to perform an oculomotor action is
+approximately an additional 50 ms [@Kirchner06] (see [@Lamme00] for
+equivalent values in monkeys). While this naturally constrains the
+capacity of the visual system, we will herein take advantage of these
+delays to dissect the different visual processes. In particular, we will
+focus in this chapter on the role of these fundamental temporal
+constraints on the dynamics of such predictive processes as they unravel
+with the passage of time.
 
 As an illustration, let's use the example of the recording of a set of
 neural cells in some visual areas. Let's assume that these recordings
@@ -297,19 +297,21 @@ This chapter will review such dynamical predictive processing approaches
 for vision at different scales of analysis, from the whole system to
 intermediate representations and finally to neurons (following in a
 decreasing order the levels of analysis from [@Marr83]). First, we will
-apply the FEP to vision as a normative approach. Extending this
-principle with the capacity of actively sampling sensory input, we will
-define Active Inference (AI) and its potential role in understanding
-vision, and also behaviors such as eye movements (see sec. 2). Then, we
-will extend it to understand how such processes may be implemented in
-retinotopic maps (see sec. 3). In particular, we will show how such a
-model may explain a visual illusion, the Flash-lag effect. This will
-then be compared with neurophysiological data. Finally, we will review
-possible implementations of such models in Spiking Neural Networks (see
-sec. 4). In particular, we will review some models of elementary
-micro-circuits and detail some potential rules for learning the
-structure of their connections in an unsupervised manner. We will
-conclude by synthesizing these results and their limits.
+apply the FEP to vision as a normative approach. Furthermore, visual
+representations should handle geometrical transformations (such as the
+motion of a visual object) but also sensory modifications, such as with
+eye movements. Extending this principle with the capacity of actively
+sampling sensory input, we will define Active Inference (AI) and its
+potential role in understanding vision, and also behaviors such as eye
+movements (see sec. 2). Then, we will extend it to understand how such
+processes may be implemented in retinotopic maps (see sec. 3). In
+particular, we will show how such a model may explain a visual illusion,
+the Flash-lag effect. This will then be compared with neurophysiological
+data. Finally, we will review possible implementations of such models in
+Spiking Neural Networks (see sec. 4). In particular, we will review some
+models of elementary micro-circuits and detail some potential rules for
+learning the structure of their connections in an unsupervised manner.
+We will conclude by synthesizing these results and their limits.
 
 2 Active Inference and the "optimality" of vision {#sec:AI}
 =================================================
