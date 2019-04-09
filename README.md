@@ -179,21 +179,21 @@ TODO: move to https://greenelab.github.io/manubot-rootstock/
 
 Vision, the capacity of making sense of the luminous environment, is
 traditionally thought as a sequence of processing steps from the retinal
-input to some higher-level representation. It is often thought that this
+input to some higher-level representation. It is often thought that such
 "pipeline", that is, this sequence of independent processing steps, is
 implemented by a strictly feedforward process in the visual pathways,
 through the thalamus and then to the visual areas within the cerebral
 cortex. Indeed, vision allows for the simple detection of the printed
 character you are currently looking at, and thus for the reading of this
-sentence. This ability involves rapid and unconscious low-level
-processes. Importantly, such processes are also largely immune to
-changes in luminance (like a shadow on this page) or to geometrical
+sentence. Such an ability involves rapid and unconscious low-level
+processes. Importantly, such ability is also largely immune to changes
+in luminance (like a shadow on this page) or to geometrical
 deformations, such as when reading a text from a slanted perspective.
 More generally, vision will correctly complete the image of a word with
 missing letters or with ambiguous or incorrect detections due to an
 overlapping clutter. Such a robustness is characteristic of biological
 systems, hence it's use as a Turing Test for security algorithms such as
-[https://fr.m.wikipedia.org/wiki/CAPTCHA](CAPTCHAs). On the othert hand,
+[https://fr.m.wikipedia.org/wiki/CAPTCHA](CAPTCHAs). On the other hand,
 models of vision as implemented in computers can learn complex
 categorization tasks on very precise datasets but are easily
 outperformed by an infant when it comes to a naturalistic, flexible and
