@@ -909,21 +909,37 @@ governing principles.
 Boutin19
 -->
 
-5 Summary and conclusions {#sec:summary-and-conclusions}
-=========================
-
-As a summary, we have reviewed in this chapter different models of
-predictive coding applied to vision. We have seen at a macroscopic scale
-the role of dynamics using Active Inference (see sec. 2). Extending such
-model to a retinotopic map, we could describe a functional traveling
-wave to disambiguate visual stimuli (see sec. 3). However, we have also
-shown a limit of such models at the microscopic scale (see sec. 4). In
-particular, it is not yet understood at the single cell level how (1)
-information is represented in spiking activity, (2) what is the
-functional role of traveling waves on cortical surfaces (3) if a common
-efficiency principle (such as sparse coding) could be used to guide the
-organization of such highly recurrent networks into a single universal
-circuit.
+However, we still lack realistic models of such visual predictive
+processing. We have built a simplified model which is able to process
+static images [@Boutin19]. It consists of a multi-layered neural
+network, where each layer includes both a recursive intra-cortical
+mechanism to generate sparse representations and also the ability for
+each layer to integrate (feeedback) information from a higher-level
+layer. The main novelty of this network is that it allows for the
+unsupervised learning of the convolutional kernels within each layer.
+Compared to classical Convolutional neural networks such as commonly
+found in deep learning architectures, we found that the emerging kernels
+were more meaningful. For instance, when learning on a class of images
+from human faces, we found in the second layer different neurons
+sensitive to face features such as eye, mouth or nose. This is similar
+to what is found in the fusyform face area, but more simulations are
+needed to validate the emergence of this representation. Moreover, these
+simulations are computationnally intensive and avoid their useon
+convetional computer architectures. A translation is this algorithm into
+a Spiking Neural Network would therefore be highly beneficial a,nd allow
+for its application to a dynamical stream of images. \# Summary and
+conclusions As a summary, we have reviewed in this chapter different
+models of predictive coding applied to vision. We have seen at a
+macroscopic scale the role of dynamics using Active Inference (see
+sec. 2). Extending such model to a retinotopic map, we could describe a
+functional traveling wave to disambiguate visual stimuli (see sec. 3).
+However, we have also shown a limit of such models at the microscopic
+scale (see sec. 4). In particular, it is not yet understood at the
+single cell level how (1) information is represented in spiking
+activity, (2) what is the functional role of traveling waves on cortical
+surfaces (3) if a common efficiency principle (such as sparse coding)
+could be used to guide the organization of such highly recurrent
+networks into a single universal circuit.
 
 To further extend our knowledge of predictive processing in vision (see
 sec. 4), it thus seems necessary to be able to implement full-scale SNNs
@@ -963,7 +979,7 @@ understood how SNNs perform a spike-time dependent plasticity. This is a
 future challenge in our understanding of the science of predictive
 processes in vision.
 
-5.1 Acknowledgments {#sec:acknowledgments}
+4.4 Acknowledgments {#sec:acknowledgments}
 -------------------
 
 This work was supported by ANR project "Horizontal-V1"
@@ -971,5 +987,5 @@ N°ANR-17-CE37-0006. The author would like to thank Berk Mirza, Hugo
 Ladret and Manivannan Subramaniyan for careful reading and insightful
 remarks.
 
-6 References {#sec:references .unnumbered}
+5 References {#sec:references .unnumbered}
 ============
