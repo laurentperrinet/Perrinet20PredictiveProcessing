@@ -905,10 +905,6 @@ the learning of the connectivity should be unsupervised. As such, the
 plasticity rules that should be developed in SNNs should use similar
 governing principles.
 
-<!--
-Boutin19
--->
-
 However, we still lack realistic models of such visual predictive
 processing. We have built a simplified model which is able to process
 static images [@Boutin19]. It consists of a multi-layered neural
