@@ -918,11 +918,11 @@ found in deep learning architectures, we found that the emerging kernels
 were more meaningful. For instance, when learning on a class of images
 from human faces, we found in the second layer different neurons
 sensitive to face features such as eye, mouth or nose. This is similar
-to what is found in the fusyform face area, but more simulations are
+to what is found in the fusiform face area, but more simulations are
 needed to validate the emergence of this representation. Moreover, these
 simulations are computationnally intensive and avoid their useon
 convetional computer architectures. A translation is this algorithm into
-a Spiking Neural Network would therefore be highly beneficial a,nd allow
+a Spiking Neural Network would therefore be highly beneficial and allow
 for its application to a dynamical stream of images.
 
 5 Summary and conclusions {#sec:summary-and-conclusions}
