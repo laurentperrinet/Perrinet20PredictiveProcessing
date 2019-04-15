@@ -115,7 +115,7 @@ secPrefix:
 - 'sec.'
 - 'secs.'
 secPrefixTemplate: $$p$$ $$i$$
-sectionsDepth: '-1'
+sectionsDepth: -1
 source: 'https://github.com/laurentperrinet/Perrinet19PredictiveProcessing/'
 subfigGrid: False
 subfigLabels: alpha a

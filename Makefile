@@ -17,13 +17,11 @@ install:
 figures_auto:
 	rsvg-convert $f -f pdf -o ./$BASENAME/$(basename "$f" .svg).pdf
 
-
-figures:
-	rsvg-convert figures/Khoei17.svg -f pdf -o figures/Khoei17.pdf
-	rsvg-convert figures/Khoei17.svg -f png -d 450 -p 450 -o figures/Khoei17.png
-	rsvg-convert figures/PerrinetAdamsFriston14anticip.svg -f pdf -o figures/PerrinetAdamsFriston14anticip.pdf
-	rsvg-convert figures/PerrinetAdamsFriston14anticip.svg -f png -d 450 -p 450 -o figures/PerrinetAdamsFriston14anticip.png
-
+figures: figures/Khoei17.png figures/PerrinetAdamsFriston14anticip.png
+	rsvg-convert figures/KhoeiMassonPerrinet17.svg -f pdf -d 450 -p 450 -o figures/KhoeiMassonPerrinet17.pdf
+	rsvg-convert figures/KhoeiMassonPerrinet17.svg -f png -d 450 -p 450 -o figures/KhoeiMassonPerrinet17.png
+	rsvg-convert figures/PerrinetAdamsFriston14.svg -f pdf -o figures/PerrinetAdamsFriston14.pdf
+	rsvg-convert figures/PerrinetAdamsFriston14.svg -f png -d 450 -p 450 -o figures/PerrinetAdamsFriston14.png
 
 markdown:
 	pandoc $(OPTIONS) $(SRC).md -t markdown -o README.md
