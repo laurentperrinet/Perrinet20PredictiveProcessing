@@ -487,33 +487,33 @@ population (see for instance [@Karvelis18autistic; @Kent19]).
 2.3 Introducing delays in AI: dynamics of predictive processing {#sec:introducing-delays-in-ai-dynamics-of-predictive-processing}
 ---------------------------------------------------------------
 
-![Figure 1: **(A)** This figure reports the response of predictive
-processing during the simulation of pursuit initiation while
-compensating for sensory motor delays, using a single sweep of a visual
-target. Here, we see horizontal excursions of oculomotor angle (dark
-blue line). One can see clearly the initial displacement of the target
-that is suppressed by action after approximately 200 ms, modeling a
-prototypical pursuit eye movement. Additionally, we illustrate the
-effects of assuming wrong sensorimotor delays on pursuit initiation.
-Under pure sensory delays (red dotted line), one can see clearly the
-delay in sensory predictions, in relation to the true inputs. With pure
-motor delays (light red dashed line) and with combined sensorimotor
-delays (light red line) there is a failure of optimal control with
-oscillatory fluctuations in oculomotor trajectories, which may become
-unstable. **(B)** This figure reports the simulation of smooth pursuit
-when the target motion is hemi-sinusoidal, as would happen for a
-pendulum that would be stopped at each half cycle left of the vertical
-(broken black lines). The generative model used here has been equipped
-with a second hierarchical level that contains hidden states, modeling
-latent periodic behavior of the (hidden) causes of target motion. With
-this addition, the improvement in pursuit accuracy apparent at the onset
-of the second cycle of motion is observed (light shaded area), similar
-to psychophysical experiments [@Barnes91]. (Reproduced from
-[@PerrinetAdamsFriston14] under the terms of the [Creative Commons
-Attribution
+![**(A)** This figure reports the response of predictive processing
+during the simulation of pursuit initiation while compensating for
+sensory motor delays, using a single sweep of a visual target. Here, we
+see horizontal excursions of oculomotor angle (dark blue line). One can
+see clearly the initial displacement of the target that is suppressed by
+action after approximately 200 ms, modeling a prototypical pursuit eye
+movement. Additionally, we illustrate the effects of assuming wrong
+sensorimotor delays on pursuit initiation. Under pure sensory delays
+(red dotted line), one can see clearly the delay in sensory predictions,
+in relation to the true inputs. With pure motor delays (light red dashed
+line) and with combined sensorimotor delays (light red line) there is a
+failure of optimal control with oscillatory fluctuations in oculomotor
+trajectories, which may become unstable. **(B)** This figure reports the
+simulation of smooth pursuit when the target motion is hemi-sinusoidal,
+as would happen for a pendulum that would be stopped at each half cycle
+left of the vertical (broken black lines). The generative model used
+here has been equipped with a second hierarchical level that contains
+hidden states, modeling latent periodic behavior of the (hidden) causes
+of target motion. With this addition, the improvement in pursuit
+accuracy apparent at the onset of the second cycle of motion is observed
+(light shaded area), similar to psychophysical experiments [@Barnes91].
+(Reproduced from [@PerrinetAdamsFriston14] under the terms of the
+[Creative Commons Attribution
 License](https://link.springer.com/article/10.1007/s00422-014-0620-8#copyrightInformation),
 © The Authors
-2014.)](figures/PerrinetAdamsFriston14.svg){#fig:PerrinetAdamsFriston14}
+2014.)](figures/PerrinetAdamsFriston14.pdf){#fig:PerrinetAdamsFriston14}{
+width=50% }
 
 An interesting perspective to study the role of neural dynamics in
 cognition is to extend this model to a more realistic description of
@@ -573,19 +573,20 @@ same type of internal equation.
 
 We illustrated the efficacy of this scheme using neuronal simulations of
 pursuit initiation responses, with and without compensation. Figure
-fig. 1, A reports the conditional estimates of hidden states and causes
-during the simulation of pursuit initiation, using a simple sweep of a
-visual target, while compensating for sensory motor delays. Here, we see
-horizontal excursions of oculomotor angle (blue line) and the angular
-position of the target (dashed black line). One can see clearly the
-initial displacement of the target that is suppressed after a few
-hundred milliseconds. This figure also illustrates the effects of
-sensorimotor delays on pursuit initiation (red lines) in relation to
-compensated (optimal) active inference. Under pure sensory delays
-(dotted line), one can see clearly the delay in sensory predictions, in
-relation to the true inputs. Of note here is the failure of optimal
-control with oscillatory fluctuations in oculomotor trajectories, which
-become unstable under combined sensorimotor delays.
+fig. **¿fig:PerrinetAdamsFriston14?**, A reports the conditional
+estimates of hidden states and causes during the simulation of pursuit
+initiation, using a simple sweep of a visual target, while compensating
+for sensory motor delays. Here, we see horizontal excursions of
+oculomotor angle (blue line) and the angular position of the target
+(dashed black line). One can see clearly the initial displacement of the
+target that is suppressed after a few hundred milliseconds. This figure
+also illustrates the effects of sensorimotor delays on pursuit
+initiation (red lines) in relation to compensated (optimal) active
+inference. Under pure sensory delays (dotted line), one can see clearly
+the delay in sensory predictions, in relation to the true inputs. Of
+note here is the failure of optimal control with oscillatory
+fluctuations in oculomotor trajectories, which become unstable under
+combined sensorimotor delays.
 
 Interestingly, this model extends to more complex visual trajectories.
 In particular, it is has been shown that gaze will be directed at the
@@ -593,24 +594,25 @@ present physical position of the target (thus in an anticipatory
 fashion) if that target follows a smooth trajectory (such as a
 pendulum). More striking, this is also true if the trajectory is
 *predictable*, for instance for a pendulum behind a static occluder
-[@Barnes91; @Adams12]. Figure fig. 1, B reports the simulation of smooth
-pursuit when target's motion is hemi-sinusoidal, as would happen for a
-pendulum that would be stopped at each half cycle, left of the vertical.
-Note that contrary to the agent modeled in [@Adams12], this agent has
-the biological constraint that sensory and motor processing is delayed.
-The generative model has been equipped with a second hierarchical level
-that contains hidden states that account for the latent periodic
-behavior of target motion. One can clearly see the initial displacement
-of the target that is suppressed after a few hundred milliseconds (pink
-shaded area). The improvement in pursuit accuracy is apparent at the
-onset of the second cycle of motion, similar to psychophysical
-experiments [@Barnes91]. Indeed, the model has an internal
-representation of latent causes of target motion that can be called upon
-even when these causes are not expressed explicitly (occluded) in the
-target trajectory. A particular advantage of this model is that it
-provides a solution for the integration of past and future information
-while still being governed by online differential equations. This
-therefore implements some form of Bayes-optimal temporal memory.
+[@Barnes91; @Adams12]. Figure fig. **¿fig:PerrinetAdamsFriston14?**, B
+reports the simulation of smooth pursuit when target's motion is
+hemi-sinusoidal, as would happen for a pendulum that would be stopped at
+each half cycle, left of the vertical. Note that contrary to the agent
+modeled in [@Adams12], this agent has the biological constraint that
+sensory and motor processing is delayed. The generative model has been
+equipped with a second hierarchical level that contains hidden states
+that account for the latent periodic behavior of target motion. One can
+clearly see the initial displacement of the target that is suppressed
+after a few hundred milliseconds (pink shaded area). The improvement in
+pursuit accuracy is apparent at the onset of the second cycle of motion,
+similar to psychophysical experiments [@Barnes91]. Indeed, the model has
+an internal representation of latent causes of target motion that can be
+called upon even when these causes are not expressed explicitly
+(occluded) in the target trajectory. A particular advantage of this
+model is that it provides a solution for the integration of past and
+future information while still being governed by online differential
+equations. This therefore implements some form of Bayes-optimal temporal
+memory.
 
 2.4 Summary {#sec:summary}
 -----------
@@ -636,7 +638,7 @@ is there any evidence for such processes in visual space?
 3.1 The flash-lag effect as evidence for predictive processing in topographic maps {#sec:the-flash-lag-effect-as-evidence-for-predictive-processing-in-topographic-maps}
 ----------------------------------------------------------------------------------
 
-![Figure 2: In [@KhoeiMassonPerrinet17], we propose a model of
+![Figure 1: In [@KhoeiMassonPerrinet17], we propose a model of
 predictive processing in a topographic map. **(A)** the model consists
 of a two-layered map: an input source target integrates information from
 visual sensors. For simplicity we only display here the horizontal
@@ -677,7 +679,7 @@ what is the neural substrate of the FLE. Here, extending the model
 compensating for delays [@PerrinetAdamsFriston14], we define a model of
 predictive processing generalized on the visual topography using an
 internal representation of visual motion [@Perrinet12pred] to define an
-anisotropic diffusion of information fig. 2, A.
+anisotropic diffusion of information fig. 1, A.
 
 The model that we used for the FLE can be used with any image. In
 particular, a single flashed dot evokes an expanding then contracting
@@ -697,7 +699,7 @@ at this point to understand if such a model extends to other stimuli or
 if we can precise its neural correlate.
 
 Applied to the image of the FLE, activity in the model shows three
-different phases, see fig. 2, B. First, there is a rapid build-up of the
+different phases, see fig. 1, B. First, there is a rapid build-up of the
 precision of the target after the first appearance of the moving dot (at
 300 ms). Consistently with the [Fröhlich
 effect](https://en.wikipedia.org/wiki/Fr%C3%B6hlich_effect) [@Jancke10],
@@ -777,7 +779,7 @@ smoothly-moving visual objects.
 As a summary, we have seen that it is possible to extend predictive
 processing to topographic maps. In particular, the resulting
 computations are particularly adapted to vision. We have shown (see
-fig. 2) a model which represents (at any given present time) different
+fig. 1) a model which represents (at any given present time) different
 variables (here "Source" and "Target"). In a more realistic model,
 neural activity is more likely to form intermediate representations
 between past, present and also future representations [@Glaser18] and at
