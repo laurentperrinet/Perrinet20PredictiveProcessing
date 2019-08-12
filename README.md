@@ -241,13 +241,15 @@ visual objects will help predict their future positions and to
 ultimately track the different bits of motion, but also to represent
 contours invariantly to this motion.
 
+<!-- Using predictions based on environmental regularities is fundamental for adaptive behavior.  -->
+
 However, there are limits and constrains to the efficiency of vision.
 First, luminous information can be noisy and ambiguous, such as in dim
 light conditions. This constrains the system to be robust to
 uncertainties. This highlights a key advantage of predictive processing
 as this involves learning a generative model of sensory data. On one
 hand, by explicitly representing the precision of variables (the inverse
-of the variance of its inferred value), one can optimally integrate
+of the inferred variance of its value), one can optimally integrate
 distributed information, even in the case that this uncertainty is not
 uniform and dynamically evolving in the system. On the other hand, a
 generative model allows to explicitly represent transformations of the
@@ -391,7 +393,7 @@ predictive. Yet, it extends the classical predictive processing of Rao
 and Ballard [@Rao99] by including action (and priors related to motor
 commands) to the overall optimization scheme. The chosen action is the
 one which is expected to reduce sensory surprise and is ultimately
-realized by an arc reflex.
+realized by a reflex arc.
 
 Simulations of the resulting AI scheme reproduce sequential eye
 movements that are reminiscent of empirically observed saccades and
@@ -449,7 +451,7 @@ graph. This allow us to predict the influence of the prior knowledge of
 precision at any given level on the final outcome.
 
 Practically, the predictive power of AI in modeling such an agent is
-revealed by studying deviations from the median behavior within a
+revealed by studying deviations from the typical behavior within a
 population of agents. For instance, there are acute differences in the
 smooth pursuit eye movements (SPEM) between patients from (control)
 neurotypic or schizophrenic groups. First, SPEM are distinct from the
@@ -487,33 +489,33 @@ population (see for instance [@Karvelis18autistic; @Kent19]).
 2.3 Introducing delays in AI: dynamics of predictive processing {#sec:introducing-delays-in-ai-dynamics-of-predictive-processing}
 ---------------------------------------------------------------
 
-![**(A)** This figure reports the response of predictive processing
-during the simulation of pursuit initiation while compensating for
-sensory motor delays, using a single sweep of a visual target. Here, we
-see horizontal excursions of oculomotor angle (dark blue line). One can
-see clearly the initial displacement of the target that is suppressed by
-action after approximately 200 ms, modeling a prototypical pursuit eye
-movement. Additionally, we illustrate the effects of assuming wrong
-sensorimotor delays on pursuit initiation. Under pure sensory delays
-(red dotted line), one can see clearly the delay in sensory predictions,
-in relation to the true inputs. With pure motor delays (light red dashed
-line) and with combined sensorimotor delays (light red line) there is a
-failure of optimal control with oscillatory fluctuations in oculomotor
-trajectories, which may become unstable. **(B)** This figure reports the
-simulation of smooth pursuit when the target motion is hemi-sinusoidal,
-as would happen for a pendulum that would be stopped at each half cycle
-left of the vertical (broken black lines). The generative model used
-here has been equipped with a second hierarchical level that contains
-hidden states, modeling latent periodic behavior of the (hidden) causes
-of target motion. With this addition, the improvement in pursuit
-accuracy apparent at the onset of the second cycle of motion is observed
-(light shaded area), similar to psychophysical experiments [@Barnes91].
-(Reproduced from [@PerrinetAdamsFriston14] under the terms of the
-[Creative Commons Attribution
+![Figure 1: **(A)** This figure reports the response of predictive
+processing during the simulation of pursuit initiation while
+compensating for sensory motor delays, using a single sweep of a visual
+target. Here, we see horizontal excursions of oculomotor angle (dark
+blue line). One can see clearly the initial displacement of the target
+that is suppressed by action after approximately 200 ms, modeling a
+prototypical pursuit eye movement. Additionally, we illustrate the
+effects of assuming wrong sensorimotor delays on pursuit initiation.
+Under pure sensory delays (red dotted line), one can see clearly the
+delay in sensory predictions, in relation to the true inputs. With pure
+motor delays (light red dashed line) and with combined sensorimotor
+delays (light red line) there is a failure of optimal control with
+oscillatory fluctuations in oculomotor trajectories, which may become
+unstable. **(B)** This figure reports the simulation of smooth pursuit
+when the target motion is hemi-sinusoidal, as would happen for a
+pendulum that would be stopped at each half cycle left of the vertical
+(broken black lines). The generative model used here has been equipped
+with a second hierarchical level that contains hidden states, modeling
+latent periodic behavior of the (hidden) causes of target motion. With
+this addition, the improvement in pursuit accuracy apparent at the onset
+of the second cycle of motion is observed (light shaded area), similar
+to psychophysical experiments [@Barnes91]. (Reproduced from
+[@PerrinetAdamsFriston14] under the terms of the [Creative Commons
+Attribution
 License](https://link.springer.com/article/10.1007/s00422-014-0620-8#copyrightInformation),
 © The Authors
-2014.)](figures/PerrinetAdamsFriston14.pdf){#fig:PerrinetAdamsFriston14}{
-width=50% }
+2014.)](figures/PerrinetAdamsFriston14.svg){#fig:PerrinetAdamsFriston14}
 
 An interesting perspective to study the role of neural dynamics in
 cognition is to extend this model to a more realistic description of
@@ -573,46 +575,44 @@ same type of internal equation.
 
 We illustrated the efficacy of this scheme using neuronal simulations of
 pursuit initiation responses, with and without compensation. Figure
-fig. **¿fig:PerrinetAdamsFriston14?**, A reports the conditional
-estimates of hidden states and causes during the simulation of pursuit
-initiation, using a simple sweep of a visual target, while compensating
-for sensory motor delays. Here, we see horizontal excursions of
-oculomotor angle (blue line) and the angular position of the target
-(dashed black line). One can see clearly the initial displacement of the
-target that is suppressed after a few hundred milliseconds. This figure
-also illustrates the effects of sensorimotor delays on pursuit
-initiation (red lines) in relation to compensated (optimal) active
-inference. Under pure sensory delays (dotted line), one can see clearly
-the delay in sensory predictions, in relation to the true inputs. Of
-note here is the failure of optimal control with oscillatory
-fluctuations in oculomotor trajectories, which become unstable under
-combined sensorimotor delays.
+fig. 1, A reports the conditional estimates of hidden states and causes
+during the simulation of pursuit initiation, using a simple sweep of a
+visual target, while compensating for sensory motor delays. Here, we see
+horizontal excursions of oculomotor angle (blue line) and the angular
+position of the target (dashed black line). One can see clearly the
+initial displacement of the target that is suppressed after a few
+hundred milliseconds. This figure also illustrates the effects of
+sensorimotor delays on pursuit initiation (red lines) in relation to
+compensated (optimal) active inference. Under pure sensory delays
+(dotted line), one can see clearly the delay in sensory predictions, in
+relation to the true inputs. Of note here is the failure of optimal
+control with oscillatory fluctuations in oculomotor trajectories, which
+become unstable under combined sensorimotor delays.
 
 Interestingly, this model extends to more complex visual trajectories.
-In particular, it is has been shown that gaze will be directed at the
+In particular, it has been shown that gaze will be directed at the
 present physical position of the target (thus in an anticipatory
 fashion) if that target follows a smooth trajectory (such as a
 pendulum). More striking, this is also true if the trajectory is
 *predictable*, for instance for a pendulum behind a static occluder
-[@Barnes91; @Adams12]. Figure fig. **¿fig:PerrinetAdamsFriston14?**, B
-reports the simulation of smooth pursuit when target's motion is
-hemi-sinusoidal, as would happen for a pendulum that would be stopped at
-each half cycle, left of the vertical. Note that contrary to the agent
-modeled in [@Adams12], this agent has the biological constraint that
-sensory and motor processing is delayed. The generative model has been
-equipped with a second hierarchical level that contains hidden states
-that account for the latent periodic behavior of target motion. One can
-clearly see the initial displacement of the target that is suppressed
-after a few hundred milliseconds (pink shaded area). The improvement in
-pursuit accuracy is apparent at the onset of the second cycle of motion,
-similar to psychophysical experiments [@Barnes91]. Indeed, the model has
-an internal representation of latent causes of target motion that can be
-called upon even when these causes are not expressed explicitly
-(occluded) in the target trajectory. A particular advantage of this
-model is that it provides a solution for the integration of past and
-future information while still being governed by online differential
-equations. This therefore implements some form of Bayes-optimal temporal
-memory.
+[@Barnes91; @Adams12]. Figure fig. 1, B reports the simulation of smooth
+pursuit when target's motion is hemi-sinusoidal, as would happen for a
+pendulum that would be stopped at each half cycle, left of the vertical.
+Note that contrary to the agent modeled in [@Adams12], this agent has
+the biological constraint that sensory and motor processing is delayed.
+The generative model has been equipped with a second hierarchical level
+that contains hidden states that account for the latent periodic
+behavior of target motion. One can clearly see the initial displacement
+of the target that is suppressed after a few hundred milliseconds (pink
+shaded area). The improvement in pursuit accuracy is apparent at the
+onset of the second cycle of motion, similar to psychophysical
+experiments [@Barnes91]. Indeed, the model has an internal
+representation of latent causes of target motion that can be called upon
+even when these causes are not expressed explicitly (occluded) in the
+target trajectory. A particular advantage of this model is that it
+provides a solution for the integration of past and future information
+while still being governed by online differential equations. This
+therefore implements some form of Bayes-optimal temporal memory.
 
 2.4 Summary {#sec:summary}
 -----------
@@ -638,7 +638,7 @@ is there any evidence for such processes in visual space?
 3.1 The flash-lag effect as evidence for predictive processing in topographic maps {#sec:the-flash-lag-effect-as-evidence-for-predictive-processing-in-topographic-maps}
 ----------------------------------------------------------------------------------
 
-![Figure 1: In [@KhoeiMassonPerrinet17], we propose a model of
+![Figure 2: In [@KhoeiMassonPerrinet17], we propose a model of
 predictive processing in a topographic map. **(A)** the model consists
 of a two-layered map: an input source target integrates information from
 visual sensors. For simplicity we only display here the horizontal
@@ -679,7 +679,7 @@ what is the neural substrate of the FLE. Here, extending the model
 compensating for delays [@PerrinetAdamsFriston14], we define a model of
 predictive processing generalized on the visual topography using an
 internal representation of visual motion [@Perrinet12pred] to define an
-anisotropic diffusion of information fig. 1, A.
+anisotropic diffusion of information fig. 2, A.
 
 The model that we used for the FLE can be used with any image. In
 particular, a single flashed dot evokes an expanding then contracting
@@ -699,7 +699,7 @@ at this point to understand if such a model extends to other stimuli or
 if we can precise its neural correlate.
 
 Applied to the image of the FLE, activity in the model shows three
-different phases, see fig. 1, B. First, there is a rapid build-up of the
+different phases, see fig. 2, B. First, there is a rapid build-up of the
 precision of the target after the first appearance of the moving dot (at
 300 ms). Consistently with the [Fröhlich
 effect](https://en.wikipedia.org/wiki/Fr%C3%B6hlich_effect) [@Jancke10],
@@ -718,6 +718,24 @@ information is still transiently consistent and extrapolated using a
 broad, centered prior distribution of speeds: Although it is less
 precise, this position of the dot at flash termination is therefore,
 with *hindsight*, not perceived as leading the flash.
+<!-- TODO : add neurophysiological evidensce from EEG:
+
+@article{Hogendoorn2018,
+  title = {Predictive Coding of Visual Object Position Ahead of Moving Objects Revealed by Time-Resolved {{EEG}} Decoding},
+  volume = {171},
+  issn = {1053-8119},
+  doi = {10.1016/J.NEUROIMAGE.2017.12.063},
+  abstract = {Due to the delays inherent in neuronal transmission, our awareness of sensory events necessarily lags behind the occurrence of those events in the world. If the visual system did not compensate for these delays, we would consistently mislocalize moving objects behind their actual position. Anticipatory mechanisms that might compensate for these delays have been reported in animals, and such mechanisms have also been hypothesized to underlie perceptual effects in humans such as the Flash-Lag Effect. However, to date no direct physiological evidence for anticipatory mechanisms has been found in humans. Here, we apply multivariate pattern classification to time-resolved EEG data to investigate anticipatory coding of object position in humans. By comparing the time-course of neural position representation for objects in both random and predictable apparent motion, we isolated anticipatory mechanisms that could compensate for neural delays when motion trajectories were predictable. As well as revealing an early neural position representation (lag 80\textendash{}90 ms) that was unaffected by the predictability of the object's trajectory, we demonstrate a second neural position representation at 140\textendash{}150 ms that was distinct from the first, and that was pre-activated ahead of the moving object when it moved on a predictable trajectory. The latency advantage for predictable motion was approximately 16 {$\pm$} 2 ms. To our knowledge, this provides the first direct experimental neurophysiological evidence of anticipatory coding in human vision, revealing the time-course of predictive mechanisms without using a spatial proxy for time. The results are numerically consistent with earlier animal work, and suggest that current models of spatial predictive coding in visual cortex can be effectively extended into the temporal domain.},
+  journal = {NeuroImage},
+  url = {https://www.sciencedirect.com/science/article/pii/S105381191731087X},
+  author = {Hogendoorn, Hinze and Burkitt, Anthony N.},
+  month = may,
+  year = {2018},
+  pages = {55--61},
+  file = {/Users/laurentperrinet/Zotero/storage/MJ932XNX/Hogendoorn et Burkitt - 2018 - Predictive coding of visual object position ahead .pdf;/Users/laurentperrinet/Zotero/storage/5PCCPMA2/S105381191731087X.html}
+}
+
+ -->
 
 3.2 Neural correlate of apparent motion {#sec:neural-correlate-of-apparent-motion}
 ---------------------------------------
@@ -754,7 +772,7 @@ propagates toward the retinotopic wave evoked by the first dot. This was
 put in evidence by statistically comparing the response of the brain to
 the response of the two dots in isolation. In particular, we found that
 thanks to this suppressive wave, the activity for the brain stimulus was
-more precise, suggesting that such suppressive wave could serve as
+more precise, suggesting that such suppressive wave could serve as a
 predictive processing step to be read-out in upstream cortical areas.
 
 In particular, we found that the activity that we recorded fitted well
@@ -779,7 +797,7 @@ smoothly-moving visual objects.
 As a summary, we have seen that it is possible to extend predictive
 processing to topographic maps. In particular, the resulting
 computations are particularly adapted to vision. We have shown (see
-fig. 1) a model which represents (at any given present time) different
+fig. 2) a model which represents (at any given present time) different
 variables (here "Source" and "Target"). In a more realistic model,
 neural activity is more likely to form intermediate representations
 between past, present and also future representations [@Glaser18] and at
@@ -819,20 +837,20 @@ breakthrough which formed a second generation of ANNs. SNNs constitute a
 potential, third generation [@Ghosh09]. Indeed, event-based
 representation have many advantages which are a deadlock in DL. For
 instance, instead of repeating all compu­tations for each layer, channel
-and pixel of a hierarchical network ANN, and for which energy-greedy
-GPUs are necessary, event-based computations need only to be performed
-for active units at the time of a spike. In particular, a fast
-developing area of research consists in developing dedicated hardware,
-such as neuromorphic chips, which would allow to scale the effective
-volume of computations beyond the last generations of classical
-semi-conductors (CPUs, GPUs) which attain the limits of Moore's Law.
+and pixel of a hierarchical ANN, and for which energy-greedy GPUs are
+necessary, event-based computations need only to be performed for active
+units at the time of a spike. In particular, a fast developing area of
+research consists in developing dedicated hardware, such as neuromorphic
+chips, which would allow to scale the effective volume of computations
+beyond the last generations of classical semi-conductors (CPUs, GPUs)
+which attain the limits of Moore's Law.
 
 Crucial in this new type of representation is on one hand the discrete
 nature of the addressing of neurons and on the other hand the analog
 nature of the timing of spikes. Notable results using such architectures
 have been made in real-time classification and sensor fusion
 [@Oconnor13] and in pattern recognition [@Lagorce17]. Indeed, an
-important property of SNNs is the ability to represent dynamically a
+important property of SNNs is the ability to dynamically encode a
 latent, internal variable (the membrane potential in neuro-physiology)
 and to emit a spike when (and only when) an internally defined threshold
 is reached. This defines each spiking neuron as an integrator (similarly
@@ -924,7 +942,7 @@ from human faces, we observed in the second layer different neurons
 sensitive to face features such as eye, mouth or nose. This is similar
 to what is found in the fusiform face area, but more simulations are
 needed to validate the emergence of this representation. Moreover, these
-simulations are computationally intensive and avoid their use on
+simulations are computationally intensive and prohibit their use on
 conventional computer architectures. A translation is this algorithm
 into a Spiking Neural Network would therefore be highly beneficial and
 allow for its application to a dynamical stream of images.
@@ -968,19 +986,19 @@ Indeed, a normative theory for predictive processing should not only
 provide a possible solution (one given model with one set of hyper
 parameters) but with an exploration of *all possible solutions*. One
 first methodology is to have a complete understanding of the set of
-models using mathematical analysis. However, this can be difficult,
-especially for such complex systems and using simplifying assumptions
-are often leading to a shallow complexity. Another venue is to develop
-adaptive strategies to explore the functional space of different models.
-This can be for instance developed using machine learning techniques
-such as the stochastic gradient descent commonly used in deep learning.
-Another promising solution is to explore bio-inspired adaptive
-strategies. Those exist at different time-scales, from rapid adaption
-mechanisms, to a slower learning of connections, or to the long-term
-evolution of hyper-parameters. In particular, it is yet not completely
-understood how SNNs perform a spike-time dependent plasticity. This is a
-future challenge in our understanding of the science of predictive
-processes in vision.
+models using mathematical analysis. However, this becomes impossible for
+such complex systems and using simplifying assumptions are often leading
+to a shallow complexity. Another venue is to develop adaptive strategies
+to explore the functional space of different models. This can be for
+instance developed using machine learning techniques such as the
+stochastic gradient descent commonly used in deep learning. Another
+promising solution is to explore bio-inspired adaptive strategies. Those
+exist at different time-scales, from rapid adaption mechanisms, to a
+slower learning of connections, or to the long-term evolution of
+hyper-parameters. In particular, it is yet not completely understood how
+SNNs perform a spike-time dependent plasticity. This sets a future
+challenge in our understanding of the science of predictive processes in
+vision.
 
 5.1 Acknowledgments {#sec:acknowledgments}
 -------------------
