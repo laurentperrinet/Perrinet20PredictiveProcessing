@@ -21,9 +21,14 @@ description: Book chapter for "The Philosophy and Science of Predictive Processi
 category: review
 keywords:
     - Vision
-    - Active Inference
+    - Delays
     - Topography
     - Spiking Neural Networks
+    - Bayesian Model
+    - Dynamics
+    - Perception
+    - Active Inference
+    - Perception
 lang: en-US
 papersize: a4
 thanks: The author would like to thank Berk Mirza, Hugo Ladret and Manivannan Subramaniyan for careful reading and insightful remarks.
