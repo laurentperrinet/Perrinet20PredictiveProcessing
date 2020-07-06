@@ -1,148 +1,142 @@
 ---
-abstract: |
-    Within the central nervous system, visual areas are essential in
-    transforming the raw luminous signal into a representation which
-    efficiently conveys information about the environment. This process is
-    constrained by the necessity of being robust and rapid. Indeed, there
-    exists both a wide variety of potential changes in the geometrical
-    characteristics of the visual scene and also a necessity to be able to
-    respond as quickly as possible to the incoming sensory stream, for
-    instance to drive a movement of the eyes to the location of a potential
-    danger. Decades of study in neurophysiology and psychophysics at the
-    different levels of vision have shown that this system takes advantage
-    of a priori knowledge about the structure of visual information, such as
-    the regularity in the shape and motion of visual objects. As such, the
-    predictive processing framework offers a unified theory to explain a
-    variety of visual mechanisms. However, we still lack a global normative
-    approach unifying those mechanisms and we will review here some recent
-    and promising approaches. First, we will describe Active Inference, a
-    form of predictive processing equipped with the ability to actively
-    sample the visual space. Then, we will extend this paradigm to the case
-    where information is distributed on a topography, such as is the case
-    for retinotopically organized visual areas. In particular, we will
-    compare such models in light of recent neurophysiological data showing
-    the role of traveling waves in shaping visual processing. Finally, we
-    will propose some lines of research to understand how these functional
-    models may be implemented at the neural level. In particular, we will
-    review potential models of cortical processing in terms of prototypical
-    micro-circuits. These allow to separate the different flows of
-    information, from feed-forward prediction error to feed-back
-    anticipation error. Still, the design of such a generic predictive
-    processing circuit is still not fully understood and we will enumerate
-    some possible implementations using biomimetic neural networks.
+abstract: 'Within the central nervous system, visual areas are essential
+  in transforming the raw luminous signal into a representation which
+  efficiently conveys information about the environment. This process is
+  constrained by the necessity of being robust and rapid. Indeed, there
+  exists both a wide variety of potential changes in the geometrical
+  characteristics of the visual scene and also a necessity to be able to
+  respond as quickly as possible to the incoming sensory stream, for
+  instance to drive a movement of the eyes to the location of a
+  potential danger. Decades of study in neurophysiology and
+  psychophysics at the different levels of vision have shown that this
+  system takes advantage of a priori knowledge about the structure of
+  visual information, such as the regularity in the shape and motion of
+  visual objects. As such, the predictive processing framework offers a
+  unified theory to explain a variety of visual mechanisms. However, we
+  still lack a global normative approach unifying those mechanisms and
+  we will review here some recent and promising approaches. First, we
+  will describe Active Inference, a form of predictive processing
+  equipped with the ability to actively sample the visual space. Then,
+  we will extend this paradigm to the case where information is
+  distributed on a topography, such as is the case for retinotopically
+  organized visual areas. In particular, we will compare such models in
+  light of recent neurophysiological data showing the role of traveling
+  waves in shaping visual processing. Finally, we will propose some
+  lines of research to understand how these functional models may be
+  implemented at the neural level. In particular, we will review
+  potential models of cortical processing in terms of prototypical
+  micro-circuits. These allow to separate the different flows of
+  information, from feed-forward prediction error to feed-back
+  anticipation error. Still, the design of such a generic predictive
+  processing circuit is still not fully understood and we will enumerate
+  some possible implementations using biomimetic neural networks.'
 author: Laurent Perrinet
 author_info:
 - affiliations:
-  - 'Institut de Neurosciences de la Timone, CNRS / Aix-Marseille Université'
+  - 'Institut de Neurosciences de la Timone, CNRS / Aix-Marseille
+    Université'
   email: 'laurent.perrinet\@univ-amu.fr'
-  funders: |
-      This work was supported by ANR project "Horizontal-V1"
-      N°ANR-17-CE37-0006.
+  funders: 'This work was supported by ANR project "Horizontal-V1"
+    N°ANR-17-CE37-0006.'
   github: laurentperrinet
   initials: LuP
   name: Laurent U Perrinet
   orcid: '0000-0002-9536-010X'
   twitter: laurentperrinet
-autoEqnLabels: False
-autoSectionLabels: True
-bibliography: 'Perrinet19PredictiveProcessing.bib'
+autoSectionLabels: true
+bibliography: Perrinet19PredictiveProcessing.bib
 category: review
-ccsDelim: ','
-ccsLabelSep: '---'
+ccsDelim: ', '
+ccsLabelSep: ' --- '
 ccsTemplate: $$i$$$$ccsLabelSep$$$$t$$
-chapDelim: '.'
-chapters: False
+chapDelim: .
 chaptersDepth: 1
-codeBlockCaptions: False
-cref: False
 crossrefYaml: 'pandoc-crossref.yaml'
 date: '2019-04-01'
 date-meta: '2019-04-01'
-description: |
-    Book chapter proposal for "The Philosophy and Science of Predictive
-    Processing" to be published by Bloomsbury
+description: 'Book chapter for "The Philosophy and Science of Predictive
+  Processing" to be published by Bloomsbury'
 email: 'Laurent.Perrinet\@univ-amu.fr'
-eqnLabels: arabic
+eqLabels: arabic
 eqnPrefix:
-- 'eq.'
-- 'eqns.'
+- eq.
+- eqns.
 eqnPrefixTemplate: $$p$$ $$i$$
 figLabels: arabic
 figPrefix:
-- 'fig.'
-- 'figs.'
+- fig.
+- figs.
 figPrefixTemplate: $$p$$ $$i$$
 figureTemplate: $$figureTitle$$ $$i$$$$titleDelim$$ $$t$$
-figureTitle: Figure
-institute: |
-    Institut de Neurosciences de la Timone, CNRS / Aix-Marseille Université
-    - Marseille, France
+figureTitle: |
+  Figure
+institute: 'Institut de Neurosciences de la Timone, CNRS / Aix-Marseille
+  Université - Marseille, France'
 keywords:
 - Vision
-- Active Inference
+- Delays
 - Topography
 - Spiking Neural Networks
+- Bayesian Model
+- Dynamics
+- Perception
+- Active Inference
+- Perception
 lang: 'en-US'
-lastDelim: ','
-linkReferences: False
+lastDelim: ', '
 listingTemplate: $$listingTitle$$ $$i$$$$titleDelim$$ $$t$$
 listingTitle: Listing
-listings: False
 lofTitle: |
-    List of Figures
-    ===============
+  List of Figures
+  ===============
 lolTitle: |
-    List of Listings
-    ================
+  List of Listings
+  ================
 lotTitle: |
-    List of Tables
-    ==============
+  List of Tables
+  ==============
 lstLabels: arabic
 lstPrefix:
-- 'lst.'
-- 'lsts.'
+- lst.
+- lsts.
 lstPrefixTemplate: $$p$$ $$i$$
-nameInLink: False
-numberSections: True
-pairDelim: ','
+numberSections: true
+pairDelim: ', '
 papersize: a4
-rangeDelim: '\-'
-refDelim: ','
+rangeDelim: '-'
+refDelim: ', '
 refIndexTemplate: $$i$$$$suf$$
+secHeaderDelim: 
 secHeaderTemplate: $$i$$$$secHeaderDelim$$$$t$$
 secLabels: arabic
 secPrefix:
-- 'sec.'
-- 'secs.'
+- sec.
+- secs.
 secPrefixTemplate: $$p$$ $$i$$
-sectionsDepth: -1
+sectionsDepth: '-1'
 source: 'https://github.com/laurentperrinet/Perrinet19PredictiveProcessing/'
-subfigGrid: False
 subfigLabels: alpha a
 subfigureChildTemplate: $$i$$
-subfigureRefIndexTemplate: '$$i$$$$suf$$ ($$s$$)'
-subfigureTemplate: '$$figureTitle$$ $$i$$$$titleDelim$$ $$t$$. $$ccs$$'
-subject: |
-    Book chapter proposal for "The Philosophy and Science of Predictive
-    Processing" to be published by Bloomsbury
-tableEqns: False
+subfigureRefIndexTemplate: $$i$$$$suf$$ ($$s$$)
+subfigureTemplate: $$figureTitle$$ $$i$$$$titleDelim$$ $$t$$. $$ccs$$
+subject: 'Book chapter for "The Philosophy and Science of Predictive
+  Processing" to be published by Bloomsbury'
 tableTemplate: $$tableTitle$$ $$i$$$$titleDelim$$ $$t$$
 tableTitle: Table
 tblLabels: arabic
 tblPrefix:
-- 'tbl.'
-- 'tbls.'
+- tbl.
+- tbls.
 tblPrefixTemplate: $$p$$ $$i$$
-thanks: |
-    The author would like to thank Berk Mirza, Hugo Ladret and Manivannan
-    Subramaniyan for careful reading and insightful remarks.
-title: |
-    From the retina to action: Dynamics of predictive processing in the
-    visual system
+thanks: 'The author would like to thank Berk Mirza, Hugo Ladret and
+  Manivannan Subramaniyan for careful reading and insightful remarks.'
+title: 'From the retina to action: Dynamics of predictive processing in
+  the visual system'
 titleDelim: ':'
 website: 'https://laurentperrinet.github.io/'
 ---
 
+```{=html}
 <!--
 
 https://en.wikipedia.org/wiki/YAML
@@ -173,7 +167,7 @@ http://lierdakil.github.io/pandoc-crossref/
 TODO: move to https://greenelab.github.io/manubot-rootstock/
 
 -->
-
+```
 1 Motivation: Role of dynamics in the neural computations underlying visual processing {#sec:intro}
 ======================================================================================
 
@@ -207,7 +201,7 @@ sighted persons may perform these abilities. To rephrase [@Wigner90],
 "the Unreasonable Effectiveness of Vision in the Natural World" invites
 us to focus on this cognitive ability for a better understanding of the
 brain in general.
-<!-- More generally, however simple or complex, a retinal image will always be interpreted as a visual scene with respect to some cognitive context.  -->
+`<!-- More generally, however simple or complex, a retinal image will always be interpreted as a visual scene with respect to some cognitive context.  -->`{=html}
 
 Anatomically, vision is the result of the interplay of neural networks
 which are organized in a hierarchy of visual areas. Each visual area is
@@ -241,8 +235,9 @@ visual objects will help predict their future positions and to
 ultimately track the different bits of motion, but also to represent
 contours invariantly to this motion.
 
+```{=html}
 <!-- Using predictions based on environmental regularities is fundamental for adaptive behavior.  -->
-
+```
 However, there are limits and constrains to the efficiency of vision.
 First, luminous information can be noisy and ambiguous, such as in dim
 light conditions. This constrains the system to be robust to
@@ -320,10 +315,11 @@ these results and their limits.
 2 Active Inference and the "optimality" of vision {#sec:AI}
 =================================================
 
+```{=html}
 <!--
 TODO: check terminology for Active Inference
 -->
-
+```
 Optimization principles seem the only choice to understand "The
 Unreasonable Effectiveness of Vision in the Natural World". However,
 trying to understand vision as an emergent process from efficiency
@@ -718,7 +714,7 @@ information is still transiently consistent and extrapolated using a
 broad, centered prior distribution of speeds: Although it is less
 precise, this position of the dot at flash termination is therefore,
 with *hindsight*, not perceived as leading the flash.
-<!-- TODO : add neurophysiological evidensce from EEG:
+`<!-- TODO : add neurophysiological evidensce from EEG:
 
 @article{Hogendoorn2018,
   title = {Predictive Coding of Visual Object Position Ahead of Moving Objects Revealed by Time-Resolved {{EEG}} Decoding},
@@ -735,7 +731,7 @@ with *hindsight*, not perceived as leading the flash.
   file = {/Users/laurentperrinet/Zotero/storage/MJ932XNX/Hogendoorn et Burkitt - 2018 - Predictive coding of visual object position ahead .pdf;/Users/laurentperrinet/Zotero/storage/5PCCPMA2/S105381191731087X.html}
 }
 
- -->
+ -->`{=html}
 
 3.2 Neural correlate of apparent motion {#sec:neural-correlate-of-apparent-motion}
 ---------------------------------------
@@ -834,7 +830,7 @@ of predictive processing.
 Following the first generations of ANNs, present machine learning
 algorithms such as Deep Learning (DL) algorithms constitute a
 breakthrough which formed a second generation of ANNs. SNNs constitute a
-potential, third generation [@Ghosh09]. Indeed, event-based
+potential, third generation [@Maass97]. Indeed, event-based
 representation have many advantages which are a deadlock in DL. For
 instance, instead of repeating all compu­tations for each layer, channel
 and pixel of a hierarchical ANN, and for which energy-greedy GPUs are
@@ -855,7 +851,7 @@ latent, internal variable (the membrane potential in neuro-physiology)
 and to emit a spike when (and only when) an internally defined threshold
 is reached. This defines each spiking neuron as an integrator (similarly
 to classical neurons), but also potentially as a synchrony detector
-[@Perrinet02]. This ability to modulate the processing based on the
+[@Perrinet02stdp]. This ability to modulate the processing based on the
 relative timing of presynaptic spikes constitute a novel paradigm for
 neural computations [@Paugam12]. In particular, this shows that the
 balance in the flux of incoming excitatory and inhibitory spikes is
@@ -908,10 +904,10 @@ natural images (which consist locally to a sum of edges) compared to a
 single edge. Recently, [@Ravello19] has shown that a similar result may
 occur in rodents as soon as in the retina. Behaviorally, this fits also
 with the observation in humans that more complex textures are driving
-more robustly eye movements [@Simoncini12]. Such phenomena are
-consistent with the predictive processing principle that by accumulating
-coherent information, the *a posteriori* probability (and hence the
-response of the system) gets more precise.
+more robustly eye movements [@Ravello19]. Such phenomena are consistent
+with the predictive processing principle that by accumulating coherent
+information, the *a posteriori* probability (and hence the response of
+the system) gets more precise.
 
 Strikingly, this translates in the neural activity by the fact that for
 a more coherent set of inputs, the neural activity of the population is
@@ -929,23 +925,24 @@ governing principles.
 
 However, we still lack realistic models of such visual predictive
 processing. We have built a simplified model which is able to process
-static images [@Boutin19]. It consists of a multi-layered neural
-network, where each layer includes both a recursive intra-cortical
-mechanism to generate sparse representations and also the ability for
-each layer to integrate (feedback) information from a higher-level
-layer. The main novelty of this network is that it allows for the
-unsupervised learning of the convolutional kernels within each layer.
-Compared to classical Convolutional Neural Networks such as commonly
-found in deep learning architectures, we found that the emerging kernels
-were more meaningful: For instance, when learning on a class of images
-from human faces, we observed in the second layer different neurons
-sensitive to face features such as eye, mouth or nose. This is similar
-to what is found in the fusiform face area, but more simulations are
-needed to validate the emergence of this representation. Moreover, these
-simulations are computationally intensive and prohibit their use on
-conventional computer architectures. A translation is this algorithm
-into a Spiking Neural Network would therefore be highly beneficial and
-allow for its application to a dynamical stream of images.
+static images [@BoutinFranciosiniRuffierPerrinet20feedback]. It consists
+of a multi-layered neural network, where each layer includes both a
+recursive intra-cortical mechanism to generate sparse representations
+and also the ability for each layer to integrate (feedback) information
+from a higher-level layer. The main novelty of this network is that it
+allows for the unsupervised learning of the convolutional kernels within
+each layer. Compared to classical Convolutional Neural Networks such as
+commonly found in deep learning architectures, we found that the
+emerging kernels were more meaningful: For instance, when learning on a
+class of images from human faces, we observed in the second layer
+different neurons sensitive to face features such as eye, mouth or nose.
+This is similar to what is found in the fusiform face area, but more
+simulations are needed to validate the emergence of this representation.
+Moreover, these simulations are computationally intensive and prohibit
+their use on conventional computer architectures. A translation is this
+algorithm into a Spiking Neural Network would therefore be highly
+beneficial and allow for its application to a dynamical stream of
+images.
 
 5 Summary and conclusions {#sec:summary-and-conclusions}
 =========================
