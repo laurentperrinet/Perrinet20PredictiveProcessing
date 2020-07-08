@@ -1,11 +1,62 @@
 ---
+abstract: 'Within the central nervous system, visual areas are essential
+  in transforming the raw luminous signal into a representation which
+  efficiently conveys information about the environment. This process is
+  constrained by the necessity of being robust and rapid. Indeed, there
+  exists both a wide variety of potential changes in the geometrical
+  characteristics of the visual scene and also a necessity to be able to
+  respond as quickly as possible to the incoming sensory stream, for
+  instance to drive a movement of the eyes to the location of a
+  potential danger. Decades of study in neurophysiology and
+  psychophysics at the different levels of vision have shown that this
+  system takes advantage of a priori knowledge about the structure of
+  visual information, such as the regularity in the shape and motion of
+  visual objects. As such, the predictive processing framework offers a
+  unified theory to explain a variety of visual mechanisms. However, we
+  still lack a global normative approach unifying those mechanisms and
+  we will review here some recent and promising approaches. First, we
+  will describe Active Inference, a form of predictive processing
+  equipped with the ability to actively sample the visual space. Then,
+  we will extend this paradigm to the case where information is
+  distributed on a topography, such as is the case for retinotopically
+  organized visual areas. In particular, we will compare such models in
+  light of recent neurophysiological data showing the role of traveling
+  waves in shaping visual processing. Finally, we will propose some
+  lines of research to understand how these functional models may be
+  implemented at the neural level. In particular, we will review
+  potential models of cortical processing in terms of prototypical
+  micro-circuits. These allow to separate the different flows of
+  information, from feed-forward prediction error to feed-back
+  anticipation error. Still, the design of such a generic predictive
+  processing circuit is still not fully understood and we will enumerate
+  some possible implementations using biomimetic neural networks.'
+author: Laurent Perrinet
+author_info:
+- affiliations:
+  - 'Institut de Neurosciences de la Timone, CNRS / Aix-Marseille
+    Université'
+  email: 'laurent.perrinet\@univ-amu.fr'
+  funders: 'This work was supported by ANR project "Horizontal-V1"
+    N°ANR-17-CE37-0006.'
+  github: laurentperrinet
+  initials: LuP
+  name: Laurent U Perrinet
+  orcid: '0000-0002-9536-010X'
+  twitter: laurentperrinet
+autoSectionLabels: true
 bibliography: Perrinet19PredictiveProcessing.bib
+category: review
 ccsDelim: ', '
 ccsLabelSep: ' --- '
 ccsTemplate: $$i$$$$ccsLabelSep$$$$t$$
 chapDelim: .
 chaptersDepth: 1
 crossrefYaml: 'pandoc-crossref.yaml'
+date: '2020-07-06'
+date-meta: '2020-07-06'
+description: 'Book chapter for "The Philosophy and Science of Predictive
+  Processing" to be published by Bloomsbury'
+email: 'Laurent.Perrinet\@univ-amu.fr'
 eqLabels: arabic
 eqnPrefix:
 - eq.
@@ -17,7 +68,21 @@ figPrefix:
 - figs.
 figPrefixTemplate: $$p$$ $$i$$
 figureTemplate: $$figureTitle$$ $$i$$$$titleDelim$$ $$t$$
-figureTitle: Figure
+figureTitle: |
+  Figure
+institute: 'Institut de Neurosciences de la Timone, CNRS / Aix-Marseille
+  Université - Marseille, France'
+keywords:
+- Vision
+- Delays
+- Topography
+- Spiking Neural Networks
+- Bayesian Model
+- Dynamics
+- Perception
+- Active Inference
+- Perception
+lang: 'en-US'
 lastDelim: ', '
 listingTemplate: $$listingTitle$$ $$i$$$$titleDelim$$ $$t$$
 listingTitle: Listing
@@ -35,7 +100,9 @@ lstPrefix:
 - lst.
 - lsts.
 lstPrefixTemplate: $$p$$ $$i$$
+numberSections: true
 pairDelim: ', '
+papersize: a4
 rangeDelim: '-'
 refDelim: ', '
 refIndexTemplate: $$i$$$$suf$$
@@ -46,11 +113,14 @@ secPrefix:
 - sec.
 - secs.
 secPrefixTemplate: $$p$$ $$i$$
-sectionsDepth: 0
+sectionsDepth: '-1'
+source: 'https://github.com/laurentperrinet/Perrinet19PredictiveProcessing/'
 subfigLabels: alpha a
 subfigureChildTemplate: $$i$$
 subfigureRefIndexTemplate: $$i$$$$suf$$ ($$s$$)
 subfigureTemplate: $$figureTitle$$ $$i$$$$titleDelim$$ $$t$$. $$ccs$$
+subject: 'Book chapter for "The Philosophy and Science of Predictive
+  Processing" to be published by Bloomsbury'
 tableTemplate: $$tableTitle$$ $$i$$$$titleDelim$$ $$t$$
 tableTitle: Table
 tblLabels: arabic
@@ -58,26 +128,13 @@ tblPrefix:
 - tbl.
 - tbls.
 tblPrefixTemplate: $$p$$ $$i$$
+thanks: 'The author would like to thank Berk Mirza, Hugo Ladret and
+  Manivannan Subramaniyan for careful reading and insightful remarks.'
+title: 'From the retina to action: Dynamics of predictive processing in
+  the visual system'
 titleDelim: ':'
+website: 'https://laurentperrinet.github.io/'
 ---
-
-------------------------------------------------------------------------
-
-title: "From the retina to action: Dynamics of predictive processing in the visual system" author: Laurent Perrinet author\_info:
----------------------------------------------------------------------------------------------------------------------------------
-
-    github: laurentperrinet
-    name: Laurent U Perrinet
-    initials: LuP
-    orcid: 0000-0002-9536-010X
-    twitter: laurentperrinet
-    email: laurent.perrinet@univ-amu.fr
-    affiliations:
-      - Institut de Neurosciences de la Timone, CNRS / Aix-Marseille Université
-    funders: This work was supported by ANR project "Horizontal-V1" N°ANR-17-CE37-0006.
-
-date: 2020-07-06 date-meta: 2020-07-06 institute: Institut de Neurosciences de la Timone, CNRS / Aix-Marseille Université - Marseille, France subject: Book chapter for "The Philosophy and Science of Predictive Processing" to be published by Bloomsbury description: Book chapter for "The Philosophy and Science of Predictive Processing" to be published by Bloomsbury category: review keywords: - Vision - Delays - Topography - Spiking Neural Networks - Bayesian Model - Dynamics - Perception - Active Inference - Perception lang: en-US papersize: a4 thanks: The author would like to thank Berk Mirza, Hugo Ladret and Manivannan Subramaniyan for careful reading and insightful remarks. website: https://laurentperrinet.github.io/ source: https://github.com/laurentperrinet/Perrinet19PredictiveProcessing/ email: Laurent.Perrinet\@univ-amu.fr abstract: Within the central nervous system, visual areas are essential in transforming the raw luminous signal into a representation which efficiently conveys information about the environment. This process is constrained by the necessity of being robust and rapid. Indeed, there exists both a wide variety of potential changes in the geometrical characteristics of the visual scene and also a necessity to be able to respond as quickly as possible to the incoming sensory stream, for instance to drive a movement of the eyes to the location of a potential danger. Decades of study in neurophysiology and psychophysics at the different levels of vision have shown that this system takes advantage of a priori knowledge about the structure of visual information, such as the regularity in the shape and motion of visual objects. As such, the predictive processing framework offers a unified theory to explain a variety of visual mechanisms. However, we still lack a global normative approach unifying those mechanisms and we will review here some recent and promising approaches. First, we will describe Active Inference, a form of predictive processing equipped with the ability to actively sample the visual space. Then, we will extend this paradigm to the case where information is distributed on a topography, such as is the case for retinotopically organized visual areas. In particular, we will compare such models in light of recent neurophysiological data showing the role of traveling waves in shaping visual processing. Finally, we will propose some lines of research to understand how these functional models may be implemented at the neural level. In particular, we will review potential models of cortical processing in terms of prototypical micro-circuits. These allow to separate the different flows of information, from feed-forward prediction error to feed-back anticipation error. Still, the design of such a generic predictive processing circuit is still not fully understood and we will enumerate some possible implementations using biomimetic neural networks. bibliography: Perrinet19PredictiveProcessing.bib sectionsDepth: -1 numberSections: true figureTitle: \| Figure autoSectionLabels: True
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ```{=html}
 <!--
@@ -114,8 +171,8 @@ TODO: move to https://greenelab.github.io/manubot-rootstock/
 
 \-->
 ```
-Motivation: Role of dynamics in the neural computations underlying visual processing {#sec:intro}
-====================================================================================
+1 Motivation: Role of dynamics in the neural computations underlying visual processing {#sec:intro}
+======================================================================================
 
 Vision, the capacity of making sense of the luminous environment, is
 traditionally thought as a sequence of processing steps from the retinal
@@ -247,19 +304,19 @@ motion of a visual object) but also sensory modifications, such as with
 eye movements. Extending the previous principle with the capacity of
 actively sampling sensory input, we will define Active Inference (AI)
 and illustrate its potential role in understanding vision, and also
-behaviors such as eye movements (see sec. 3). Then, we will extend it to
+behaviors such as eye movements (see sec. 2). Then, we will extend it to
 understand how such processes may be implemented in retinotopic maps
-(see sec. 4). In particular, we will show how such a model may explain a
+(see sec. 3). In particular, we will show how such a model may explain a
 visual illusion, the Flash-lag effect. This will then be compared with
 neurophysiological data. Finally, we will review possible
-implementations of such models in Spiking Neural Networks (see sec. 5).
+implementations of such models in Spiking Neural Networks (see sec. 4).
 In particular, we will review some models of elementary micro-circuits
 and detail some potential rules for learning the structure of their
 connections in an unsupervised manner. We will conclude by synthesizing
 these results and their limits.
 
-Active Inference and the "optimality" of vision {#sec:AI}
-===============================================
+2 Active Inference and the "optimality" of vision {#sec:AI}
+=================================================
 
 ```{=html}
 <!-- TODO: check terminology for Active Inference -->
@@ -282,8 +339,8 @@ imperative to predict at best sensory data, that is, in technical terms,
 to minimize the entropy of hidden states of the world and their sensory
 consequences.
 
-Perceptions as hypotheses, Actions as experiments
--------------------------------------------------
+2.1 Perceptions as hypotheses, Actions as experiments {#sec:perceptions-as-hypotheses-actions-as-experiments}
+-----------------------------------------------------
 
 For instance, it is not yet known why the fast mechanism that directs
 our gaze toward any position in (visual) space, the saccadic system, is
@@ -358,8 +415,8 @@ action would not yield a minimization of the surprise about the visual
 scene. Globally, it is therefore more ecological to keep eyes open to
 explore the different parts of the visual scene.
 
-Is there a neural implementation for Active Inference (AI)?
------------------------------------------------------------
+2.2 Is there a neural implementation for Active Inference (AI)? {#sec:is-there-a-neural-implementation-for-active-inference-ai}
+---------------------------------------------------------------
 
 As we have seen above, once we have resolved the optimization problem
 given the whole setting (generative model, priors) the agent that we
@@ -426,8 +483,8 @@ applications of computational neuroscience seem particularly relevant
 for a better understanding of the diversity of behaviors in the human
 population (see for instance [@Karvelis18autistic; @Kent19]).
 
-Introducing delays in AI: dynamics of predictive processing
------------------------------------------------------------
+2.3 Introducing delays in AI: dynamics of predictive processing {#sec:introducing-delays-in-ai-dynamics-of-predictive-processing}
+---------------------------------------------------------------
 
 ![Figure 1: (A) This figure reports the response of predictive
 processing during the simulation of pursuit initiation while
@@ -553,8 +610,8 @@ future information while still being governed by online differential
 equations. This therefore implements some form of Bayes-optimal temporal
 memory.
 
-Summary
--------
+2.4 Summary {#sec:summary}
+-----------
 
 To sum up, we have shown here that a full visual perception / action
 cycle could be understood as a predictive process under the Active
@@ -567,15 +624,15 @@ visual objects such as an *a priori* bias [@Damasse18], gravity, or
 external cues [@Kowler14]. This may help synthesize most laws governing
 the organization of perception, as formalized in the Gestalt theory.
 
-Predictive processing on visual maps {#sec:maps}
-====================================
+3 Predictive processing on visual maps {#sec:maps}
+======================================
 
 While we have shown the role of predictive processing at a macroscopic
 scale by designing each neural assembly as a node in a dependency graph,
 is there any evidence for such processes in visual space?
 
-The flash-lag effect as evidence for predictive processing in topographic maps
-------------------------------------------------------------------------------
+3.1 The flash-lag effect as evidence for predictive processing in topographic maps {#sec:the-flash-lag-effect-as-evidence-for-predictive-processing-in-topographic-maps}
+----------------------------------------------------------------------------------
 
 ![Figure 2: In [@KhoeiMassonPerrinet17], we propose a model of
 predictive processing in a topographic map. (A) The model consists of a
@@ -662,8 +719,8 @@ with *hindsight*, not perceived as leading the flash.
 
 \-->`{=html}
 
-Neural correlate of apparent motion
------------------------------------
+3.2 Neural correlate of apparent motion {#sec:neural-correlate-of-apparent-motion}
+---------------------------------------
 
 Let's apply a similar approach to another visual illusion: When two
 stationary dots are flashed at close successive positions and times,
@@ -717,8 +774,8 @@ waves help disambiguate the input stimulus. This corresponds to the
 implementation of a predictive process using an *a priori* knowledge of
 smoothly-moving visual objects.
 
-Summary
--------
+3.3 Summary {#sec:summary-1}
+-----------
 
 As a summary, we have seen that it is possible to extend predictive
 processing to topographic maps. In particular, the resulting
@@ -735,12 +792,12 @@ feed-back streams. In particular it is an open question whether such
 neural computations could be implemented by traveling waves on the
 cortical surface [@Muller18].
 
-Open problems in the science of visual predictive processing {#sec:spikes}
-============================================================
+4 Open problems in the science of visual predictive processing {#sec:spikes}
+==============================================================
 
-In sec. 3, we have studied the dynamics of predictive processing at the
+In sec. 2, we have studied the dynamics of predictive processing at the
 macroscopic scale, that is, by considering (cortical) areas as nodes of
-a dependency graph. In sec. 4, we have extended such models within such
+a dependency graph. In sec. 3, we have extended such models within such
 nodes as fields organized on the topography of each visual area. At an
 even finer scale than this intermediate mesoscopic scale is the
 microscopic scale of actual neural cells. To better understand the
@@ -754,8 +811,8 @@ communicate using prototypical, short pulses called action potentials or
 raised when modeling such Spiking Neural Networks (SNNs) in the context
 of predictive processing.
 
-The challenges of representing visual information in Spiking Neural Networks (SNNs)
------------------------------------------------------------------------------------
+4.1 The challenges of representing visual information in Spiking Neural Networks (SNNs) {#sec:the-challenges-of-representing-visual-information-in-spiking-neural-networks-snns}
+---------------------------------------------------------------------------------------
 
 Following the first generations of Artificial Neural Networks (ANNs),
 present machine learning algorithms such as Deep Learning (DL)
@@ -787,8 +844,8 @@ neural computations [@Paugam12]. In particular, this shows that the
 balance in the flux of incoming excitatory and inhibitory spikes is
 crucial to maximize the efficiency of such SNNs [@Hansel12].
 
-The role of cortical waves in shaping the dynamic processing of visual information
-----------------------------------------------------------------------------------
+4.2 The role of cortical waves in shaping the dynamic processing of visual information {#sec:the-role-of-cortical-waves-in-shaping-the-dynamic-processing-of-visual-information}
+--------------------------------------------------------------------------------------
 
 Another crucial point in deciphering the predictive processing
 mechanisms is given by the functional anatomy. Indeed, in the primary
@@ -821,8 +878,8 @@ been applied to explain the response of V1 neurons to natural scenes
 [@Kremkow16] by using a push-pull mechanism. Still it is an open problem
 as to know how such a circuitry may emerge.
 
-Integrative properties of cortical areas: toward sparse, efficient representations
-----------------------------------------------------------------------------------
+4.3 Integrative properties of cortical areas: toward sparse, efficient representations {#sec:integrative-properties-of-cortical-areas-toward-sparse-efficient-representations}
+--------------------------------------------------------------------------------------
 
 Another interesting perspective is the integrative nature of neural
 computations. While it was believed that neurons would represent the
@@ -873,15 +930,15 @@ their use on conventional computer architectures. A translation of this
 algorithm into a SNN would therefore be highly beneficial and allow for
 its application to a dynamical stream of images.
 
-Summary and conclusions
-=======================
+5 Summary and conclusions {#sec:summary-and-conclusions}
+=========================
 
 As a summary, we have reviewed in this chapter different models of
 predictive coding applied to vision. We have seen at a macroscopic scale
-the role of dynamics using Active Inference (see sec. 3). Extending such
+the role of dynamics using Active Inference (see sec. 2). Extending such
 model to a retinotopic map, we could describe a functional traveling
-wave to disambiguate visual stimuli (see sec. 4). However, we have also
-shown a limit of such models at the microscopic scale (see sec. 5). In
+wave to disambiguate visual stimuli (see sec. 3). However, we have also
+shown a limit of such models at the microscopic scale (see sec. 4). In
 particular, it is not yet understood at the single cell level how (1)
 information is represented in spiking activity, (2) what is the
 functional role of traveling waves on cortical surfaces (3) if a common
@@ -890,7 +947,7 @@ organization of such highly recurrent networks into a single universal
 circuit.
 
 To further extend our knowledge of predictive processing in vision (see
-sec. 5), it thus seems necessary to be able to implement full-scale SNNs
+sec. 4), it thus seems necessary to be able to implement full-scale SNNs
 implementing complex visual processes. However, the three different
 anatomical scales that we have highlighted above (feed-forward, lateral,
 feedback) seem to be tightly coupled and can be difficult to be modeled
@@ -926,13 +983,13 @@ SNNs perform a spike-time dependent plasticity. This sets a future
 challenge in our understanding of the science of predictive processes in
 vision.
 
-Acknowledgments
----------------
+5.1 Acknowledgments {#sec:acknowledgments}
+-------------------
 
 This work was supported by ANR project "Horizontal-V1"
 N°ANR-17-CE37-0006. The author would like to thank Berk Mirza, Hugo
 Ladret and Manivannan Subramaniyan for careful reading and insightful
 remarks.
 
-References {#references .unnumbered}
-==========
+6 References {#sec:references .unnumbered}
+============
