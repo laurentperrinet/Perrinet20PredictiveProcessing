@@ -1,11 +1,11 @@
 default: doc markdown pdf
 
-SRC=Perrinet19PredictiveProcessing
+SRC=Perrinet20PredictiveProcessing
 
 OPTIONS=-F pandoc-crossref -F pandoc-citeproc -f markdown+tex_math_dollars+smart+implicit_figures --standalone --mathjax --biblatex --bibliography=$(SRC).bib
 
 edit:
-	atom Perrinet19PredictiveProcessing.md
+	atom Perrinet20PredictiveProcessing.md
 install:
 	# https://pandoc.org/installing.html
 	brew install pandoc

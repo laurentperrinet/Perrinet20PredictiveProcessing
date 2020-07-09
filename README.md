@@ -44,7 +44,7 @@ author_info:
   orcid: '0000-0002-9536-010X'
   twitter: laurentperrinet
 autoSectionLabels: true
-bibliography: Perrinet19PredictiveProcessing.bib
+bibliography: Perrinet20PredictiveProcessing.bib
 category: review
 ccsDelim: ', '
 ccsLabelSep: ' --- '
@@ -114,7 +114,7 @@ secPrefix:
 - secs.
 secPrefixTemplate: $$p$$ $$i$$
 sectionsDepth: '-1'
-source: 'https://github.com/laurentperrinet/Perrinet19PredictiveProcessing/'
+source: 'https://github.com/laurentperrinet/Perrinet20PredictiveProcessing/'
 subfigLabels: alpha a
 subfigureChildTemplate: $$i$$
 subfigureRefIndexTemplate: $$i$$$$suf$$ ($$s$$)

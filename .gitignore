@@ -1,6 +1,6 @@
 # Byte-compiled / optimized / DLL files
-Perrinet19PredictiveProcessing.doc
-Perrinet19PredictiveProcessing.pdf
+Perrinet20PredictiveProcessing.doc
+Perrinet20PredictiveProcessing.pdf
 __pycache__/
 *.py[cod]
 *$py.class
@@ -104,4 +104,4 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-Perrinet19PredictiveProcessing.docx
+Perrinet20PredictiveProcessing.docx
