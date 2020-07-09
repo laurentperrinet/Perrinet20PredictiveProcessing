@@ -2,7 +2,7 @@ default: doc markdown pdf
 
 SRC=Perrinet20PredictiveProcessing
 
-OPTIONS=-F pandoc-crossref -F pandoc-citeproc -f markdown+tex_math_dollars+smart+implicit_figures --standalone --mathjax --biblatex --bibliography=$(SRC).bib
+OPTIONS=-F pandoc-crossref -F pandoc-citeproc -f markdown+tex_math_dollars+smart+implicit_figures --standalone --mathjax --bibliography=$(SRC).bib
 
 edit:
 	atom Perrinet20PredictiveProcessing.md
