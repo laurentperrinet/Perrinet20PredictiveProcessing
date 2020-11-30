@@ -3,7 +3,7 @@ default: html pdf
 SRC=Perrinet20PredictiveProcessing
 
 # OPTIONS=-F pandoc-crossref -F pandoc-citeproc -f markdown+tex_math_dollars+smart+implicit_figures --standalone --mathjax --bibliography=$(SRC).bib
-OPTIONS= --toc --number-sections --standalone --filter pandoc-crossref  --bibliography ~/github/perrinet_curriculum-vitae_tex/LaurentPerrinet_Publications.bib --bibliography $(SRC).bib -f markdown+tex_math_dollars+smart+implicit_figures+implicit_header_references --mathjax  --citeproc --csl ieee.csl
+OPTIONS= --toc --standalone --filter pandoc-crossref  --bibliography ~/github/perrinet_curriculum-vitae_tex/LaurentPerrinet_Publications.bib --bibliography $(SRC).bib -f markdown+tex_math_dollars+smart+implicit_figures --mathjax  --citeproc --csl ieee.csl
 
 edit:
 	atom Perrinet20PredictiveProcessing.md
