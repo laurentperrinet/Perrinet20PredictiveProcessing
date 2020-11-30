@@ -22,7 +22,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
         with:
-          # fetch entire commit history to support get_rootstock_commit
+          # fetch entire commit history to support get_rootstock_commit 
           fetch-depth: 0
       - name: Cache
         uses: actions/cache@v1
