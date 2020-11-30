@@ -9,10 +9,11 @@ edit:
 	atom Perrinet20PredictiveProcessing.md
 install:
 	# https://pandoc.org/installing.html
-	# brew uninstall pandoc-citeproc
-	# brew install pandoc-crossref
 	brew install pandoc
+	# http://lierdakil.github.io/pandoc-crossref
+	brew install pandoc-crossref
 	# conda install -c conda-forge pandoc
+	# brew uninstall pandoc-citeproc
 	# conda install -c conda-forge rb-citeproc
 	brew install librsvg
 	# conda install -c conda-forge librsvg
