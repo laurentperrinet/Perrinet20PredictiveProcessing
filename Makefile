@@ -1,17 +1,21 @@
-default: doc markdown pdf
+default: html pdf
 
 SRC=Perrinet20PredictiveProcessing
 
-OPTIONS=-F pandoc-crossref -F pandoc-citeproc -f markdown+tex_math_dollars+smart+implicit_figures --standalone --mathjax --bibliography=$(SRC).bib
+# OPTIONS=-F pandoc-crossref -F pandoc-citeproc -f markdown+tex_math_dollars+smart+implicit_figures --standalone --mathjax --bibliography=$(SRC).bib
+OPTIONS= --toc --number-sections --standalone --filter pandoc-crossref  --bibliography ~/github/perrinet_curriculum-vitae_tex/LaurentPerrinet_Publications.bib --bibliography $(SRC).bib -f markdown+tex_math_dollars+smart+implicit_figures+implicit_header_references --mathjax  --citeproc --csl ieee.csl
 
 edit:
 	atom Perrinet20PredictiveProcessing.md
 install:
 	# https://pandoc.org/installing.html
+	# brew uninstall pandoc-citeproc
+	# brew install pandoc-crossref
 	brew install pandoc
-	brew install pandoc-citeproc
-	brew install pandoc-crossref
+	# conda install -c conda-forge pandoc
+	# conda install -c conda-forge rb-citeproc
 	brew install librsvg
+	# conda install -c conda-forge librsvg
 	tlmgr install collection-fontsrecommended
 
 figures_auto:
@@ -23,11 +27,14 @@ figures: figures/KhoeiMassonPerrinet17.png figures/PerrinetAdamsFriston14.png .g
 	rsvg-convert figures/PerrinetAdamsFriston14.svg -f pdf -o figures/PerrinetAdamsFriston14.pdf
 	rsvg-convert figures/PerrinetAdamsFriston14.svg -f png -d 450 -p 450 -o figures/PerrinetAdamsFriston14.png
 
-markdown:
-	pandoc $(OPTIONS) $(SRC).md -t markdown -o README.md
+html:
+	pandoc $(SRC).md $(OPTIONS) -t html -o index.html
 
 doc:
 	pandoc $(OPTIONS) $(SRC).md -t docx -o $(SRC).docx
 
 pdf:
 	pandoc $(OPTIONS) $(SRC).md -t latex  -o $(SRC).pdf
+
+biblio:
+	pandoc Perrinet20PredictiveProcessing.bib --metadata title="Bibliography" --citeproc --csl ieee.csl -s -o biblio.html
