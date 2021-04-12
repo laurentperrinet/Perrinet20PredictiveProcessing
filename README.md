@@ -2,6 +2,11 @@
 ## by Laurent Perrinet (2020)
 
 
+[![HTML Manuscript](https://img.shields.io/badge/manuscript-HTML-blue.svg)](https://laurentperrinet.github.io/Perrinet20PredictiveProcessing_manubot/v/latest/index.html)
+[![GitHub Actions Status](https://github.com/manubot/rootstock/workflows/Manubot/badge.svg)](https://github.com/laurentperrinet/Perrinet20PredictiveProcessing_manubot/actions)
+[![DOI](https://zenodo.org/badge/167395481.svg)](https://zenodo.org/badge/latestdoi/167395481)
+
+
  * Read the [full text](https://laurentperrinet.github.io/Perrinet20PredictiveProcessing_manubot/v/latest/index.html)
 
  * The source code of the text is available at https://github.com/laurentperrinet/Perrinet20PredictiveProcessing_manubot (+ dev code @ https://github.com/laurentperrinet/Perrinet20PredictiveProcessing )
